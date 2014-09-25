@@ -1,0 +1,43 @@
+﻿@model GameReviewWebsiteProject.Models.Gamer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Gamer</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AvatarUrl)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AvatarUrl)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Biography)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Biography)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.GamerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
