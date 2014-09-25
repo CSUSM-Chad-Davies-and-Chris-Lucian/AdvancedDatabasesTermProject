@@ -184,3 +184,5 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 Visual Studio Projects/GameReviewWebsiteProject/GameReviewWebsiteProject/Web.config
+Visual Studio Projects/GameReviewWebsiteProject/GameReviewWebsiteProject/Web.Debug.config
+Visual Studio Projects/GameReviewWebsiteProject/GameReviewWebsiteProject/Web.Release.config
