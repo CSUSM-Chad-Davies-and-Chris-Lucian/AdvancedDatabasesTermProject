@@ -43,7 +43,7 @@ namespace GameReviewWebsiteProject.Controllers
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "GameReviews");
         }
 
         [AllowAnonymous]
@@ -64,7 +64,7 @@ namespace GameReviewWebsiteProject.Controllers
                 {
                     WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
                     WebSecurity.Login(model.UserName, model.Password);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "GameReviews");
                 }
                 catch (MembershipCreateUserException e)
                 {
@@ -320,7 +320,7 @@ namespace GameReviewWebsiteProject.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "GameReviews");
             }
         }
 
