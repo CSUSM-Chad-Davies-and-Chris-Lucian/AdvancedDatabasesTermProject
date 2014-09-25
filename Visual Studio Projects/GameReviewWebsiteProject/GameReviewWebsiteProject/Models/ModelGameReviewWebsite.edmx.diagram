@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bb892be78f4044f4b41c07589feafd89" Name="Diagram1">
+        <EntityTypeShape EntityType="GameReviewWebsiteModel.Author" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameReviewWebsiteModel.Comment" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameReviewWebsiteModel.Game" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameReviewWebsiteModel.Gamer" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GameReviewWebsiteModel.GameReview" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="GameReviewWebsiteModel.FK_GameReview_Author" ManuallyRouted="false" />
+        <AssociationConnector Association="GameReviewWebsiteModel.FK_Comment_Gamer" ManuallyRouted="false" />
+        <AssociationConnector Association="GameReviewWebsiteModel.FK_Comment_GameReview" ManuallyRouted="false" />
+        <AssociationConnector Association="GameReviewWebsiteModel.FK_GameReview_Game" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

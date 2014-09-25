@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="GameReviewWebsiteModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="GameReviewWebsiteModelStoreContainer">
+          <EntitySet Name="Author" EntityType="GameReviewWebsiteModel.Store.Author" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Comment" EntityType="GameReviewWebsiteModel.Store.Comment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Game" EntityType="GameReviewWebsiteModel.Store.Game" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Gamer" EntityType="GameReviewWebsiteModel.Store.Gamer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GameReview" EntityType="GameReviewWebsiteModel.Store.GameReview" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Comment_Gamer" Association="GameReviewWebsiteModel.Store.FK_Comment_Gamer">
+            <End Role="Gamer" EntitySet="Gamer" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comment_GameReview" Association="GameReviewWebsiteModel.Store.FK_Comment_GameReview">
+            <End Role="GameReview" EntitySet="GameReview" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GameReview_Author" Association="GameReviewWebsiteModel.Store.FK_GameReview_Author">
+            <End Role="Author" EntitySet="Author" />
+            <End Role="GameReview" EntitySet="GameReview" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GameReview_Game" Association="GameReviewWebsiteModel.Store.FK_GameReview_Game">
+            <End Role="Game" EntitySet="Game" />
+            <End Role="GameReview" EntitySet="GameReview" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Author">
+          <Key>
+            <PropertyRef Name="AuthorId" />
+          </Key>
+          <Property Name="AuthorId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="Genre" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="Biography" Type="nvarchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="CommentId" />
+          </Key>
+          <Property Name="CommentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GameReviewId" Type="int" Nullable="false" />
+          <Property Name="GamerId" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="Content" Type="nvarchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Game">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Gamer">
+          <Key>
+            <PropertyRef Name="GamerId" />
+          </Key>
+          <Property Name="GamerId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="AvatarUrl" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="Biography" Type="nvarchar" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="GameReview">
+          <Key>
+            <PropertyRef Name="GameReviewId" />
+          </Key>
+          <Property Name="GameReviewId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GameId" Type="int" Nullable="false" />
+          <Property Name="AuthorId" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="Content" Type="nvarchar" Nullable="false" />
+          <Property Name="Rating" Type="decimal" Nullable="false" Precision="2" Scale="1" />
+        </EntityType>
+        <Association Name="FK_Comment_Gamer">
+          <End Role="Gamer" Type="GameReviewWebsiteModel.Store.Gamer" Multiplicity="1" />
+          <End Role="Comment" Type="GameReviewWebsiteModel.Store.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gamer">
+              <PropertyRef Name="GamerId" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="GamerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comment_GameReview">
+          <End Role="GameReview" Type="GameReviewWebsiteModel.Store.GameReview" Multiplicity="1" />
+          <End Role="Comment" Type="GameReviewWebsiteModel.Store.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GameReview">
+              <PropertyRef Name="GameReviewId" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="GameReviewId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GameReview_Author">
+          <End Role="Author" Type="GameReviewWebsiteModel.Store.Author" Multiplicity="1" />
+          <End Role="GameReview" Type="GameReviewWebsiteModel.Store.GameReview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Author">
+              <PropertyRef Name="AuthorId" />
+            </Principal>
+            <Dependent Role="GameReview">
+              <PropertyRef Name="AuthorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GameReview_Game">
+          <End Role="Game" Type="GameReviewWebsiteModel.Store.Game" Multiplicity="1" />
+          <End Role="GameReview" Type="GameReviewWebsiteModel.Store.GameReview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameId" />
+            </Principal>
+            <Dependent Role="GameReview">
+              <PropertyRef Name="GameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GameReviewWebsiteModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GameReviewWebsiteEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Authors" EntityType="GameReviewWebsiteModel.Author" />
+          <EntitySet Name="Comments" EntityType="GameReviewWebsiteModel.Comment" />
+          <EntitySet Name="Games" EntityType="GameReviewWebsiteModel.Game" />
+          <EntitySet Name="Gamers" EntityType="GameReviewWebsiteModel.Gamer" />
+          <EntitySet Name="GameReviews" EntityType="GameReviewWebsiteModel.GameReview" />
+          <AssociationSet Name="FK_GameReview_Author" Association="GameReviewWebsiteModel.FK_GameReview_Author">
+            <End Role="Author" EntitySet="Authors" />
+            <End Role="GameReview" EntitySet="GameReviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comment_Gamer" Association="GameReviewWebsiteModel.FK_Comment_Gamer">
+            <End Role="Gamer" EntitySet="Gamers" />
+            <End Role="Comment" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comment_GameReview" Association="GameReviewWebsiteModel.FK_Comment_GameReview">
+            <End Role="GameReview" EntitySet="GameReviews" />
+            <End Role="Comment" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_GameReview_Game" Association="GameReviewWebsiteModel.FK_GameReview_Game">
+            <End Role="Game" EntitySet="Games" />
+            <End Role="GameReview" EntitySet="GameReviews" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Author">
+          <Key>
+            <PropertyRef Name="AuthorId" />
+          </Key>
+          <Property Name="AuthorId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Genre" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Biography" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="GameReviews" Relationship="GameReviewWebsiteModel.FK_GameReview_Author" FromRole="Author" ToRole="GameReview" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="CommentId" />
+          </Key>
+          <Property Name="CommentId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="GameReviewId" Type="Int32" Nullable="false" />
+          <Property Name="GamerId" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Content" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Gamer" Relationship="GameReviewWebsiteModel.FK_Comment_Gamer" FromRole="Comment" ToRole="Gamer" />
+          <NavigationProperty Name="GameReview" Relationship="GameReviewWebsiteModel.FK_Comment_GameReview" FromRole="Comment" ToRole="GameReview" />
+        </EntityType>
+        <EntityType Name="Game">
+          <Key>
+            <PropertyRef Name="GameId" />
+          </Key>
+          <Property Name="GameId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="GameReviews" Relationship="GameReviewWebsiteModel.FK_GameReview_Game" FromRole="Game" ToRole="GameReview" />
+        </EntityType>
+        <EntityType Name="Gamer">
+          <Key>
+            <PropertyRef Name="GamerId" />
+          </Key>
+          <Property Name="GamerId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="AvatarUrl" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Biography" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Comments" Relationship="GameReviewWebsiteModel.FK_Comment_Gamer" FromRole="Gamer" ToRole="Comment" />
+        </EntityType>
+        <EntityType Name="GameReview">
+          <Key>
+            <PropertyRef Name="GameReviewId" />
+          </Key>
+          <Property Name="GameReviewId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="GameId" Type="Int32" Nullable="false" />
+          <Property Name="AuthorId" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Content" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="Rating" Type="Decimal" Nullable="false" Precision="2" Scale="1" />
+          <NavigationProperty Name="Author" Relationship="GameReviewWebsiteModel.FK_GameReview_Author" FromRole="GameReview" ToRole="Author" />
+          <NavigationProperty Name="Comments" Relationship="GameReviewWebsiteModel.FK_Comment_GameReview" FromRole="GameReview" ToRole="Comment" />
+          <NavigationProperty Name="Game" Relationship="GameReviewWebsiteModel.FK_GameReview_Game" FromRole="GameReview" ToRole="Game" />
+        </EntityType>
+        <Association Name="FK_GameReview_Author">
+          <End Role="Author" Type="GameReviewWebsiteModel.Author" Multiplicity="1" />
+          <End Role="GameReview" Type="GameReviewWebsiteModel.GameReview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Author">
+              <PropertyRef Name="AuthorId" />
+            </Principal>
+            <Dependent Role="GameReview">
+              <PropertyRef Name="AuthorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comment_Gamer">
+          <End Role="Gamer" Type="GameReviewWebsiteModel.Gamer" Multiplicity="1" />
+          <End Role="Comment" Type="GameReviewWebsiteModel.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Gamer">
+              <PropertyRef Name="GamerId" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="GamerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comment_GameReview">
+          <End Role="GameReview" Type="GameReviewWebsiteModel.GameReview" Multiplicity="1" />
+          <End Role="Comment" Type="GameReviewWebsiteModel.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GameReview">
+              <PropertyRef Name="GameReviewId" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="GameReviewId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_GameReview_Game">
+          <End Role="Game" Type="GameReviewWebsiteModel.Game" Multiplicity="1" />
+          <End Role="GameReview" Type="GameReviewWebsiteModel.GameReview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Game">
+              <PropertyRef Name="GameId" />
+            </Principal>
+            <Dependent Role="GameReview">
+              <PropertyRef Name="GameId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GameReviewWebsiteModelStoreContainer" CdmEntityContainer="GameReviewWebsiteEntities">
+          <EntitySetMapping Name="Authors">
+            <EntityTypeMapping TypeName="GameReviewWebsiteModel.Author">
+              <MappingFragment StoreEntitySet="Author">
+                <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Genre" ColumnName="Genre" />
+                <ScalarProperty Name="Biography" ColumnName="Biography" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="GameReviewWebsiteModel.Comment">
+              <MappingFragment StoreEntitySet="Comment">
+                <ScalarProperty Name="CommentId" ColumnName="CommentId" />
+                <ScalarProperty Name="GameReviewId" ColumnName="GameReviewId" />
+                <ScalarProperty Name="GamerId" ColumnName="GamerId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Games">
+            <EntityTypeMapping TypeName="GameReviewWebsiteModel.Game">
+              <MappingFragment StoreEntitySet="Game">
+                <ScalarProperty Name="GameId" ColumnName="GameId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gamers">
+            <EntityTypeMapping TypeName="GameReviewWebsiteModel.Gamer">
+              <MappingFragment StoreEntitySet="Gamer">
+                <ScalarProperty Name="GamerId" ColumnName="GamerId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AvatarUrl" ColumnName="AvatarUrl" />
+                <ScalarProperty Name="Biography" ColumnName="Biography" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GameReviews">
+            <EntityTypeMapping TypeName="GameReviewWebsiteModel.GameReview">
+              <MappingFragment StoreEntitySet="GameReview">
+                <ScalarProperty Name="GameReviewId" ColumnName="GameReviewId" />
+                <ScalarProperty Name="GameId" ColumnName="GameId" />
+                <ScalarProperty Name="AuthorId" ColumnName="AuthorId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
