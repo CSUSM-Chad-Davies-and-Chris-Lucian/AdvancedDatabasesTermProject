@@ -13,7 +13,7 @@
          @Html.DisplayNameFor(model => model.Game.Title)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Game.Title)
+        <h2> @Html.ActionLink(Model.Game.Title, "Details", "Games", new { id=Model.Game.GameId })</h2>
     </div>
 
     <div class="display-label">
