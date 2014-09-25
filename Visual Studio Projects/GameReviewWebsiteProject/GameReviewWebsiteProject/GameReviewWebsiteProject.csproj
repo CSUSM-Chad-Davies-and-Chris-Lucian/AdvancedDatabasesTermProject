@@ -187,6 +187,7 @@
     <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="Controllers\GameReviewsController.cs" />
     <Compile Include="Controllers\GamersController.cs" />
+    <Compile Include="Controllers\GamesController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -366,6 +367,11 @@
     <Content Include="Views\GameReviews\Details.cshtml" />
     <Content Include="Views\GameReviews\Edit.cshtml" />
     <Content Include="Views\GameReviews\Index.cshtml" />
+    <Content Include="Views\Games\Index.cshtml" />
+    <Content Include="Views\Games\Details.cshtml" />
+    <Content Include="Views\Games\Create.cshtml" />
+    <Content Include="Views\Games\Edit.cshtml" />
+    <Content Include="Views\Games\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
