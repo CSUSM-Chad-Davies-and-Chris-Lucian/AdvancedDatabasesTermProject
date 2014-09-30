@@ -62,7 +62,15 @@ namespace GameReviewWebsiteProject.Controllers
                 // Attempt to register the user
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
+                    var db = new GameReviewWebsiteEntities();
+                    db.Gamers.Add(new Gamer()
+                                      {
+                                          AvatarUrl = "",
+                                          Biography = "",
+                                          Name = model.UserName,
+                                          Password = model.Password
+                                      });
+
                     WebSecurity.Login(model.UserName, model.Password);
                     return RedirectToAction("Index", "GameReviews");
                 }
