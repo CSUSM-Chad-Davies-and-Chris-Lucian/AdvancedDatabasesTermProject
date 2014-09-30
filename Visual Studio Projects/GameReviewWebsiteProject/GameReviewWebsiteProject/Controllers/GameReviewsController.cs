@@ -13,21 +13,17 @@ namespace GameReviewWebsiteProject.Controllers
     {
         private GameReviewWebsiteEntities db = new GameReviewWebsiteEntities();
 
-        //
-        // GET: /GameReviews/
-
-        public ActionResult Index()
+        public ActionResult Index(String search = "")
         {
-            var gamereviews = db.GameReviews.Include(g => g.Author).Include(g => g.Game);
+            ViewBag.PreviewSearch = search;
+            var gamereviews = db.GameReviews.Where(x => x.Title.Contains(search)).Include(g => g.Author).Include(g => g.Game);
+           
             return View(gamereviews.ToList());
         }
 
-        //
-        // GET: /GameReviews/Details/5
-
         public ActionResult Details(int id = 0)
         {
-            GameReview gamereview = db.GameReviews.Find(id);
+            var gamereview = db.GameReviews.Find(id);
             if (gamereview == null)
             {
                 return HttpNotFound();
@@ -35,18 +31,12 @@ namespace GameReviewWebsiteProject.Controllers
             return View(gamereview);
         }
 
-        //
-        // GET: /GameReviews/Create
-
         public ActionResult Create()
         {
             ViewBag.AuthorId = new SelectList(db.Authors, "AuthorId", "Name");
             ViewBag.GameId = new SelectList(db.Games, "GameId", "Title");
             return View();
         }
-
-        //
-        // POST: /GameReviews/Create
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -64,12 +54,9 @@ namespace GameReviewWebsiteProject.Controllers
             return View(gamereview);
         }
 
-        //
-        // GET: /GameReviews/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
-            GameReview gamereview = db.GameReviews.Find(id);
+            var gamereview = db.GameReviews.Find(id);
             if (gamereview == null)
             {
                 return HttpNotFound();
@@ -78,9 +65,6 @@ namespace GameReviewWebsiteProject.Controllers
             ViewBag.GameId = new SelectList(db.Games, "GameId", "Title", gamereview.GameId);
             return View(gamereview);
         }
-
-        //
-        // POST: /GameReviews/Edit/5
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -97,9 +81,6 @@ namespace GameReviewWebsiteProject.Controllers
             return View(gamereview);
         }
 
-        //
-        // GET: /GameReviews/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
             GameReview gamereview = db.GameReviews.Find(id);
@@ -109,9 +90,6 @@ namespace GameReviewWebsiteProject.Controllers
             }
             return View(gamereview);
         }
-
-        //
-        // POST: /GameReviews/Delete/5
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

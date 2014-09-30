@@ -1,50 +1,32 @@
 ﻿@model GameReviewWebsiteProject.Models.GameReview
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = Model.Title;
 }
 
-<h2>Details</h2>
+<h2>@Html.DisplayFor(model => model.Title)</h2>
 
 <fieldset>
     <legend>GameReview</legend>
 
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Game.Title)
+    <div class="display-field">
+        <h2>@Html.ActionLink(Model.Game.Title, "Details", "Games", new { id = Model.Game.GameId }, null)</h2>
     </div>
     <div class="display-field">
-        <h2> @Html.ActionLink(Model.Game.Title, "Details", "Games", new { id=Model.Game.GameId }, null)</h2>
+        Review By: @Html.DisplayFor(model => model.Author.Name)
     </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Author.Name)
-    </div>
+    <br />
     <div class="display-field">
-        @Html.DisplayFor(model => model.Author.Name)
+        <strong>@Html.DisplayFor(model => model.Content)</strong>
     </div>
-
+    <br />
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Title)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Title)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Content)
-    </div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Content)
-    </div>
-
-    <div class="display-label">
-         @Html.DisplayNameFor(model => model.Rating)
+        @Html.DisplayNameFor(model => model.Rating)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Rating)
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.GameReviewId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
