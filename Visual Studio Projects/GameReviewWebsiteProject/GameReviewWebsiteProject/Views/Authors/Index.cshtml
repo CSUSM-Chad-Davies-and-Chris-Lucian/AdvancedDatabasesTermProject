@@ -5,7 +5,15 @@
 }
 
 <h2>Authors</h2>
-
+@using (Html.BeginForm())
+{
+    @Html.TextBox("search")
+    <input type="submit" />
+}
+@if (!String.IsNullOrEmpty(ViewBag.PreviewSearch))
+{
+    <h2>You are searching for @ViewBag.PreviewSearch</h2>
+}
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
