@@ -1,30 +1,23 @@
 ﻿@model GameReviewWebsiteProject.Models.GameReview
 
 @{
-<<<<<<< HEAD
-    ViewBag.Title = "Game Review's Details";
-}
-
-<h2>Game Review's Details</h2>
-=======
     ViewBag.Title = Model.Title;
 }
 
 <h2>@Html.DisplayFor(model => model.Title)</h2>
->>>>>>> origin/master
 
 <fieldset>
     <legend>GameReview</legend>
 
     <div class="display-field">
-        <h2>@Html.ActionLink(Model.Game.Title, "Details", "Games", new { id = Model.Game.GameId }, null)</h2>
+        <h3>Game: @Html.ActionLink(Model.Game.Title, "Details", "Games", new { id = Model.Game.GameId }, null)</h3>
     </div>
     <div class="display-field">
-        Review By: @Html.DisplayFor(model => model.Author.Name)
+        Author: @Html.ActionLink(Model.Author.Name, "Details", "Authors", new { id = Model.Author.AuthorId }, null)
     </div>
     <br />
     <div class="display-field">
-        <strong>@Html.DisplayFor(model => model.Content)</strong>
+        @Html.DisplayFor(model => model.Content)
     </div>
     <br />
     <div class="display-label">
@@ -34,6 +27,20 @@
         @Html.DisplayFor(model => model.Rating)
     </div>
 </fieldset>
+
+<h2>Comments</h2>
+<p>
+
+    @foreach (var comment in Model.Comments)
+    {
+        <div>
+            <strong>@Html.DisplayFor(model => comment.Gamer.Name) - @Html.DisplayFor(model => comment.Title)</strong>
+            <p>
+                @Html.DisplayFor(model => comment.Content)
+            </p>
+        </div>
+    }
+</p>
 <p>
     @Html.ActionLink("Back to List", "Index")
 </p>
