@@ -28,19 +28,39 @@
     </div>
 </fieldset>
 
-<h2>Comments</h2>
-<p>
 
-    @foreach (var comment in Model.Comments)
-    {
-        <div>
-            <strong>@Html.DisplayFor(model => comment.Gamer.Name) - @Html.DisplayFor(model => comment.Title)</strong>
-            <p>
-                @Html.DisplayFor(model => comment.Content)
-            </p>
-        </div>
-    }
-</p>
+@if (Request.IsAuthenticated)
+{
+    <h3>Create Comment</h3>
+    <div>
+        @using (Html.BeginForm("CreateComment","GameReviews"))
+        {
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(model => model.GameReviewId)
+            <div class="display-field">Title: </div>
+            <div class="display-field">
+                @Html.TextBox("Title", "")
+            </div>
+            <div class="display-field">Comment: </div>
+            <div class="display-field">
+                @Html.TextArea("Content", "")
+            </div>
+            <input type="submit" value="Add Comment" />
+        }
+    </div>
+}
+
+<h2>Comments</h2>
+@foreach (var comment in Model.Comments)
+{
+    <hr />
+    <div>
+        <strong>@Html.ActionLink(comment.Gamer.Name, "Details", "Games", new { id = comment.Gamer.GamerId }, null) - @Html.DisplayFor(model => comment.Title)</strong>
+        <p>
+            @Html.DisplayFor(model => comment.Content)
+        </p>
+    </div>
+}
 <p>
     @Html.ActionLink("Back to List", "Index")
 </p>

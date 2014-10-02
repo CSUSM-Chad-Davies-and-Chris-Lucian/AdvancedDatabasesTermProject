@@ -17,7 +17,7 @@ namespace GameReviewWebsiteProject.Controllers
         {
             ViewBag.PreviewSearch = search;
             var gamereviews = db.GameReviews.Where(x => x.Title.Contains(search)).Include(g => g.Author).Include(g => g.Game);
-           
+
             return View(gamereviews.ToList());
         }
 
@@ -29,6 +29,20 @@ namespace GameReviewWebsiteProject.Controllers
                 return HttpNotFound();
             }
             return View(gamereview);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateComment(Comment comment)
+        {
+            if (ModelState.IsValid)
+            {
+                var db = new GameReviewWebsiteEntities();
+                comment.GamerId = db.Gamers.First(x => User.Identity.Name == x.Name).GamerId;
+                db.Comments.Add(comment);
+                db.SaveChanges();
+            }
+            return RedirectToAction("Details", new { id = comment.GameReviewId });
         }
 
         public ActionResult Create()
