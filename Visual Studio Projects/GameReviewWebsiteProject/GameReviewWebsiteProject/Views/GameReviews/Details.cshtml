@@ -55,7 +55,7 @@
 {
     <hr />
     <div>
-        <strong>@Html.ActionLink(comment.Gamer.Name, "Details", "Games", new { id = comment.Gamer.GamerId }, null) - @Html.DisplayFor(model => comment.Title)</strong>
+        <strong>@Html.ActionLink(comment.Gamer.Name, "Details", "Gamers", new { id = comment.Gamer.GamerId }, null) - @Html.DisplayFor(model => comment.Title)</strong>
         <p>
             @Html.DisplayFor(model => comment.Content)
         </p>
