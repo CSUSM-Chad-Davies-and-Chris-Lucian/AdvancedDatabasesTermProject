@@ -5,10 +5,15 @@
 }
 
 <h2>Gamers</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+@using (Html.BeginForm())
+{
+    @Html.TextBox("search")
+    <input type="submit" />
+}
+@if (!String.IsNullOrEmpty(ViewBag.PreviewSearch))
+{
+    <h2>You are searching for @ViewBag.PreviewSearch</h2>
+}
 <table>
     <tr>
         <th>
@@ -26,11 +31,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.AvatarUrl)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.GamerId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.GamerId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.GamerId })
         </td>
     </tr>
 }

@@ -19,7 +19,7 @@ namespace GameReviewWebsiteProject.Controllers
         public ActionResult Index(String search = "")
         {
             ViewBag.PreviewSearch = search;
-            var authors = db.Authors.Where(x => x.Name.Contains(search));//.Include(g => g.GameReviews);
+            var authors = db.Authors.Where(x => x.Name.Contains(search));
 
             return View(authors.ToList());
         }

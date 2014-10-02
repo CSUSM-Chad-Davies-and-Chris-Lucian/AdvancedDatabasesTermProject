@@ -16,9 +16,12 @@ namespace GameReviewWebsiteProject.Controllers
         //
         // GET: /Gamers/
 
-        public ActionResult Index()
+        public ActionResult Index(String search = "")
         {
-            return View(db.Gamers.ToList());
+            ViewBag.PreviewSearch = search;
+            var gamers = db.Gamers.Where(x => x.Name.Contains(search));
+
+            return View(gamers.ToList());
         }
 
         //

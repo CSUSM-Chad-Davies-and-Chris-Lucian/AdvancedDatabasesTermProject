@@ -30,6 +30,17 @@
         @Html.DisplayFor(model => model.Biography)
     </div>
 </fieldset>
+<h2>Comments</h2>
+@foreach (var comment in Model.Comments)
+{
+    <hr />
+    <div>
+        <strong>@Html.ActionLink(comment.GameReview.Title, "Details", "GameReviews", new { id = comment.GameReview.GameReviewId }, null) - @Html.DisplayFor(model => comment.Title)</strong>
+        <p>
+            @Html.DisplayFor(model => comment.Content)
+        </p>
+    </div>
+}
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.GamerId }) |
     @Html.ActionLink("Back to List", "Index")
