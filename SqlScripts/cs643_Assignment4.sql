@@ -1,11 +1,11 @@
 /*
 Created by Chris Lucian and Chad Davies
 9/16/2014
-CS512 Advanced Databases
+CS643 Advanced Databases
 Assignment 4
 
 This script tests each individual table to ensure we can insert, update, select, and delete
-Unike assignment 2, this script also tests invalid values, foreign key constraint violations, and invalid range, and sized data
+Unlike assignment 2, this script also tests invalid values, foreign key constraint violations, and invalid range, and sized data
 */
 
 USE [GameReviewWebsite_CS643]
@@ -402,4 +402,4 @@ INSERT INTO [dbo].[GameReview]
 		   ,1.0)
 
 GO
---***********************Begin Invalid Null Inserts***********************--
+--***********************End Invalid Null Inserts***********************--
