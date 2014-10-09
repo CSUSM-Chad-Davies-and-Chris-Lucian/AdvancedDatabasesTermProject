@@ -8,7 +8,8 @@
     <h2>Create a new account.</h2>
 </hgroup>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary()
 
@@ -27,6 +28,15 @@
                 @Html.LabelFor(m => m.ConfirmPassword)
                 @Html.PasswordFor(m => m.ConfirmPassword)
             </li>
+            <li>
+                @Html.LabelFor(m => m.AvatarUrl)
+                @Html.TextBoxFor(m => m.AvatarUrl)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Bio)
+                @Html.TextBoxFor(m => m.Bio)
+            </li>
+
         </ol>
         <input type="submit" value="Register" />
     </fieldset>

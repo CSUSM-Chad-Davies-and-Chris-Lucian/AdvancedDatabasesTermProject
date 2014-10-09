@@ -86,6 +86,14 @@ namespace GameReviewWebsiteProject.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [StringLength(4000)]
+        public string Bio { get; set; }
+
+        [Required]
+        [StringLength(150)]
+        public string AvatarUrl { get; set; }
     }
 
     public class ExternalLogin
