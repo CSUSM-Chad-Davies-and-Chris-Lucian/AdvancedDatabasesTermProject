@@ -18,6 +18,7 @@ namespace GameReviewWebsiteProject.Controllers
 
         public ActionResult Index(String search = "")
         {
+            search = String.Join("", search.Take(50));
             ViewBag.PreviewSearch = search;
             var authors = db.Authors.Where(x => x.Name.Contains(search));
 

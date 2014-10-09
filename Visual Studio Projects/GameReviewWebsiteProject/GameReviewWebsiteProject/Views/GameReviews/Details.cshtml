@@ -1,4 +1,5 @@
-﻿@model GameReviewWebsiteProject.Models.GameReview
+﻿@using GameReviewWebsiteProject.Models
+@model GameReview
 
 @{
     ViewBag.Title = Model.Title;
@@ -36,14 +37,17 @@
         @using (Html.BeginForm("CreateComment","GameReviews"))
         {
             @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
             @Html.HiddenFor(model => model.GameReviewId)
             <div class="display-field">Title: </div>
             <div class="display-field">
                 @Html.TextBox("Title", "")
+                @Html.ValidationMessageFor(model => new Comment().Title)
             </div>
             <div class="display-field">Comment: </div>
             <div class="display-field">
                 @Html.TextArea("Content", "")
+                @Html.ValidationMessageFor(model => new Comment().Content)
             </div>
             <input type="submit" value="Add Comment" />
         }

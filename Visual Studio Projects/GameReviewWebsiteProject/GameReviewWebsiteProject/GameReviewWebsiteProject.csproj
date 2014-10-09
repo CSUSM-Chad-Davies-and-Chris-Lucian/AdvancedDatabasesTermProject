@@ -224,6 +224,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelGameReviewWebsite.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\PartialClasses\Comment.cs" />
+    <Compile Include="Models\PartialClasses\Author.cs" />
+    <Compile Include="Models\PartialClasses\GameReview.cs" />
+    <Compile Include="Models\PartialClasses\Gamer.cs" />
+    <Compile Include="Models\PartialClasses\Game.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

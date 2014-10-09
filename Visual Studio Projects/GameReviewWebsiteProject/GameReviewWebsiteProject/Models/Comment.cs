@@ -6,6 +6,7 @@
 //    Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System.ComponentModel.DataAnnotations;
 
 namespace GameReviewWebsiteProject.Models
 {
@@ -17,6 +18,7 @@ namespace GameReviewWebsiteProject.Models
         public int CommentId { get; set; }
         public int GameReviewId { get; set; }
         public int GamerId { get; set; }
+        [Required]
         public string Title { get; set; }
         public string Content { get; set; }
     
