@@ -18,6 +18,7 @@ namespace GameReviewWebsiteProject.Controllers
 
         public ActionResult Index(String search = "")
         {
+            ViewBag.SearchError = search.Length > 50 ? "Search is limited to 50 characters" : "";
             search = String.Join("", search.Take(50));
             ViewBag.PreviewSearch = search;
             var gamers = db.Gamers.Where(x => x.Name.Contains(search));

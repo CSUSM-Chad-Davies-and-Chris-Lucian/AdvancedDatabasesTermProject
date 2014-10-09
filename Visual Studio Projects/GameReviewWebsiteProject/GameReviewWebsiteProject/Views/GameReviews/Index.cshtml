@@ -13,6 +13,7 @@
 @if (!String.IsNullOrEmpty(ViewBag.PreviewSearch))
 {
     <h2>You are searching for @ViewBag.PreviewSearch</h2>
+    <strong style="color: red;">@ViewBag.SearchError</strong>
 }
 <table>
     <tr>

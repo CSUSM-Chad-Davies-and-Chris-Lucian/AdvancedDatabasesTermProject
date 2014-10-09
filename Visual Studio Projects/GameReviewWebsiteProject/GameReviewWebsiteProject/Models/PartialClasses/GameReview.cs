@@ -10,7 +10,9 @@ namespace GameReviewWebsiteProject.Models
         public class GameReviewMetaData
         {
             public int GameReviewId { get; set; }
+            [Required]
             public int GameId { get; set; }
+            [Required]
             public int AuthorId { get; set; }
             [Required]
             [StringLength(150)]
