@@ -29,7 +29,7 @@
         public void AssertLinkContent(string content)
         {
             #region Variable Declarations
-            HtmlHyperlink uILOLHyperlink = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UIBodyPane.UILOLHyperlink;
+            HtmlHyperlink uILOLHyperlink = GetHyperLinkWithInnerText(content);
             #endregion
 
             // Verify that the 'InnerText' property of 'LOL' link equals 'LOL'
@@ -41,5 +41,13 @@
          "zzzzzzzzzzzzzz\r\nSearch is limited to 50 characters \r\n\r\nGame Review Tite \r\n\r\nGame" +
          " Name \r\n\r\nRating ";
         }
+        public HtmlHyperlink GetHyperLinkWithInnerText(string innerText)
+        {
+                    var mUILOLHyperlink = new HtmlHyperlink();
+                    #region Search Criteria
+                    mUILOLHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = innerText;
+                    #endregion
+                return mUILOLHyperlink;
+            }
     }
 }

@@ -16,28 +16,30 @@ namespace GameReviewWebsiteTests
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class GameReview
+    public class Gamer
     {
-        public GameReview()
+        public Gamer()
         {
         }
 
 //=========================================================================================
-        // GAME REVIEW
+        // GAME
         [TestMethod]
-        public void SearchForLOLReviewAndVerifyTest()
+        public void SearchForGamerFrank()
         {
             this.UIMap.OpenSite();
-            this.UIMap.TypeInSearchBox("lol");
+            this.UIMap.ChangeToGamers();
+            this.UIMap.TypeInSearchBox("Frank");
             this.UIMap.SubmitLol();
-            this.UIMap.AssertLinkContent("LOL");
+            this.UIMap.AssertLinkContent("Frank");
             this.UIMap.closesite();
         }
 
         [TestMethod]
-        public void SearchForGameReviewLong()
+        public void SearchForGamerLong()
         {
             this.UIMap.OpenSite();
+            this.UIMap.ChangeToGamers();
             var Content = new String('z', 51);
             this.UIMap.TypeInSearchBox(Content);
             this.UIMap.SubmitLol();
@@ -48,18 +50,20 @@ namespace GameReviewWebsiteTests
 
         }
         [TestMethod]
-        public void SearchForGameReviewNothing()
+        public void SearchForGamerNothing()
         {
             this.UIMap.OpenSite();
+            this.UIMap.ChangeToGamers();
             this.UIMap.SubmitLol();
             this.UIMap.AssertEmptyGameReviewSearch();
             this.UIMap.closesite();
         }
 
         [TestMethod]
-        public void SearchForGameReviewNotThere()
+        public void SearchForGamerNotThere()
         {
             this.UIMap.OpenSite();
+            this.UIMap.ChangeToGamers();
             this.UIMap.TypeInSearchBox("pickles34");
             this.UIMap.SubmitLol();
             this.UIMap.AssertWrongReview();
@@ -67,7 +71,7 @@ namespace GameReviewWebsiteTests
         }
 
 //=========================================================================================
-        // END GAME REVIEW
+        // END
 
         /// <summary>
         ///Gets or sets the test context which provides

@@ -300,6 +300,19 @@ namespace GameReviewWebsiteTests
             Assert.AreEqual(this.AssertWrongReviewExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
         }
         
+        /// <summary>
+        /// ChangeToGamers
+        /// </summary>
+        public void ChangeToGamers()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uIGamersHyperlink = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UIMenuCustom.UIGamersHyperlink;
+            #endregion
+
+            // Click 'Gamers' link
+            Mouse.Click(uIGamersHyperlink, new Point(22, 9));
+        }
+        
         #region Properties
         public virtual AssertEmptyGameReviewSearchExpectedValues AssertEmptyGameReviewSearchExpectedValues
         {
