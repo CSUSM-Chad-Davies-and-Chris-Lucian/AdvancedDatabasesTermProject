@@ -16,9 +16,9 @@ namespace GameReviewWebsiteTests
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class Game
+    public class Gamer
     {
-        public Game()
+        public Gamer()
         {
         }
 
@@ -28,10 +28,11 @@ namespace GameReviewWebsiteTests
         public void SearchForGamerFrank()
         {
             this.UIMap.OpenSite();
-            //this.UIMap.ChangeToGamers();
-            //this.UIMap.TypeInSearchBox("Frank");
-            //this.UIMap.SubmitLol();
-            //this.UIMap.AssertLinkContent("Frank");
+            this.UIMap.ChangeToGamers();
+            this.UIMap.TypeInSearchBox("Frank");
+            this.UIMap.SubmitLol();
+            this.UIMap.AssertLinkContent("Frank");
+            //this.UIMap.clickFrank();
             this.UIMap.closesite();
         }
 

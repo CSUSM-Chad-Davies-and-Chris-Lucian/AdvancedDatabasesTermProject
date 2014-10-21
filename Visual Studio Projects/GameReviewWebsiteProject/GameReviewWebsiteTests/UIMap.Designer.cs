@@ -313,6 +313,19 @@ namespace GameReviewWebsiteTests
             Mouse.Click(uIGamersHyperlink, new Point(22, 9));
         }
         
+        /// <summary>
+        /// clickFrank - Use 'clickFrankExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void clickFrank()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uIFrankHyperlink = this.UIGamersGameReviewSiteWindow.UIGamersGameReviewSiteDocument.UIBodyPane2.UIFrankHyperlink;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'Frank' link equals 'Frank'
+            Assert.AreEqual(this.clickFrankExpectedValues.UIFrankHyperlinkInnerText, uIFrankHyperlink.InnerText);
+        }
+        
         #region Properties
         public virtual AssertEmptyGameReviewSearchExpectedValues AssertEmptyGameReviewSearchExpectedValues
         {
@@ -446,6 +459,18 @@ namespace GameReviewWebsiteTests
             }
         }
         
+        public virtual clickFrankExpectedValues clickFrankExpectedValues
+        {
+            get
+            {
+                if ((this.mclickFrankExpectedValues == null))
+                {
+                    this.mclickFrankExpectedValues = new clickFrankExpectedValues();
+                }
+                return this.mclickFrankExpectedValues;
+            }
+        }
+        
         public UIGameReviewsGameRevieWindow UIGameReviewsGameRevieWindow
         {
             get
@@ -505,6 +530,8 @@ namespace GameReviewWebsiteTests
         private typelolParams mtypelolParams;
         
         private AssertWrongReviewExpectedValues mAssertWrongReviewExpectedValues;
+        
+        private clickFrankExpectedValues mclickFrankExpectedValues;
         
         private UIGameReviewsGameRevieWindow mUIGameReviewsGameRevieWindow;
         
@@ -706,6 +733,21 @@ namespace GameReviewWebsiteTests
         /// </summary>
         public string UIItemCustomInnerText = "Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for pickles34\r\n \r\n\r\nGame Review Tite \r\n\r" +
             "\nGame Name \r\n\r\nRating ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'clickFrank'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class clickFrankExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'Frank' link equals 'Frank'
+        /// </summary>
+        public string UIFrankHyperlinkInnerText = "Frank";
         #endregion
     }
     
@@ -1442,6 +1484,18 @@ namespace GameReviewWebsiteTests
                 return this.mUIBodyPane1;
             }
         }
+        
+        public UIBodyPane21 UIBodyPane2
+        {
+            get
+            {
+                if ((this.mUIBodyPane2 == null))
+                {
+                    this.mUIBodyPane2 = new UIBodyPane21(this);
+                }
+                return this.mUIBodyPane2;
+            }
+        }
         #endregion
         
         #region Fields
@@ -1450,6 +1504,8 @@ namespace GameReviewWebsiteTests
         private UIBodyPane2 mUIBodyPane;
         
         private UIBodyPane11 mUIBodyPane1;
+        
+        private UIBodyPane21 mUIBodyPane2;
         #endregion
     }
     
@@ -1550,6 +1606,57 @@ namespace GameReviewWebsiteTests
         
         #region Fields
         private HtmlHyperlink mUIDoubleDownHyperlink;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane21 : HtmlDiv
+    {
+        
+        public UIBodyPane21(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Gamers\r\n\r\n  \r\n\r\nYou are searching for fr";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Gamers - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlHyperlink UIFrankHyperlink
+        {
+            get
+            {
+                if ((this.mUIFrankHyperlink == null))
+                {
+                    this.mUIFrankHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUIFrankHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = null;
+                    this.mUIFrankHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUIFrankHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUIFrankHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Frank";
+                    this.mUIFrankHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Gamers/Details/16";
+                    this.mUIFrankHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUIFrankHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://localhost:3085/Gamers/Details/16";
+                    this.mUIFrankHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = null;
+                    this.mUIFrankHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "href=\"/Gamers/Details/16\"";
+                    this.mUIFrankHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "1";
+                    this.mUIFrankHyperlink.WindowTitles.Add("Gamers - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIFrankHyperlink;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlHyperlink mUIFrankHyperlink;
         #endregion
     }
 }
