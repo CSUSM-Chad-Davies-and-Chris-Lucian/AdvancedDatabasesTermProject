@@ -52,6 +52,10 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Author.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="Register.cs" />
+    <Compile Include="Login.cs" />
     <Compile Include="Gamer.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameReview.cs" />

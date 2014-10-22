@@ -326,6 +326,767 @@ namespace GameReviewWebsiteTests
             Assert.AreEqual(this.clickFrankExpectedValues.UIFrankHyperlinkInnerText, uIFrankHyperlink.InnerText);
         }
         
+        /// <summary>
+        /// AssertMMOMan - Use 'AssertMMOManExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertMMOMan()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uIMMOManHyperlink = this.UIGamersGameReviewSiteWindow.UIGamersGameReviewSiteDocument.UIBodyPane.UIMMOManHyperlink;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'MMO Man' link equals 'MMO Man'
+            Assert.AreEqual(this.AssertMMOManExpectedValues.UIMMOManHyperlinkInnerText, uIMMOManHyperlink.InnerText);
+        }
+        
+        /// <summary>
+        /// AssertPicklesNot - Use 'AssertPicklesNotExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertPicklesNot()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIGamersGameReviewSiteWindow.UIGamersGameReviewSiteDocument.UIBodyPane3.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Gamers
+            //
+            //  
+            //
+            //You are searching for pickles34
+            // 
+            //
+            //Name 
+            //
+            //AvatarUrl '
+            Assert.AreEqual(this.AssertPicklesNotExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// SwitchToGames
+        /// </summary>
+        public void SwitchToGames()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uIGamesHyperlink = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UIMenuCustom.UIGamesHyperlink;
+            #endregion
+
+            // Click 'Games' link
+            Mouse.Click(uIGamesHyperlink, new Point(36, 18));
+        }
+        
+        /// <summary>
+        /// AssertDestiny - Use 'AssertDestinyExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertDestiny()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uIDestinyHyperlink = this.UIGamesGameReviewSiteIWindow.UIGamesGameReviewSiteDocument.UIBodyPane.UIDestinyHyperlink;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'Destiny' link equals 'Destiny'
+            Assert.AreEqual(this.AssertDestinyExpectedValues.UIDestinyHyperlinkInnerText, uIDestinyHyperlink.InnerText);
+        }
+        
+        /// <summary>
+        /// AssertGameNothing - Use 'AssertGameNothingExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertGameNothing()
+        {
+            #region Variable Declarations
+            HtmlCell uIRTSwithspiceCell = this.UIGamesGameReviewSiteIWindow.UIGamesGameReviewSiteDocument.UIBodyPane1.UIItemTable.UIRTSwithspiceCell;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'RTS with spice' cell equals 'RTS with spice '
+            Assert.AreEqual(this.AssertGameNothingExpectedValues.UIRTSwithspiceCellInnerText, uIRTSwithspiceCell.InnerText);
+        }
+        
+        /// <summary>
+        /// AssertGamesNothing1 - Use 'AssertGamesNothing1ExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertGamesNothing1()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIGamesGameReviewSiteIWindow.UIGamesGameReviewSiteDocument.UIBodyPane1.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Games
+            //
+            //  
+            //
+            //
+            //Title 
+            //
+            //Description 
+            //
+            //
+            //Destiny
+            //MMOFPS with epic story and action. 
+            //
+            //World of Warcraft
+            //Cause it will never die! 
+            //
+            //Star Craft
+            //RTS with spice 
+            //
+            //Ranomly generated android game
+            //Review material for review bot! 
+            //
+            //Planetary Annihilation
+            //Epic interplanetary destruction 
+            //
+            //Sergon Simulator
+            //Bloody simulator that communicates the difficulty of surguery 
+            //
+            //Diablo 3 
+            //Roguelike with taste 
+            //
+            //Train Simulator
+            //Professionals love us! 
+            //
+            //Dues Ex Machina
+            //Your favoriate plot twist in a game! 
+            //
+            //League of Legends
+            //Moba for the populus 
+            //
+            //Sam and Max
+            //Adventure! 
+            //
+            //Gauntlet
+            //4 Player Roguelike! 
+            //
+            //Mine Craft
+            //We just made 2 billion dollars! 
+            //
+            //Assassins creed 4
+            //Glorified pirate sim simply put! 
+            //
+            //IT the game
+            //Your best choise for clown horror 
+            //
+            //Ned for Speed
+            //Ned really likes to race! 
+            //
+            //Mario World
+            //Mario based RPG 
+            //
+            //Board game package plus!
+            //Your favorite board games in one huge package! 
+            //
+            //Clash of Clans
+            //How wil you review this? I am a cell phone game! 
+            //
+            //Zork
+            //Text Adventure '
+            Assert.AreEqual(this.AssertGamesNothing1ExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// AssertNotThereGames - Use 'AssertNotThereGamesExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertNotThereGames()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIGamesGameReviewSiteIWindow.UIGamesGameReviewSiteDocument.UIBodyPane2.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Games
+            //
+            //  
+            //
+            //You are searching for pickles34
+            // 
+            //
+            //Title 
+            //
+            //Description '
+            Assert.AreEqual(this.AssertNotThereGamesExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// AssertLoLSearchTest - Use 'AssertLoLSearchTestExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertLoLSearchTest()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uILOLHyperlink = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UIBodyPane.UILOLHyperlink;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'LOL' link equals 'LOL'
+            Assert.AreEqual(this.AssertLoLSearchTestExpectedValues.UILOLHyperlinkInnerText, uILOLHyperlink.InnerText);
+        }
+        
+        /// <summary>
+        /// SwitchToAuthors
+        /// </summary>
+        public void SwitchToAuthors()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uIAuthorsHyperlink = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UIMenuCustom.UIAuthorsHyperlink;
+            #endregion
+
+            // Click 'Authors' link
+            Mouse.Click(uIAuthorsHyperlink, new Point(41, 6));
+        }
+        
+        /// <summary>
+        /// AssertSox - Use 'AssertSoxExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertSox()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIAuthorsGameReviewSitWindow.UIAuthorsGameReviewSitDocument.UIBodyPane.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Authors
+            //
+            //  
+            //
+            //You are searching for Sox
+            // 
+            //
+            //Name 
+            //
+            //Genre 
+            //
+            //
+            //Sox
+            //Indie '
+            Assert.AreEqual(this.AssertSoxExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// AssertAuthorsNothing - Use 'AssertAuthorsNothingExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertAuthorsNothing()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIAuthorsGameReviewSitWindow.UIAuthorsGameReviewSitDocument.UIBodyPane1.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Authors
+            //
+            //  
+            //
+            //
+            //Name 
+            //
+            //Genre 
+            //
+            //
+            //Chris
+            //FPS 
+            //
+            //Chad
+            //MMO 
+            //
+            //ReviewBot
+            //All 
+            //
+            //Dictator Commander
+            //RTS 
+            //
+            //Annoying 14 yearold
+            //First Person Shooters 
+            //
+            //Simulator Rick
+            //Simulators 
+            //
+            //Billy the bomber
+            //Flight Sim 
+            //
+            //Sam of the shrine
+            //RPG 
+            //
+            //Sox
+            //Indie 
+            //
+            //Speedy Bob
+            //Racing 
+            //
+            //Slow Surgeon
+            //Surgeon Sims 
+            //
+            //Rick Roll Rogue
+            //Rogue Like 
+            //
+            //Cappin Pirate Yar
+            //Pirate sim 
+            //
+            //Simply Pvp
+            //Pvp anything 
+            //
+            //Eponential Salvation
+            //I must heeeeeeel youuu! 
+            //
+            //Dreaming of Clowns
+            //Clown Horror 
+            //
+            //Moba Adoba
+            //MOBAs 
+            //
+            //Fantasy Texter
+            //Text Based Roguelikes 
+            //
+            //Monopoly General 
+            //Not bored of board games 
+            //
+            //WhySoSerious
+            //Bat Games '
+            Assert.AreEqual(this.AssertAuthorsNothingExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// AssertAuthorsNotThere - Use 'AssertAuthorsNotThereExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertAuthorsNotThere()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIAuthorsGameReviewSitWindow.UIAuthorsGameReviewSitDocument.UIBodyPane2.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Authors
+            //
+            //  
+            //
+            //You are searching for pickles34
+            // 
+            //
+            //Name 
+            //
+            //Genre '
+            Assert.AreEqual(this.AssertAuthorsNotThereExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// SwitchToLogin
+        /// </summary>
+        public void SwitchToLogin()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uILoginHyperlink = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UILoginHyperlink;
+            #endregion
+
+            // Click 'Log in' link
+            Mouse.Click(uILoginHyperlink, new Point(22, 11));
+        }
+        
+        /// <summary>
+        /// TypeFrank - Use 'TypeFrankParams' to pass parameters into this method.
+        /// </summary>
+        public void TypeFrank()
+        {
+            #region Variable Declarations
+            HtmlEdit uIUsernameEdit = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UIUsernameEdit;
+            #endregion
+
+            // Type 'frank' in 'User name' text box
+            uIUsernameEdit.Text = this.TypeFrankParams.UIUsernameEditText;
+        }
+        
+        /// <summary>
+        /// TypePassword - Use 'TypePasswordParams' to pass parameters into this method.
+        /// </summary>
+        public void TypePassword()
+        {
+            #region Variable Declarations
+            HtmlEdit uIPasswordEdit = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UIPasswordEdit;
+            #endregion
+
+            // Type '********' in 'Password' text box
+            uIPasswordEdit.Password = this.TypePasswordParams.UIPasswordEditPassword;
+        }
+        
+        /// <summary>
+        /// TypeWrongPassword - Use 'TypeWrongPasswordParams' to pass parameters into this method.
+        /// </summary>
+        public void TypeWrongPassword()
+        {
+            #region Variable Declarations
+            HtmlEdit uIPasswordEdit = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UIPasswordEdit;
+            #endregion
+
+            // Type '********' in 'Password' text box
+            uIPasswordEdit.Password = this.TypeWrongPasswordParams.UIPasswordEditPassword;
+        }
+        
+        /// <summary>
+        /// PressLogIn
+        /// </summary>
+        public void PressLogIn()
+        {
+            #region Variable Declarations
+            HtmlInputButton uILoginButton = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UILoginFormCustom.UILoginButton;
+            #endregion
+
+            // Click 'Log in' button
+            Mouse.Click(uILoginButton, new Point(43, 22));
+        }
+        
+        /// <summary>
+        /// WrongPassword - Use 'WrongPasswordExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void WrongPassword()
+        {
+            #region Variable Declarations
+            HtmlCustom uITheusernameorpassworCustom = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UILoginFormCustom.UITheusernameorpassworCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'The user name or password provided is in' custom control equals 'The user name or password provided is incorrect.'
+            Assert.AreEqual(this.WrongPasswordExpectedValues.UITheusernameorpassworCustomInnerText, uITheusernameorpassworCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// TypeCorrectPassword - Use 'TypeCorrectPasswordParams' to pass parameters into this method.
+        /// </summary>
+        public void TypeCorrectPassword()
+        {
+            #region Variable Declarations
+            HtmlEdit uIPasswordEdit1 = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UIPasswordEdit1;
+            #endregion
+
+            // Type '********' in 'Password' text box
+            uIPasswordEdit1.Password = this.TypeCorrectPasswordParams.UIPasswordEdit1Password;
+        }
+        
+        /// <summary>
+        /// EnsureFrankLogIn - Use 'EnsureFrankLogInExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void EnsureFrankLogIn()
+        {
+            #region Variable Declarations
+            HtmlCustom uILoginCustom = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UILoginCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'login' custom control equals 'Hello, frank  Log off  '
+            Assert.AreEqual(this.EnsureFrankLogInExpectedValues.UILoginCustomInnerText, uILoginCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// PressLogIn1
+        /// </summary>
+        public void PressLogIn1()
+        {
+            #region Variable Declarations
+            HtmlInputButton uILoginButton = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UILoginFormCustom.UILoginButton;
+            #endregion
+
+            // Click 'Log in' button
+            Mouse.Click(uILoginButton, new Point(14, 18));
+        }
+        
+        /// <summary>
+        /// CheckUserNameFieldEmpty - Use 'CheckUserNameFieldEmptyExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void CheckUserNameFieldEmpty()
+        {
+            #region Variable Declarations
+            HtmlSpan uITheUsernamefieldisrePane = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UILoginFormCustom.UITheUsernamefieldisrePane;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'The User name field is required.' pane equals 'The User name field is required.'
+            Assert.AreEqual(this.CheckUserNameFieldEmptyExpectedValues.UITheUsernamefieldisrePaneInnerText, uITheUsernamefieldisrePane.InnerText);
+        }
+        
+        /// <summary>
+        /// CheckPasswordFieldEmpty - Use 'CheckPasswordFieldEmptyExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void CheckPasswordFieldEmpty()
+        {
+            #region Variable Declarations
+            HtmlSpan uIThePasswordfieldisrePane = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UILoginFormCustom.UIThePasswordfieldisrePane;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'The Password field is required.' pane equals 'The Password field is required.'
+            Assert.AreEqual(this.CheckPasswordFieldEmptyExpectedValues.UIThePasswordfieldisrePaneInnerText, uIThePasswordfieldisrePane.InnerText);
+        }
+        
+        /// <summary>
+        /// UserZs - Use 'UserZsParams' to pass parameters into this method.
+        /// </summary>
+        public void UserZs()
+        {
+            #region Variable Declarations
+            HtmlEdit uIUsernameEdit = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UIUsernameEdit;
+            #endregion
+
+            // Type 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz' in 'User name' text box
+            uIUsernameEdit.Text = this.UserZsParams.UIUsernameEditText;
+        }
+        
+        /// <summary>
+        /// PassLong - Use 'PassLongParams' to pass parameters into this method.
+        /// </summary>
+        public void PassLong()
+        {
+            #region Variable Declarations
+            HtmlEdit uIPasswordEdit1 = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UIPasswordEdit1;
+            #endregion
+
+            // Type '********' in 'Password' text box
+            uIPasswordEdit1.Password = this.PassLongParams.UIPasswordEdit1Password;
+        }
+        
+        /// <summary>
+        /// UserNameTooLong - Use 'UserNameTooLongExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void UserNameTooLong()
+        {
+            #region Variable Declarations
+            HtmlCustom uITheusernameorpassworCustom = this.UILoginGameReviewSiteIWindow.UILoginGameReviewSiteDocument.UILoginFormCustom.UITheusernameorpassworCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'The user name or password provided is in' custom control equals 'The user name or password provided is incorrect.'
+            Assert.AreEqual(this.UserNameTooLongExpectedValues.UITheusernameorpassworCustomInnerText, uITheusernameorpassworCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// SwitchToRegister
+        /// </summary>
+        public void SwitchToRegister()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uIRegisterHyperlink = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UIRegisterHyperlink;
+            #endregion
+
+            // Click 'Register' link
+            Mouse.Click(uIRegisterHyperlink, new Point(15, 5));
+        }
+        
+        /// <summary>
+        /// TypeUserName - Use 'TypeUserNameParams' to pass parameters into this method.
+        /// </summary>
+        public void TypeUserName()
+        {
+            #region Variable Declarations
+            HtmlEdit uIUsernameEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIUsernameEdit;
+            #endregion
+
+            // Type 'username' in 'User name' text box
+            uIUsernameEdit.Text = this.TypeUserNameParams.UIUsernameEditText;
+        }
+        
+        /// <summary>
+        /// TypePasswords - Use 'TypePasswordsParams' to pass parameters into this method.
+        /// </summary>
+        public void TypePasswords()
+        {
+            #region Variable Declarations
+            HtmlEdit uIPasswordEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIPasswordEdit;
+            HtmlEdit uIConfirmpasswordEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIConfirmpasswordEdit;
+            #endregion
+
+            // Type '********' in 'Password' text box
+            uIPasswordEdit.Password = this.TypePasswordsParams.UIPasswordEditPassword;
+
+            // Type '********' in 'Confirm password' text box
+            uIConfirmpasswordEdit.Password = this.TypePasswordsParams.UIConfirmpasswordEditPassword;
+        }
+        
+        /// <summary>
+        /// TypeAvBio - Use 'TypeAvBioParams' to pass parameters into this method.
+        /// </summary>
+        public void TypeAvBio()
+        {
+            #region Variable Declarations
+            HtmlEdit uIAvatarUrlEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIAvatarUrlEdit;
+            HtmlEdit uIBioEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIBioEdit;
+            #endregion
+
+            // Type '1' in 'AvatarUrl' text box
+            uIAvatarUrlEdit.Text = this.TypeAvBioParams.UIAvatarUrlEditText;
+
+            // Type '1' in 'Bio' text box
+            uIBioEdit.Text = this.TypeAvBioParams.UIBioEditText;
+        }
+        
+        /// <summary>
+        /// PressRegister
+        /// </summary>
+        public void PressRegister()
+        {
+            #region Variable Declarations
+            HtmlInputButton uIRegisterButton = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIBodyPane.UIRegisterButton;
+            #endregion
+
+            // Click 'Register' button
+            Mouse.Click(uIRegisterButton, new Point(19, 17));
+        }
+        
+        /// <summary>
+        /// CheckPasswordShort - Use 'CheckPasswordShortExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void CheckPasswordShort()
+        {
+            #region Variable Declarations
+            HtmlCustom uIThePasswordmustbeatlCustom = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIBodyPane1.UIThePasswordmustbeatlCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'The Password must be at least 6 characte' custom control equals 'The Password must be at least 6 characters long.'
+            Assert.AreEqual(this.CheckPasswordShortExpectedValues.UIThePasswordmustbeatlCustomInnerText, uIThePasswordmustbeatlCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// TypeGoodPasswords - Use 'TypeGoodPasswordsParams' to pass parameters into this method.
+        /// </summary>
+        public void TypeGoodPasswords()
+        {
+            #region Variable Declarations
+            HtmlEdit uIPasswordEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIPasswordEdit;
+            HtmlEdit uIConfirmpasswordEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIConfirmpasswordEdit;
+            #endregion
+
+            // Type '********' in 'Password' text box
+            uIPasswordEdit.Password = this.TypeGoodPasswordsParams.UIPasswordEditPassword;
+
+            // Type '********' in 'Confirm password' text box
+            uIConfirmpasswordEdit.Password = this.TypeGoodPasswordsParams.UIConfirmpasswordEditPassword;
+        }
+        
+        /// <summary>
+        /// TypeGoodPasswords1 - Use 'TypeGoodPasswords1Params' to pass parameters into this method.
+        /// </summary>
+        public void TypeGoodPasswords1()
+        {
+            #region Variable Declarations
+            HtmlEdit uIPasswordEdit1 = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIPasswordEdit1;
+            HtmlEdit uIConfirmpasswordEdit1 = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIConfirmpasswordEdit1;
+            #endregion
+
+            // Type '********' in 'Password' text box
+            uIPasswordEdit1.Password = this.TypeGoodPasswords1Params.UIPasswordEdit1Password;
+
+            // Type '********' in 'Confirm password' text box
+            uIConfirmpasswordEdit1.Password = this.TypeGoodPasswords1Params.UIConfirmpasswordEdit1Password;
+        }
+        
+        /// <summary>
+        /// CheckUserNameRegistered - Use 'CheckUserNameRegisteredExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void CheckUserNameRegistered()
+        {
+            #region Variable Declarations
+            HtmlCustom uILoginCustom = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UILoginCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'login' custom control equals 'Hello, username  Log off  '
+            Assert.AreEqual(this.CheckUserNameRegisteredExpectedValues.UILoginCustomInnerText, uILoginCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// RegisterAlreadyExist - Use 'RegisterAlreadyExistExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void RegisterAlreadyExist()
+        {
+            #region Variable Declarations
+            HtmlCustom uIUsernamealreadyexistCustom = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIBodyPane2.UIUsernamealreadyexistCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'User name already exists. Please enter a' custom control equals 'User name already exists. Please enter a different user name.'
+            Assert.AreEqual(this.RegisterAlreadyExistExpectedValues.UIUsernamealreadyexistCustomInnerText, uIUsernamealreadyexistCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// UserFieldReqReg - Use 'UserFieldReqRegExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void UserFieldReqReg()
+        {
+            #region Variable Declarations
+            HtmlCustom uITheUsernamefieldisreCustom = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIBodyPane1.UITheUsernamefieldisreCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'The User name field is required.' custom control equals 'The User name field is required.'
+            Assert.AreEqual(this.UserFieldReqRegExpectedValues.UITheUsernamefieldisreCustomInnerText, uITheUsernamefieldisreCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// PasswordReqReg - Use 'PasswordReqRegExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void PasswordReqReg()
+        {
+            #region Variable Declarations
+            HtmlCustom uIThePasswordfieldisreCustom = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIBodyPane1.UIThePasswordfieldisreCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'The Password field is required.' custom control equals 'The Password field is required.'
+            Assert.AreEqual(this.PasswordReqRegExpectedValues.UIThePasswordfieldisreCustomInnerText, uIThePasswordfieldisreCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// AvatarReqReg - Use 'AvatarReqRegExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AvatarReqReg()
+        {
+            #region Variable Declarations
+            HtmlCustom uITheAvatarUrlfieldisrCustom = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIBodyPane1.UITheAvatarUrlfieldisrCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'The AvatarUrl field is required.' custom control equals 'The AvatarUrl field is required.'
+            Assert.AreEqual(this.AvatarReqRegExpectedValues.UITheAvatarUrlfieldisrCustomInnerText, uITheAvatarUrlfieldisrCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// BioReqReg - Use 'BioReqRegExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void BioReqReg()
+        {
+            #region Variable Declarations
+            HtmlCustom uITheBiofieldisrequireCustom = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIBodyPane1.UITheBiofieldisrequireCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'The Bio field is required.' custom control equals 'The Bio field is required.'
+            Assert.AreEqual(this.BioReqRegExpectedValues.UITheBiofieldisrequireCustomInnerText, uITheBiofieldisrequireCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// RegFillFieldsFull - Use 'RegFillFieldsFullParams' to pass parameters into this method.
+        /// </summary>
+        public void RegFillFieldsFull()
+        {
+            #region Variable Declarations
+            HtmlEdit uIUsernameEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIUsernameEdit;
+            HtmlEdit uIPasswordEdit1 = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIPasswordEdit1;
+            HtmlEdit uIConfirmpasswordEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIConfirmpasswordEdit;
+            HtmlCustom uIAvatarUrlCustom = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIBodyPane.UIAvatarUrlCustom;
+            HtmlEdit uIAvatarUrlEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIAvatarUrlEdit;
+            HtmlLabel uIBioLabel = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIBodyPane.UIBioLabel;
+            HtmlEdit uIBioEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIBioEdit;
+            #endregion
+
+            // Type 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' in 'User name' text box
+            uIUsernameEdit.Text = this.RegFillFieldsFullParams.UIUsernameEditText;
+
+            // Type '********' in 'Password' text box
+            uIPasswordEdit1.Password = this.RegFillFieldsFullParams.UIPasswordEdit1Password;
+
+            // Type '********' in 'Confirm password' text box
+            uIConfirmpasswordEdit.Password = this.RegFillFieldsFullParams.UIConfirmpasswordEditPassword;
+
+            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
+            Playback.PlaybackSettings.ContinueOnError = true;
+
+            // Mouse hover 'AvatarUrl' custom control at (1, 1)
+            Mouse.Hover(uIAvatarUrlCustom, new Point(1, 1));
+
+            // Reset flag to ensure that play back stops if there is an error.
+            Playback.PlaybackSettings.ContinueOnError = false;
+
+            // Type 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' in 'AvatarUrl' text box
+            uIAvatarUrlEdit.Text = this.RegFillFieldsFullParams.UIAvatarUrlEditText;
+
+            // Set flag to allow play back to continue if non-essential actions fail. (For example, if a mouse hover action fails.)
+            Playback.PlaybackSettings.ContinueOnError = true;
+
+            // Mouse hover 'Bio' label at (1, 1)
+            Mouse.Hover(uIBioLabel, new Point(1, 1));
+
+            // Reset flag to ensure that play back stops if there is an error.
+            Playback.PlaybackSettings.ContinueOnError = false;
+
+            // Type 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' in 'Bio' text box
+            uIBioEdit.Text = this.RegFillFieldsFullParams.UIBioEditText;
+        }
+        
         #region Properties
         public virtual AssertEmptyGameReviewSearchExpectedValues AssertEmptyGameReviewSearchExpectedValues
         {
@@ -471,6 +1232,414 @@ namespace GameReviewWebsiteTests
             }
         }
         
+        public virtual AssertMMOManExpectedValues AssertMMOManExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertMMOManExpectedValues == null))
+                {
+                    this.mAssertMMOManExpectedValues = new AssertMMOManExpectedValues();
+                }
+                return this.mAssertMMOManExpectedValues;
+            }
+        }
+        
+        public virtual AssertPicklesNotExpectedValues AssertPicklesNotExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertPicklesNotExpectedValues == null))
+                {
+                    this.mAssertPicklesNotExpectedValues = new AssertPicklesNotExpectedValues();
+                }
+                return this.mAssertPicklesNotExpectedValues;
+            }
+        }
+        
+        public virtual AssertDestinyExpectedValues AssertDestinyExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertDestinyExpectedValues == null))
+                {
+                    this.mAssertDestinyExpectedValues = new AssertDestinyExpectedValues();
+                }
+                return this.mAssertDestinyExpectedValues;
+            }
+        }
+        
+        public virtual AssertGameNothingExpectedValues AssertGameNothingExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertGameNothingExpectedValues == null))
+                {
+                    this.mAssertGameNothingExpectedValues = new AssertGameNothingExpectedValues();
+                }
+                return this.mAssertGameNothingExpectedValues;
+            }
+        }
+        
+        public virtual AssertGamesNothing1ExpectedValues AssertGamesNothing1ExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertGamesNothing1ExpectedValues == null))
+                {
+                    this.mAssertGamesNothing1ExpectedValues = new AssertGamesNothing1ExpectedValues();
+                }
+                return this.mAssertGamesNothing1ExpectedValues;
+            }
+        }
+        
+        public virtual AssertNotThereGamesExpectedValues AssertNotThereGamesExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertNotThereGamesExpectedValues == null))
+                {
+                    this.mAssertNotThereGamesExpectedValues = new AssertNotThereGamesExpectedValues();
+                }
+                return this.mAssertNotThereGamesExpectedValues;
+            }
+        }
+        
+        public virtual AssertLoLSearchTestExpectedValues AssertLoLSearchTestExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertLoLSearchTestExpectedValues == null))
+                {
+                    this.mAssertLoLSearchTestExpectedValues = new AssertLoLSearchTestExpectedValues();
+                }
+                return this.mAssertLoLSearchTestExpectedValues;
+            }
+        }
+        
+        public virtual AssertSoxExpectedValues AssertSoxExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertSoxExpectedValues == null))
+                {
+                    this.mAssertSoxExpectedValues = new AssertSoxExpectedValues();
+                }
+                return this.mAssertSoxExpectedValues;
+            }
+        }
+        
+        public virtual AssertAuthorsNothingExpectedValues AssertAuthorsNothingExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertAuthorsNothingExpectedValues == null))
+                {
+                    this.mAssertAuthorsNothingExpectedValues = new AssertAuthorsNothingExpectedValues();
+                }
+                return this.mAssertAuthorsNothingExpectedValues;
+            }
+        }
+        
+        public virtual AssertAuthorsNotThereExpectedValues AssertAuthorsNotThereExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertAuthorsNotThereExpectedValues == null))
+                {
+                    this.mAssertAuthorsNotThereExpectedValues = new AssertAuthorsNotThereExpectedValues();
+                }
+                return this.mAssertAuthorsNotThereExpectedValues;
+            }
+        }
+        
+        public virtual TypeFrankParams TypeFrankParams
+        {
+            get
+            {
+                if ((this.mTypeFrankParams == null))
+                {
+                    this.mTypeFrankParams = new TypeFrankParams();
+                }
+                return this.mTypeFrankParams;
+            }
+        }
+        
+        public virtual TypePasswordParams TypePasswordParams
+        {
+            get
+            {
+                if ((this.mTypePasswordParams == null))
+                {
+                    this.mTypePasswordParams = new TypePasswordParams();
+                }
+                return this.mTypePasswordParams;
+            }
+        }
+        
+        public virtual TypeWrongPasswordParams TypeWrongPasswordParams
+        {
+            get
+            {
+                if ((this.mTypeWrongPasswordParams == null))
+                {
+                    this.mTypeWrongPasswordParams = new TypeWrongPasswordParams();
+                }
+                return this.mTypeWrongPasswordParams;
+            }
+        }
+        
+        public virtual WrongPasswordExpectedValues WrongPasswordExpectedValues
+        {
+            get
+            {
+                if ((this.mWrongPasswordExpectedValues == null))
+                {
+                    this.mWrongPasswordExpectedValues = new WrongPasswordExpectedValues();
+                }
+                return this.mWrongPasswordExpectedValues;
+            }
+        }
+        
+        public virtual TypeCorrectPasswordParams TypeCorrectPasswordParams
+        {
+            get
+            {
+                if ((this.mTypeCorrectPasswordParams == null))
+                {
+                    this.mTypeCorrectPasswordParams = new TypeCorrectPasswordParams();
+                }
+                return this.mTypeCorrectPasswordParams;
+            }
+        }
+        
+        public virtual EnsureFrankLogInExpectedValues EnsureFrankLogInExpectedValues
+        {
+            get
+            {
+                if ((this.mEnsureFrankLogInExpectedValues == null))
+                {
+                    this.mEnsureFrankLogInExpectedValues = new EnsureFrankLogInExpectedValues();
+                }
+                return this.mEnsureFrankLogInExpectedValues;
+            }
+        }
+        
+        public virtual CheckUserNameFieldEmptyExpectedValues CheckUserNameFieldEmptyExpectedValues
+        {
+            get
+            {
+                if ((this.mCheckUserNameFieldEmptyExpectedValues == null))
+                {
+                    this.mCheckUserNameFieldEmptyExpectedValues = new CheckUserNameFieldEmptyExpectedValues();
+                }
+                return this.mCheckUserNameFieldEmptyExpectedValues;
+            }
+        }
+        
+        public virtual CheckPasswordFieldEmptyExpectedValues CheckPasswordFieldEmptyExpectedValues
+        {
+            get
+            {
+                if ((this.mCheckPasswordFieldEmptyExpectedValues == null))
+                {
+                    this.mCheckPasswordFieldEmptyExpectedValues = new CheckPasswordFieldEmptyExpectedValues();
+                }
+                return this.mCheckPasswordFieldEmptyExpectedValues;
+            }
+        }
+        
+        public virtual UserZsParams UserZsParams
+        {
+            get
+            {
+                if ((this.mUserZsParams == null))
+                {
+                    this.mUserZsParams = new UserZsParams();
+                }
+                return this.mUserZsParams;
+            }
+        }
+        
+        public virtual PassLongParams PassLongParams
+        {
+            get
+            {
+                if ((this.mPassLongParams == null))
+                {
+                    this.mPassLongParams = new PassLongParams();
+                }
+                return this.mPassLongParams;
+            }
+        }
+        
+        public virtual UserNameTooLongExpectedValues UserNameTooLongExpectedValues
+        {
+            get
+            {
+                if ((this.mUserNameTooLongExpectedValues == null))
+                {
+                    this.mUserNameTooLongExpectedValues = new UserNameTooLongExpectedValues();
+                }
+                return this.mUserNameTooLongExpectedValues;
+            }
+        }
+        
+        public virtual TypeUserNameParams TypeUserNameParams
+        {
+            get
+            {
+                if ((this.mTypeUserNameParams == null))
+                {
+                    this.mTypeUserNameParams = new TypeUserNameParams();
+                }
+                return this.mTypeUserNameParams;
+            }
+        }
+        
+        public virtual TypePasswordsParams TypePasswordsParams
+        {
+            get
+            {
+                if ((this.mTypePasswordsParams == null))
+                {
+                    this.mTypePasswordsParams = new TypePasswordsParams();
+                }
+                return this.mTypePasswordsParams;
+            }
+        }
+        
+        public virtual TypeAvBioParams TypeAvBioParams
+        {
+            get
+            {
+                if ((this.mTypeAvBioParams == null))
+                {
+                    this.mTypeAvBioParams = new TypeAvBioParams();
+                }
+                return this.mTypeAvBioParams;
+            }
+        }
+        
+        public virtual CheckPasswordShortExpectedValues CheckPasswordShortExpectedValues
+        {
+            get
+            {
+                if ((this.mCheckPasswordShortExpectedValues == null))
+                {
+                    this.mCheckPasswordShortExpectedValues = new CheckPasswordShortExpectedValues();
+                }
+                return this.mCheckPasswordShortExpectedValues;
+            }
+        }
+        
+        public virtual TypeGoodPasswordsParams TypeGoodPasswordsParams
+        {
+            get
+            {
+                if ((this.mTypeGoodPasswordsParams == null))
+                {
+                    this.mTypeGoodPasswordsParams = new TypeGoodPasswordsParams();
+                }
+                return this.mTypeGoodPasswordsParams;
+            }
+        }
+        
+        public virtual TypeGoodPasswords1Params TypeGoodPasswords1Params
+        {
+            get
+            {
+                if ((this.mTypeGoodPasswords1Params == null))
+                {
+                    this.mTypeGoodPasswords1Params = new TypeGoodPasswords1Params();
+                }
+                return this.mTypeGoodPasswords1Params;
+            }
+        }
+        
+        public virtual CheckUserNameRegisteredExpectedValues CheckUserNameRegisteredExpectedValues
+        {
+            get
+            {
+                if ((this.mCheckUserNameRegisteredExpectedValues == null))
+                {
+                    this.mCheckUserNameRegisteredExpectedValues = new CheckUserNameRegisteredExpectedValues();
+                }
+                return this.mCheckUserNameRegisteredExpectedValues;
+            }
+        }
+        
+        public virtual RegisterAlreadyExistExpectedValues RegisterAlreadyExistExpectedValues
+        {
+            get
+            {
+                if ((this.mRegisterAlreadyExistExpectedValues == null))
+                {
+                    this.mRegisterAlreadyExistExpectedValues = new RegisterAlreadyExistExpectedValues();
+                }
+                return this.mRegisterAlreadyExistExpectedValues;
+            }
+        }
+        
+        public virtual UserFieldReqRegExpectedValues UserFieldReqRegExpectedValues
+        {
+            get
+            {
+                if ((this.mUserFieldReqRegExpectedValues == null))
+                {
+                    this.mUserFieldReqRegExpectedValues = new UserFieldReqRegExpectedValues();
+                }
+                return this.mUserFieldReqRegExpectedValues;
+            }
+        }
+        
+        public virtual PasswordReqRegExpectedValues PasswordReqRegExpectedValues
+        {
+            get
+            {
+                if ((this.mPasswordReqRegExpectedValues == null))
+                {
+                    this.mPasswordReqRegExpectedValues = new PasswordReqRegExpectedValues();
+                }
+                return this.mPasswordReqRegExpectedValues;
+            }
+        }
+        
+        public virtual AvatarReqRegExpectedValues AvatarReqRegExpectedValues
+        {
+            get
+            {
+                if ((this.mAvatarReqRegExpectedValues == null))
+                {
+                    this.mAvatarReqRegExpectedValues = new AvatarReqRegExpectedValues();
+                }
+                return this.mAvatarReqRegExpectedValues;
+            }
+        }
+        
+        public virtual BioReqRegExpectedValues BioReqRegExpectedValues
+        {
+            get
+            {
+                if ((this.mBioReqRegExpectedValues == null))
+                {
+                    this.mBioReqRegExpectedValues = new BioReqRegExpectedValues();
+                }
+                return this.mBioReqRegExpectedValues;
+            }
+        }
+        
+        public virtual RegFillFieldsFullParams RegFillFieldsFullParams
+        {
+            get
+            {
+                if ((this.mRegFillFieldsFullParams == null))
+                {
+                    this.mRegFillFieldsFullParams = new RegFillFieldsFullParams();
+                }
+                return this.mRegFillFieldsFullParams;
+            }
+        }
+        
         public UIGameReviewsGameRevieWindow UIGameReviewsGameRevieWindow
         {
             get
@@ -506,6 +1675,54 @@ namespace GameReviewWebsiteTests
                 return this.mUIGamersGameReviewSiteWindow;
             }
         }
+        
+        public UIGamesGameReviewSiteIWindow UIGamesGameReviewSiteIWindow
+        {
+            get
+            {
+                if ((this.mUIGamesGameReviewSiteIWindow == null))
+                {
+                    this.mUIGamesGameReviewSiteIWindow = new UIGamesGameReviewSiteIWindow();
+                }
+                return this.mUIGamesGameReviewSiteIWindow;
+            }
+        }
+        
+        public UIAuthorsGameReviewSitWindow UIAuthorsGameReviewSitWindow
+        {
+            get
+            {
+                if ((this.mUIAuthorsGameReviewSitWindow == null))
+                {
+                    this.mUIAuthorsGameReviewSitWindow = new UIAuthorsGameReviewSitWindow();
+                }
+                return this.mUIAuthorsGameReviewSitWindow;
+            }
+        }
+        
+        public UILoginGameReviewSiteIWindow UILoginGameReviewSiteIWindow
+        {
+            get
+            {
+                if ((this.mUILoginGameReviewSiteIWindow == null))
+                {
+                    this.mUILoginGameReviewSiteIWindow = new UILoginGameReviewSiteIWindow();
+                }
+                return this.mUILoginGameReviewSiteIWindow;
+            }
+        }
+        
+        public UIRegisterGameReviewSiWindow UIRegisterGameReviewSiWindow
+        {
+            get
+            {
+                if ((this.mUIRegisterGameReviewSiWindow == null))
+                {
+                    this.mUIRegisterGameReviewSiWindow = new UIRegisterGameReviewSiWindow();
+                }
+                return this.mUIRegisterGameReviewSiWindow;
+            }
+        }
         #endregion
         
         #region Fields
@@ -533,11 +1750,87 @@ namespace GameReviewWebsiteTests
         
         private clickFrankExpectedValues mclickFrankExpectedValues;
         
+        private AssertMMOManExpectedValues mAssertMMOManExpectedValues;
+        
+        private AssertPicklesNotExpectedValues mAssertPicklesNotExpectedValues;
+        
+        private AssertDestinyExpectedValues mAssertDestinyExpectedValues;
+        
+        private AssertGameNothingExpectedValues mAssertGameNothingExpectedValues;
+        
+        private AssertGamesNothing1ExpectedValues mAssertGamesNothing1ExpectedValues;
+        
+        private AssertNotThereGamesExpectedValues mAssertNotThereGamesExpectedValues;
+        
+        private AssertLoLSearchTestExpectedValues mAssertLoLSearchTestExpectedValues;
+        
+        private AssertSoxExpectedValues mAssertSoxExpectedValues;
+        
+        private AssertAuthorsNothingExpectedValues mAssertAuthorsNothingExpectedValues;
+        
+        private AssertAuthorsNotThereExpectedValues mAssertAuthorsNotThereExpectedValues;
+        
+        private TypeFrankParams mTypeFrankParams;
+        
+        private TypePasswordParams mTypePasswordParams;
+        
+        private TypeWrongPasswordParams mTypeWrongPasswordParams;
+        
+        private WrongPasswordExpectedValues mWrongPasswordExpectedValues;
+        
+        private TypeCorrectPasswordParams mTypeCorrectPasswordParams;
+        
+        private EnsureFrankLogInExpectedValues mEnsureFrankLogInExpectedValues;
+        
+        private CheckUserNameFieldEmptyExpectedValues mCheckUserNameFieldEmptyExpectedValues;
+        
+        private CheckPasswordFieldEmptyExpectedValues mCheckPasswordFieldEmptyExpectedValues;
+        
+        private UserZsParams mUserZsParams;
+        
+        private PassLongParams mPassLongParams;
+        
+        private UserNameTooLongExpectedValues mUserNameTooLongExpectedValues;
+        
+        private TypeUserNameParams mTypeUserNameParams;
+        
+        private TypePasswordsParams mTypePasswordsParams;
+        
+        private TypeAvBioParams mTypeAvBioParams;
+        
+        private CheckPasswordShortExpectedValues mCheckPasswordShortExpectedValues;
+        
+        private TypeGoodPasswordsParams mTypeGoodPasswordsParams;
+        
+        private TypeGoodPasswords1Params mTypeGoodPasswords1Params;
+        
+        private CheckUserNameRegisteredExpectedValues mCheckUserNameRegisteredExpectedValues;
+        
+        private RegisterAlreadyExistExpectedValues mRegisterAlreadyExistExpectedValues;
+        
+        private UserFieldReqRegExpectedValues mUserFieldReqRegExpectedValues;
+        
+        private PasswordReqRegExpectedValues mPasswordReqRegExpectedValues;
+        
+        private AvatarReqRegExpectedValues mAvatarReqRegExpectedValues;
+        
+        private BioReqRegExpectedValues mBioReqRegExpectedValues;
+        
+        private RegFillFieldsFullParams mRegFillFieldsFullParams;
+        
         private UIGameReviewsGameRevieWindow mUIGameReviewsGameRevieWindow;
         
         private UIGameReviewsGameRevieWindow1 mUIGameReviewsGameRevieWindow1;
         
         private UIGamersGameReviewSiteWindow mUIGamersGameReviewSiteWindow;
+        
+        private UIGamesGameReviewSiteIWindow mUIGamesGameReviewSiteIWindow;
+        
+        private UIAuthorsGameReviewSitWindow mUIAuthorsGameReviewSitWindow;
+        
+        private UILoginGameReviewSiteIWindow mUILoginGameReviewSiteIWindow;
+        
+        private UIRegisterGameReviewSiWindow mUIRegisterGameReviewSiWindow;
         #endregion
     }
     
@@ -748,6 +2041,872 @@ namespace GameReviewWebsiteTests
         /// Verify that the 'InnerText' property of 'Frank' link equals 'Frank'
         /// </summary>
         public string UIFrankHyperlinkInnerText = "Frank";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertMMOMan'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertMMOManExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'MMO Man' link equals 'MMO Man'
+        /// </summary>
+        public string UIMMOManHyperlinkInnerText = "MMO Man";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertPicklesNot'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertPicklesNotExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Gamers
+        ///
+        ///  
+        ///
+        ///You are searching for pickles34
+        /// 
+        ///
+        ///Name 
+        ///
+        ///AvatarUrl '
+        /// </summary>
+        public string UIItemCustomInnerText = "Gamers\r\n\r\n  \r\n\r\nYou are searching for pickles34\r\n \r\n\r\nName \r\n\r\nAvatarUrl ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertDestiny'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertDestinyExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'Destiny' link equals 'Destiny'
+        /// </summary>
+        public string UIDestinyHyperlinkInnerText = "Destiny";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertGameNothing'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertGameNothingExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'RTS with spice' cell equals 'RTS with spice '
+        /// </summary>
+        public string UIRTSwithspiceCellInnerText = "RTS with spice ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertGamesNothing1'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertGamesNothing1ExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Games
+        ///
+        ///  
+        ///
+        ///
+        ///Title 
+        ///
+        ///Description 
+        ///
+        ///
+        ///Destiny
+        ///MMOFPS with epic story and action. 
+        ///
+        ///World of Warcraft
+        ///Cause it will never die! 
+        ///
+        ///Star Craft
+        ///RTS with spice 
+        ///
+        ///Ranomly generated android game
+        ///Review material for review bot! 
+        ///
+        ///Planetary Annihilation
+        ///Epic interplanetary destruction 
+        ///
+        ///Sergon Simulator
+        ///Bloody simulator that communicates the difficulty of surguery 
+        ///
+        ///Diablo 3 
+        ///Roguelike with taste 
+        ///
+        ///Train Simulator
+        ///Professionals love us! 
+        ///
+        ///Dues Ex Machina
+        ///Your favoriate plot twist in a game! 
+        ///
+        ///League of Legends
+        ///Moba for the populus 
+        ///
+        ///Sam and Max
+        ///Adventure! 
+        ///
+        ///Gauntlet
+        ///4 Player Roguelike! 
+        ///
+        ///Mine Craft
+        ///We just made 2 billion dollars! 
+        ///
+        ///Assassins creed 4
+        ///Glorified pirate sim simply put! 
+        ///
+        ///IT the game
+        ///Your best choise for clown horror 
+        ///
+        ///Ned for Speed
+        ///Ned really likes to race! 
+        ///
+        ///Mario World
+        ///Mario based RPG 
+        ///
+        ///Board game package plus!
+        ///Your favorite board games in one huge package! 
+        ///
+        ///Clash of Clans
+        ///How wil you review this? I am a cell phone game! 
+        ///
+        ///Zork
+        ///Text Adventure '
+        /// </summary>
+        public string UIItemCustomInnerText = @"Games
+
+  
+
+
+Title 
+
+Description 
+
+
+Destiny
+MMOFPS with epic story and action. 
+
+World of Warcraft
+Cause it will never die! 
+
+Star Craft
+RTS with spice 
+
+Ranomly generated android game
+Review material for review bot! 
+
+Planetary Annihilation
+Epic interplanetary destruction 
+
+Sergon Simulator
+Bloody simulator that communicates the difficulty of surguery 
+
+Diablo 3 
+Roguelike with taste 
+
+Train Simulator
+Professionals love us! 
+
+Dues Ex Machina
+Your favoriate plot twist in a game! 
+
+League of Legends
+Moba for the populus 
+
+Sam and Max
+Adventure! 
+
+Gauntlet
+4 Player Roguelike! 
+
+Mine Craft
+We just made 2 billion dollars! 
+
+Assassins creed 4
+Glorified pirate sim simply put! 
+
+IT the game
+Your best choise for clown horror 
+
+Ned for Speed
+Ned really likes to race! 
+
+Mario World
+Mario based RPG 
+
+Board game package plus!
+Your favorite board games in one huge package! 
+
+Clash of Clans
+How wil you review this? I am a cell phone game! 
+
+Zork
+Text Adventure ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertNotThereGames'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertNotThereGamesExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Games
+        ///
+        ///  
+        ///
+        ///You are searching for pickles34
+        /// 
+        ///
+        ///Title 
+        ///
+        ///Description '
+        /// </summary>
+        public string UIItemCustomInnerText = "Games\r\n\r\n  \r\n\r\nYou are searching for pickles34\r\n \r\n\r\nTitle \r\n\r\nDescription ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertLoLSearchTest'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertLoLSearchTestExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'LOL' link equals 'LOL'
+        /// </summary>
+        public string UILOLHyperlinkInnerText = "LOL";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertSox'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertSoxExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Authors
+        ///
+        ///  
+        ///
+        ///You are searching for Sox
+        /// 
+        ///
+        ///Name 
+        ///
+        ///Genre 
+        ///
+        ///
+        ///Sox
+        ///Indie '
+        /// </summary>
+        public string UIItemCustomInnerText = "Authors\r\n\r\n  \r\n\r\nYou are searching for Sox\r\n \r\n\r\nName \r\n\r\nGenre \r\n\r\n\r\nSox\r\nIndie " +
+            "";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertAuthorsNothing'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertAuthorsNothingExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Authors
+        ///
+        ///  
+        ///
+        ///
+        ///Name 
+        ///
+        ///Genre 
+        ///
+        ///
+        ///Chris
+        ///FPS 
+        ///
+        ///Chad
+        ///MMO 
+        ///
+        ///ReviewBot
+        ///All 
+        ///
+        ///Dictator Commander
+        ///RTS 
+        ///
+        ///Annoying 14 yearold
+        ///First Person Shooters 
+        ///
+        ///Simulator Rick
+        ///Simulators 
+        ///
+        ///Billy the bomber
+        ///Flight Sim 
+        ///
+        ///Sam of the shrine
+        ///RPG 
+        ///
+        ///Sox
+        ///Indie 
+        ///
+        ///Speedy Bob
+        ///Racing 
+        ///
+        ///Slow Surgeon
+        ///Surgeon Sims 
+        ///
+        ///Rick Roll Rogue
+        ///Rogue Like 
+        ///
+        ///Cappin Pirate Yar
+        ///Pirate sim 
+        ///
+        ///Simply Pvp
+        ///Pvp anything 
+        ///
+        ///Eponential Salvation
+        ///I must heeeeeeel youuu! 
+        ///
+        ///Dreaming of Clowns
+        ///Clown Horror 
+        ///
+        ///Moba Adoba
+        ///MOBAs 
+        ///
+        ///Fantasy Texter
+        ///Text Based Roguelikes 
+        ///
+        ///Monopoly General 
+        ///Not bored of board games 
+        ///
+        ///WhySoSerious
+        ///Bat Games '
+        /// </summary>
+        public string UIItemCustomInnerText = @"Authors
+
+  
+
+
+Name 
+
+Genre 
+
+
+Chris
+FPS 
+
+Chad
+MMO 
+
+ReviewBot
+All 
+
+Dictator Commander
+RTS 
+
+Annoying 14 yearold
+First Person Shooters 
+
+Simulator Rick
+Simulators 
+
+Billy the bomber
+Flight Sim 
+
+Sam of the shrine
+RPG 
+
+Sox
+Indie 
+
+Speedy Bob
+Racing 
+
+Slow Surgeon
+Surgeon Sims 
+
+Rick Roll Rogue
+Rogue Like 
+
+Cappin Pirate Yar
+Pirate sim 
+
+Simply Pvp
+Pvp anything 
+
+Eponential Salvation
+I must heeeeeeel youuu! 
+
+Dreaming of Clowns
+Clown Horror 
+
+Moba Adoba
+MOBAs 
+
+Fantasy Texter
+Text Based Roguelikes 
+
+Monopoly General 
+Not bored of board games 
+
+WhySoSerious
+Bat Games ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertAuthorsNotThere'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertAuthorsNotThereExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Authors
+        ///
+        ///  
+        ///
+        ///You are searching for pickles34
+        /// 
+        ///
+        ///Name 
+        ///
+        ///Genre '
+        /// </summary>
+        public string UIItemCustomInnerText = "Authors\r\n\r\n  \r\n\r\nYou are searching for pickles34\r\n \r\n\r\nName \r\n\r\nGenre ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TypeFrank'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class TypeFrankParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'frank' in 'User name' text box
+        /// </summary>
+        public string UIUsernameEditText = "frank";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TypePassword'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class TypePasswordParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditPassword = "mOL/lXDUSd/hy7K5BZnJEA==";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TypeWrongPassword'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class TypeWrongPasswordParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditPassword = "f2EvLsCPalkcXckOPxY5aQ==";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'WrongPassword'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class WrongPasswordExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'The user name or password provided is in' custom control equals 'The user name or password provided is incorrect.'
+        /// </summary>
+        public string UITheusernameorpassworCustomInnerText = "The user name or password provided is incorrect.";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TypeCorrectPassword'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class TypeCorrectPasswordParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEdit1Password = "mOL/lXDUSd/hy7K5BZnJEA==";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'EnsureFrankLogIn'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class EnsureFrankLogInExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'login' custom control equals 'Hello, frank  Log off  '
+        /// </summary>
+        public string UILoginCustomInnerText = "Hello, frank  Log off  ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'CheckUserNameFieldEmpty'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class CheckUserNameFieldEmptyExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'The User name field is required.' pane equals 'The User name field is required.'
+        /// </summary>
+        public string UITheUsernamefieldisrePaneInnerText = "The User name field is required.";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'CheckPasswordFieldEmpty'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class CheckPasswordFieldEmptyExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'The Password field is required.' pane equals 'The Password field is required.'
+        /// </summary>
+        public string UIThePasswordfieldisrePaneInnerText = "The Password field is required.";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'UserZs'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UserZsParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz' in 'User name' text box
+        /// </summary>
+        public string UIUsernameEditText = "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'PassLong'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class PassLongParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEdit1Password = "4zTBLvfxCh8SxpssBf8qcdmzvKJk/hsJp2OQs6Rdhr0iKJ9tjK8/4PTunkKNjd7LXLdIG6xTuIY=";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'UserNameTooLong'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UserNameTooLongExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'The user name or password provided is in' custom control equals 'The user name or password provided is incorrect.'
+        /// </summary>
+        public string UITheusernameorpassworCustomInnerText = "The user name or password provided is incorrect.";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TypeUserName'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class TypeUserNameParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'username' in 'User name' text box
+        /// </summary>
+        public string UIUsernameEditText = "username";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TypePasswords'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class TypePasswordsParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditPassword = "2Oxm3dAuzpTO5Npam0fkew==";
+        
+        /// <summary>
+        /// Type '********' in 'Confirm password' text box
+        /// </summary>
+        public string UIConfirmpasswordEditPassword = "2Oxm3dAuzpTO5Npam0fkew==";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TypeAvBio'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class TypeAvBioParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type '1' in 'AvatarUrl' text box
+        /// </summary>
+        public string UIAvatarUrlEditText = "1";
+        
+        /// <summary>
+        /// Type '1' in 'Bio' text box
+        /// </summary>
+        public string UIBioEditText = "1";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'CheckPasswordShort'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class CheckPasswordShortExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'The Password must be at least 6 characte' custom control equals 'The Password must be at least 6 characters long.'
+        /// </summary>
+        public string UIThePasswordmustbeatlCustomInnerText = "The Password must be at least 6 characters long.";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TypeGoodPasswords'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class TypeGoodPasswordsParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEditPassword = "Uwt9ILuuofkG2MP3H3yOWYQcjv1UlmhQ";
+        
+        /// <summary>
+        /// Type '********' in 'Confirm password' text box
+        /// </summary>
+        public string UIConfirmpasswordEditPassword = "Uwt9ILuuofkG2MP3H3yOWYQcjv1UlmhQ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'TypeGoodPasswords1'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class TypeGoodPasswords1Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEdit1Password = "MTnqGLWWNjOWwjF8wGxtdQhZ43ocezNy";
+        
+        /// <summary>
+        /// Type '********' in 'Confirm password' text box
+        /// </summary>
+        public string UIConfirmpasswordEdit1Password = "MTnqGLWWNjOWwjF8wGxtdQhZ43ocezNy";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'CheckUserNameRegistered'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class CheckUserNameRegisteredExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'login' custom control equals 'Hello, username  Log off  '
+        /// </summary>
+        public string UILoginCustomInnerText = "Hello, username  Log off  ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'RegisterAlreadyExist'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class RegisterAlreadyExistExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'User name already exists. Please enter a' custom control equals 'User name already exists. Please enter a different user name.'
+        /// </summary>
+        public string UIUsernamealreadyexistCustomInnerText = "User name already exists. Please enter a different user name.";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'UserFieldReqReg'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UserFieldReqRegExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'The User name field is required.' custom control equals 'The User name field is required.'
+        /// </summary>
+        public string UITheUsernamefieldisreCustomInnerText = "The User name field is required.";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'PasswordReqReg'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class PasswordReqRegExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'The Password field is required.' custom control equals 'The Password field is required.'
+        /// </summary>
+        public string UIThePasswordfieldisreCustomInnerText = "The Password field is required.";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AvatarReqReg'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AvatarReqRegExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'The AvatarUrl field is required.' custom control equals 'The AvatarUrl field is required.'
+        /// </summary>
+        public string UITheAvatarUrlfieldisrCustomInnerText = "The AvatarUrl field is required.";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'BioReqReg'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class BioReqRegExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'The Bio field is required.' custom control equals 'The Bio field is required.'
+        /// </summary>
+        public string UITheBiofieldisrequireCustomInnerText = "The Bio field is required.";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'RegFillFieldsFull'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class RegFillFieldsFullParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' in 'User name' text box
+        /// </summary>
+        public string UIUsernameEditText = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        
+        /// <summary>
+        /// Type '********' in 'Password' text box
+        /// </summary>
+        public string UIPasswordEdit1Password = "MyglOTZZGJkEGyyzd2kRuT30FfL2rRJ1SUvhjtyJD1QrO6snmHCDP02tommDHNkdFLEg6F4rGhM4viI7X" +
+            "5/9ZMnIIYKMCkk1TORL51kF7wnoiQck6ieNjA==";
+        
+        /// <summary>
+        /// Type '********' in 'Confirm password' text box
+        /// </summary>
+        public string UIConfirmpasswordEditPassword = "MyglOTZZGJkEGyyzd2kRuT30FfL2rRJ1SUvhjtyJD1QrO6snmHCDP02tommDHNkdFLEg6F4rGhM4viI7X" +
+            "5/9ZMnIIYKMCkk1TORL51kF7wnoiQck6ieNjA==";
+        
+        /// <summary>
+        /// Type 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' in 'AvatarUrl' text box
+        /// </summary>
+        public string UIAvatarUrlEditText = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" +
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        
+        /// <summary>
+        /// Type 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' in 'Bio' text box
+        /// </summary>
+        public string UIBioEditText = @"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
         #endregion
     }
     
@@ -1010,6 +3169,77 @@ namespace GameReviewWebsiteTests
                 return this.mUIMenuCustom;
             }
         }
+        
+        public HtmlHyperlink UILoginHyperlink
+        {
+            get
+            {
+                if ((this.mUILoginHyperlink == null))
+                {
+                    this.mUILoginHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUILoginHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = "loginLink";
+                    this.mUILoginHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUILoginHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUILoginHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Log in";
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Account/Login";
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://localhost:3085/Account/Login";
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = null;
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "id=\"loginLink\" href=\"/Account/Login\"";
+                    this.mUILoginHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "3";
+                    this.mUILoginHyperlink.WindowTitles.Add("Game Reviews - Game Review Site!");
+                    #endregion
+                }
+                return this.mUILoginHyperlink;
+            }
+        }
+        
+        public HtmlCustom UILoginCustom
+        {
+            get
+            {
+                if ((this.mUILoginCustom == null))
+                {
+                    this.mUILoginCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUILoginCustom.SearchProperties["TagName"] = "SECTION";
+                    this.mUILoginCustom.SearchProperties["Id"] = "login";
+                    this.mUILoginCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUILoginCustom.FilterProperties["Class"] = null;
+                    this.mUILoginCustom.FilterProperties["ControlDefinition"] = "id=\"login\"";
+                    this.mUILoginCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUILoginCustom.WindowTitles.Add("Game Reviews - Game Review Site!");
+                    #endregion
+                }
+                return this.mUILoginCustom;
+            }
+        }
+        
+        public HtmlHyperlink UIRegisterHyperlink
+        {
+            get
+            {
+                if ((this.mUIRegisterHyperlink == null))
+                {
+                    this.mUIRegisterHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUIRegisterHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = "registerLink";
+                    this.mUIRegisterHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUIRegisterHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUIRegisterHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Register";
+                    this.mUIRegisterHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Account/Register";
+                    this.mUIRegisterHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUIRegisterHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://localhost:3085/Account/Register";
+                    this.mUIRegisterHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = null;
+                    this.mUIRegisterHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "id=\"registerLink\" href=\"/Account/Registe";
+                    this.mUIRegisterHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "2";
+                    this.mUIRegisterHyperlink.WindowTitles.Add("Game Reviews - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIRegisterHyperlink;
+            }
+        }
         #endregion
         
         #region Fields
@@ -1020,6 +3250,12 @@ namespace GameReviewWebsiteTests
         private UIBodyPane1 mUIBodyPane1;
         
         private UIMenuCustom mUIMenuCustom;
+        
+        private HtmlHyperlink mUILoginHyperlink;
+        
+        private HtmlCustom mUILoginCustom;
+        
+        private HtmlHyperlink mUIRegisterHyperlink;
         #endregion
     }
     
@@ -1254,10 +3490,64 @@ namespace GameReviewWebsiteTests
                 return this.mUIGamersHyperlink;
             }
         }
+        
+        public HtmlHyperlink UIGamesHyperlink
+        {
+            get
+            {
+                if ((this.mUIGamesHyperlink == null))
+                {
+                    this.mUIGamesHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUIGamesHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = null;
+                    this.mUIGamesHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUIGamesHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUIGamesHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Games";
+                    this.mUIGamesHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Games";
+                    this.mUIGamesHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUIGamesHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://localhost:3085/Games";
+                    this.mUIGamesHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = null;
+                    this.mUIGamesHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "href=\"/Games\"";
+                    this.mUIGamesHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "4";
+                    this.mUIGamesHyperlink.WindowTitles.Add("Game Reviews - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIGamesHyperlink;
+            }
+        }
+        
+        public HtmlHyperlink UIAuthorsHyperlink
+        {
+            get
+            {
+                if ((this.mUIAuthorsHyperlink == null))
+                {
+                    this.mUIAuthorsHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUIAuthorsHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = null;
+                    this.mUIAuthorsHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUIAuthorsHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUIAuthorsHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Authors";
+                    this.mUIAuthorsHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Authors";
+                    this.mUIAuthorsHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUIAuthorsHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://localhost:3085/Authors";
+                    this.mUIAuthorsHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = null;
+                    this.mUIAuthorsHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "href=\"/Authors\"";
+                    this.mUIAuthorsHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "3";
+                    this.mUIAuthorsHyperlink.WindowTitles.Add("Game Reviews - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIAuthorsHyperlink;
+            }
+        }
         #endregion
         
         #region Fields
         private HtmlHyperlink mUIGamersHyperlink;
+        
+        private HtmlHyperlink mUIGamesHyperlink;
+        
+        private HtmlHyperlink mUIAuthorsHyperlink;
         #endregion
     }
     
@@ -1496,6 +3786,18 @@ namespace GameReviewWebsiteTests
                 return this.mUIBodyPane2;
             }
         }
+        
+        public UIBodyPane3 UIBodyPane3
+        {
+            get
+            {
+                if ((this.mUIBodyPane3 == null))
+                {
+                    this.mUIBodyPane3 = new UIBodyPane3(this);
+                }
+                return this.mUIBodyPane3;
+            }
+        }
         #endregion
         
         #region Fields
@@ -1506,6 +3808,8 @@ namespace GameReviewWebsiteTests
         private UIBodyPane11 mUIBodyPane1;
         
         private UIBodyPane21 mUIBodyPane2;
+        
+        private UIBodyPane3 mUIBodyPane3;
         #endregion
     }
     
@@ -1551,10 +3855,37 @@ namespace GameReviewWebsiteTests
                 return this.mUISubmitQueryButton;
             }
         }
+        
+        public HtmlHyperlink UIMMOManHyperlink
+        {
+            get
+            {
+                if ((this.mUIMMOManHyperlink == null))
+                {
+                    this.mUIMMOManHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUIMMOManHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = null;
+                    this.mUIMMOManHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUIMMOManHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUIMMOManHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "MMO Man";
+                    this.mUIMMOManHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Gamers/Details/1";
+                    this.mUIMMOManHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUIMMOManHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://localhost:3085/Gamers/Details/1";
+                    this.mUIMMOManHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = null;
+                    this.mUIMMOManHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "href=\"/Gamers/Details/1\"";
+                    this.mUIMMOManHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "1";
+                    this.mUIMMOManHyperlink.WindowTitles.Add("Gamers - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIMMOManHyperlink;
+            }
+        }
         #endregion
         
         #region Fields
         private HtmlInputButton mUISubmitQueryButton;
+        
+        private HtmlHyperlink mUIMMOManHyperlink;
         #endregion
     }
     
@@ -1657,6 +3988,1443 @@ namespace GameReviewWebsiteTests
         
         #region Fields
         private HtmlHyperlink mUIFrankHyperlink;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane3 : HtmlDiv
+    {
+        
+        public UIBodyPane3(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Gamers\r\n\r\n  \r\n\r\nYou are searching for pi";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Gamers - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlCustom UIItemCustom
+        {
+            get
+            {
+                if ((this.mUIItemCustom == null))
+                {
+                    this.mUIItemCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUIItemCustom.SearchProperties["TagName"] = "SECTION";
+                    this.mUIItemCustom.SearchProperties["Id"] = null;
+                    this.mUIItemCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIItemCustom.FilterProperties["Class"] = "content-wrapper main-content clear-fix";
+                    this.mUIItemCustom.FilterProperties["ControlDefinition"] = "class=\"content-wrapper main-content clea";
+                    this.mUIItemCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUIItemCustom.WindowTitles.Add("Gamers - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIItemCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlCustom mUIItemCustom;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIGamesGameReviewSiteIWindow : BrowserWindow
+    {
+        
+        public UIGamesGameReviewSiteIWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Games - Game Review Site!";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "IEFrame";
+            this.WindowTitles.Add("Games - Game Review Site!");
+            #endregion
+        }
+        
+        public void LaunchUrl(System.Uri url)
+        {
+            this.CopyFrom(BrowserWindow.Launch(url));
+        }
+        
+        #region Properties
+        public UIGamesGameReviewSiteDocument UIGamesGameReviewSiteDocument
+        {
+            get
+            {
+                if ((this.mUIGamesGameReviewSiteDocument == null))
+                {
+                    this.mUIGamesGameReviewSiteDocument = new UIGamesGameReviewSiteDocument(this);
+                }
+                return this.mUIGamesGameReviewSiteDocument;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIGamesGameReviewSiteDocument mUIGamesGameReviewSiteDocument;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIGamesGameReviewSiteDocument : HtmlDocument
+    {
+        
+        public UIGamesGameReviewSiteDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Games - Game Review Site!";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Games";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://localhost:3085/Games";
+            this.WindowTitles.Add("Games - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public UIBodyPane4 UIBodyPane
+        {
+            get
+            {
+                if ((this.mUIBodyPane == null))
+                {
+                    this.mUIBodyPane = new UIBodyPane4(this);
+                }
+                return this.mUIBodyPane;
+            }
+        }
+        
+        public UIBodyPane12 UIBodyPane1
+        {
+            get
+            {
+                if ((this.mUIBodyPane1 == null))
+                {
+                    this.mUIBodyPane1 = new UIBodyPane12(this);
+                }
+                return this.mUIBodyPane1;
+            }
+        }
+        
+        public UIBodyPane22 UIBodyPane2
+        {
+            get
+            {
+                if ((this.mUIBodyPane2 == null))
+                {
+                    this.mUIBodyPane2 = new UIBodyPane22(this);
+                }
+                return this.mUIBodyPane2;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIBodyPane4 mUIBodyPane;
+        
+        private UIBodyPane12 mUIBodyPane1;
+        
+        private UIBodyPane22 mUIBodyPane2;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane4 : HtmlDiv
+    {
+        
+        public UIBodyPane4(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Games\r\n\r\n  \r\n\r\nYou are searching for Des";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Games - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlHyperlink UIDestinyHyperlink
+        {
+            get
+            {
+                if ((this.mUIDestinyHyperlink == null))
+                {
+                    this.mUIDestinyHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUIDestinyHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = null;
+                    this.mUIDestinyHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUIDestinyHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUIDestinyHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Destiny";
+                    this.mUIDestinyHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Games/Details/1";
+                    this.mUIDestinyHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUIDestinyHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://localhost:3085/Games/Details/1";
+                    this.mUIDestinyHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = null;
+                    this.mUIDestinyHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "href=\"/Games/Details/1\"";
+                    this.mUIDestinyHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "1";
+                    this.mUIDestinyHyperlink.WindowTitles.Add("Games - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIDestinyHyperlink;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlHyperlink mUIDestinyHyperlink;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane12 : HtmlDiv
+    {
+        
+        public UIBodyPane12(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Games\r\n\r\n  \r\n\r\n\r\nTitle \r\n\r\nDescription \r";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Games - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public UIItemTable1 UIItemTable
+        {
+            get
+            {
+                if ((this.mUIItemTable == null))
+                {
+                    this.mUIItemTable = new UIItemTable1(this);
+                }
+                return this.mUIItemTable;
+            }
+        }
+        
+        public HtmlCustom UIItemCustom
+        {
+            get
+            {
+                if ((this.mUIItemCustom == null))
+                {
+                    this.mUIItemCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUIItemCustom.SearchProperties["TagName"] = "SECTION";
+                    this.mUIItemCustom.SearchProperties["Id"] = null;
+                    this.mUIItemCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIItemCustom.FilterProperties["Class"] = "content-wrapper main-content clear-fix";
+                    this.mUIItemCustom.FilterProperties["ControlDefinition"] = "class=\"content-wrapper main-content clea";
+                    this.mUIItemCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUIItemCustom.WindowTitles.Add("Games - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIItemCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIItemTable1 mUIItemTable;
+        
+        private HtmlCustom mUIItemCustom;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIItemTable1 : HtmlTable
+    {
+        
+        public UIItemTable1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlTable.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlTable.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlTable.PropertyNames.InnerText] = "Title \r\n\r\nDescription \r\n\r\n\r\nDestiny\r\nMMO";
+            this.FilterProperties[HtmlTable.PropertyNames.ControlDefinition] = null;
+            this.FilterProperties[HtmlTable.PropertyNames.RowCount] = "21";
+            this.FilterProperties[HtmlTable.PropertyNames.ColumnCount] = "2";
+            this.FilterProperties[HtmlTable.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlTable.PropertyNames.TagInstance] = "1";
+            this.WindowTitles.Add("Games - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlCell UIRTSwithspiceCell
+        {
+            get
+            {
+                if ((this.mUIRTSwithspiceCell == null))
+                {
+                    this.mUIRTSwithspiceCell = new HtmlCell(this);
+                    #region Search Criteria
+                    this.mUIRTSwithspiceCell.SearchProperties[HtmlCell.PropertyNames.Id] = null;
+                    this.mUIRTSwithspiceCell.SearchProperties[HtmlCell.PropertyNames.Name] = null;
+                    this.mUIRTSwithspiceCell.SearchProperties[HtmlCell.PropertyNames.MaxDepth] = "3";
+                    this.mUIRTSwithspiceCell.SearchProperties[HtmlCell.PropertyNames.InnerText] = "RTS with spice ";
+                    this.mUIRTSwithspiceCell.FilterProperties[HtmlCell.PropertyNames.ControlDefinition] = null;
+                    this.mUIRTSwithspiceCell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "3";
+                    this.mUIRTSwithspiceCell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "1";
+                    this.mUIRTSwithspiceCell.FilterProperties[HtmlCell.PropertyNames.Class] = null;
+                    this.mUIRTSwithspiceCell.FilterProperties[HtmlCell.PropertyNames.TagInstance] = "6";
+                    this.mUIRTSwithspiceCell.WindowTitles.Add("Games - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIRTSwithspiceCell;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlCell mUIRTSwithspiceCell;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane22 : HtmlDiv
+    {
+        
+        public UIBodyPane22(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Games\r\n\r\n  \r\n\r\nYou are searching for pic";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Games - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlCustom UIItemCustom
+        {
+            get
+            {
+                if ((this.mUIItemCustom == null))
+                {
+                    this.mUIItemCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUIItemCustom.SearchProperties["TagName"] = "SECTION";
+                    this.mUIItemCustom.SearchProperties["Id"] = null;
+                    this.mUIItemCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIItemCustom.FilterProperties["Class"] = "content-wrapper main-content clear-fix";
+                    this.mUIItemCustom.FilterProperties["ControlDefinition"] = "class=\"content-wrapper main-content clea";
+                    this.mUIItemCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUIItemCustom.WindowTitles.Add("Games - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIItemCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlCustom mUIItemCustom;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIAuthorsGameReviewSitWindow : BrowserWindow
+    {
+        
+        public UIAuthorsGameReviewSitWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Authors - Game Review Site!";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "IEFrame";
+            this.WindowTitles.Add("Authors - Game Review Site!");
+            #endregion
+        }
+        
+        public void LaunchUrl(System.Uri url)
+        {
+            this.CopyFrom(BrowserWindow.Launch(url));
+        }
+        
+        #region Properties
+        public UIAuthorsGameReviewSitDocument UIAuthorsGameReviewSitDocument
+        {
+            get
+            {
+                if ((this.mUIAuthorsGameReviewSitDocument == null))
+                {
+                    this.mUIAuthorsGameReviewSitDocument = new UIAuthorsGameReviewSitDocument(this);
+                }
+                return this.mUIAuthorsGameReviewSitDocument;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIAuthorsGameReviewSitDocument mUIAuthorsGameReviewSitDocument;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIAuthorsGameReviewSitDocument : HtmlDocument
+    {
+        
+        public UIAuthorsGameReviewSitDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Authors - Game Review Site!";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Authors";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://localhost:3085/Authors";
+            this.WindowTitles.Add("Authors - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public UIBodyPane5 UIBodyPane
+        {
+            get
+            {
+                if ((this.mUIBodyPane == null))
+                {
+                    this.mUIBodyPane = new UIBodyPane5(this);
+                }
+                return this.mUIBodyPane;
+            }
+        }
+        
+        public UIBodyPane13 UIBodyPane1
+        {
+            get
+            {
+                if ((this.mUIBodyPane1 == null))
+                {
+                    this.mUIBodyPane1 = new UIBodyPane13(this);
+                }
+                return this.mUIBodyPane1;
+            }
+        }
+        
+        public UIBodyPane23 UIBodyPane2
+        {
+            get
+            {
+                if ((this.mUIBodyPane2 == null))
+                {
+                    this.mUIBodyPane2 = new UIBodyPane23(this);
+                }
+                return this.mUIBodyPane2;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIBodyPane5 mUIBodyPane;
+        
+        private UIBodyPane13 mUIBodyPane1;
+        
+        private UIBodyPane23 mUIBodyPane2;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane5 : HtmlDiv
+    {
+        
+        public UIBodyPane5(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Authors\r\n\r\n  \r\n\r\nYou are searching for S";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Authors - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlCustom UIItemCustom
+        {
+            get
+            {
+                if ((this.mUIItemCustom == null))
+                {
+                    this.mUIItemCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUIItemCustom.SearchProperties["TagName"] = "SECTION";
+                    this.mUIItemCustom.SearchProperties["Id"] = null;
+                    this.mUIItemCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIItemCustom.FilterProperties["Class"] = "content-wrapper main-content clear-fix";
+                    this.mUIItemCustom.FilterProperties["ControlDefinition"] = "class=\"content-wrapper main-content clea";
+                    this.mUIItemCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUIItemCustom.WindowTitles.Add("Authors - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIItemCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlCustom mUIItemCustom;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane13 : HtmlDiv
+    {
+        
+        public UIBodyPane13(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Authors\r\n\r\n  \r\n\r\n\r\nName \r\n\r\nGenre \r\n\r\n\r\n";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Authors - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlCustom UIItemCustom
+        {
+            get
+            {
+                if ((this.mUIItemCustom == null))
+                {
+                    this.mUIItemCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUIItemCustom.SearchProperties["TagName"] = "SECTION";
+                    this.mUIItemCustom.SearchProperties["Id"] = null;
+                    this.mUIItemCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIItemCustom.FilterProperties["Class"] = "content-wrapper main-content clear-fix";
+                    this.mUIItemCustom.FilterProperties["ControlDefinition"] = "class=\"content-wrapper main-content clea";
+                    this.mUIItemCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUIItemCustom.WindowTitles.Add("Authors - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIItemCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlCustom mUIItemCustom;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane23 : HtmlDiv
+    {
+        
+        public UIBodyPane23(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Authors\r\n\r\n  \r\n\r\nYou are searching for p";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Authors - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlCustom UIItemCustom
+        {
+            get
+            {
+                if ((this.mUIItemCustom == null))
+                {
+                    this.mUIItemCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUIItemCustom.SearchProperties["TagName"] = "SECTION";
+                    this.mUIItemCustom.SearchProperties["Id"] = null;
+                    this.mUIItemCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIItemCustom.FilterProperties["Class"] = "content-wrapper main-content clear-fix";
+                    this.mUIItemCustom.FilterProperties["ControlDefinition"] = "class=\"content-wrapper main-content clea";
+                    this.mUIItemCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUIItemCustom.WindowTitles.Add("Authors - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIItemCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlCustom mUIItemCustom;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UILoginGameReviewSiteIWindow : BrowserWindow
+    {
+        
+        public UILoginGameReviewSiteIWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Log in - Game Review Site!";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "IEFrame";
+            this.WindowTitles.Add("Log in - Game Review Site!");
+            #endregion
+        }
+        
+        public void LaunchUrl(System.Uri url)
+        {
+            this.CopyFrom(BrowserWindow.Launch(url));
+        }
+        
+        #region Properties
+        public UILoginGameReviewSiteDocument UILoginGameReviewSiteDocument
+        {
+            get
+            {
+                if ((this.mUILoginGameReviewSiteDocument == null))
+                {
+                    this.mUILoginGameReviewSiteDocument = new UILoginGameReviewSiteDocument(this);
+                }
+                return this.mUILoginGameReviewSiteDocument;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UILoginGameReviewSiteDocument mUILoginGameReviewSiteDocument;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UILoginGameReviewSiteDocument : HtmlDocument
+    {
+        
+        public UILoginGameReviewSiteDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Log in - Game Review Site!";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Account/Login";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://localhost:3085/Account/Login";
+            this.WindowTitles.Add("Log in - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlEdit UIUsernameEdit
+        {
+            get
+            {
+                if ((this.mUIUsernameEdit == null))
+                {
+                    this.mUIUsernameEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIUsernameEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "UserName";
+                    this.mUIUsernameEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "UserName";
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = "User name";
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"UserName\" id=\"UserName\" type=\"text";
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "2";
+                    this.mUIUsernameEdit.WindowTitles.Add("Log in - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIUsernameEdit;
+            }
+        }
+        
+        public HtmlEdit UIPasswordEdit
+        {
+            get
+            {
+                if ((this.mUIPasswordEdit == null))
+                {
+                    this.mUIPasswordEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "Password";
+                    this.mUIPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "Password";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = "Password";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "PASSWORD";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = "valid";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"Password\" class=\"valid\" id=\"Passwo";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "3";
+                    this.mUIPasswordEdit.WindowTitles.Add("Log in - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIPasswordEdit;
+            }
+        }
+        
+        public UILoginFormCustom UILoginFormCustom
+        {
+            get
+            {
+                if ((this.mUILoginFormCustom == null))
+                {
+                    this.mUILoginFormCustom = new UILoginFormCustom(this);
+                }
+                return this.mUILoginFormCustom;
+            }
+        }
+        
+        public HtmlEdit UIPasswordEdit1
+        {
+            get
+            {
+                if ((this.mUIPasswordEdit1 == null))
+                {
+                    this.mUIPasswordEdit1 = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIPasswordEdit1.SearchProperties[HtmlEdit.PropertyNames.Id] = "Password";
+                    this.mUIPasswordEdit1.SearchProperties[HtmlEdit.PropertyNames.Name] = "Password";
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = "Password";
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.Type] = "PASSWORD";
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"Password\" id=\"Password\" type=\"pass";
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "3";
+                    this.mUIPasswordEdit1.WindowTitles.Add("Log in - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIPasswordEdit1;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlEdit mUIUsernameEdit;
+        
+        private HtmlEdit mUIPasswordEdit;
+        
+        private UILoginFormCustom mUILoginFormCustom;
+        
+        private HtmlEdit mUIPasswordEdit1;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UILoginFormCustom : HtmlCustom
+    {
+        
+        public UILoginFormCustom(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties["TagName"] = "SECTION";
+            this.SearchProperties["Id"] = "loginForm";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = null;
+            this.FilterProperties["Class"] = null;
+            this.FilterProperties["ControlDefinition"] = "id=\"loginForm\"";
+            this.FilterProperties["TagInstance"] = "3";
+            this.WindowTitles.Add("Log in - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlInputButton UILoginButton
+        {
+            get
+            {
+                if ((this.mUILoginButton == null))
+                {
+                    this.mUILoginButton = new HtmlInputButton(this);
+                    #region Search Criteria
+                    this.mUILoginButton.SearchProperties[HtmlButton.PropertyNames.Id] = null;
+                    this.mUILoginButton.SearchProperties[HtmlButton.PropertyNames.Name] = null;
+                    this.mUILoginButton.SearchProperties[HtmlButton.PropertyNames.DisplayText] = "Log in";
+                    this.mUILoginButton.SearchProperties[HtmlButton.PropertyNames.Type] = "submit";
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.Title] = null;
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.Class] = null;
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "type=\"submit\" value=\"Log in\"";
+                    this.mUILoginButton.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "6";
+                    this.mUILoginButton.WindowTitles.Add("Log in - Game Review Site!");
+                    #endregion
+                }
+                return this.mUILoginButton;
+            }
+        }
+        
+        public HtmlCustom UITheusernameorpassworCustom
+        {
+            get
+            {
+                if ((this.mUITheusernameorpassworCustom == null))
+                {
+                    this.mUITheusernameorpassworCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUITheusernameorpassworCustom.SearchProperties["TagName"] = "LI";
+                    this.mUITheusernameorpassworCustom.SearchProperties["Id"] = null;
+                    this.mUITheusernameorpassworCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUITheusernameorpassworCustom.FilterProperties["Class"] = null;
+                    this.mUITheusernameorpassworCustom.FilterProperties["ControlDefinition"] = null;
+                    this.mUITheusernameorpassworCustom.FilterProperties["InnerText"] = "The user name or password provided is in";
+                    this.mUITheusernameorpassworCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUITheusernameorpassworCustom.WindowTitles.Add("Log in - Game Review Site!");
+                    #endregion
+                }
+                return this.mUITheusernameorpassworCustom;
+            }
+        }
+        
+        public HtmlSpan UITheUsernamefieldisrePane
+        {
+            get
+            {
+                if ((this.mUITheUsernamefieldisrePane == null))
+                {
+                    this.mUITheUsernamefieldisrePane = new HtmlSpan(this);
+                    #region Search Criteria
+                    this.mUITheUsernamefieldisrePane.SearchProperties[HtmlDiv.PropertyNames.Id] = null;
+                    this.mUITheUsernamefieldisrePane.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+                    this.mUITheUsernamefieldisrePane.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "The User name field is required.";
+                    this.mUITheUsernamefieldisrePane.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+                    this.mUITheUsernamefieldisrePane.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+                    this.mUITheUsernamefieldisrePane.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "for=\"UserName\" generated=\"true\"";
+                    this.mUITheUsernamefieldisrePane.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "2";
+                    this.mUITheUsernamefieldisrePane.WindowTitles.Add("Log in - Game Review Site!");
+                    #endregion
+                }
+                return this.mUITheUsernamefieldisrePane;
+            }
+        }
+        
+        public HtmlSpan UIThePasswordfieldisrePane
+        {
+            get
+            {
+                if ((this.mUIThePasswordfieldisrePane == null))
+                {
+                    this.mUIThePasswordfieldisrePane = new HtmlSpan(this);
+                    #region Search Criteria
+                    this.mUIThePasswordfieldisrePane.SearchProperties[HtmlDiv.PropertyNames.Id] = null;
+                    this.mUIThePasswordfieldisrePane.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+                    this.mUIThePasswordfieldisrePane.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "The Password field is required.";
+                    this.mUIThePasswordfieldisrePane.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+                    this.mUIThePasswordfieldisrePane.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+                    this.mUIThePasswordfieldisrePane.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "for=\"Password\" generated=\"true\"";
+                    this.mUIThePasswordfieldisrePane.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+                    this.mUIThePasswordfieldisrePane.WindowTitles.Add("Log in - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIThePasswordfieldisrePane;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlInputButton mUILoginButton;
+        
+        private HtmlCustom mUITheusernameorpassworCustom;
+        
+        private HtmlSpan mUITheUsernamefieldisrePane;
+        
+        private HtmlSpan mUIThePasswordfieldisrePane;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIRegisterGameReviewSiWindow : BrowserWindow
+    {
+        
+        public UIRegisterGameReviewSiWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Register - Game Review Site!";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "IEFrame";
+            this.WindowTitles.Add("Register - Game Review Site!");
+            #endregion
+        }
+        
+        public void LaunchUrl(System.Uri url)
+        {
+            this.CopyFrom(BrowserWindow.Launch(url));
+        }
+        
+        #region Properties
+        public UIRegisterGameReviewSiDocument UIRegisterGameReviewSiDocument
+        {
+            get
+            {
+                if ((this.mUIRegisterGameReviewSiDocument == null))
+                {
+                    this.mUIRegisterGameReviewSiDocument = new UIRegisterGameReviewSiDocument(this);
+                }
+                return this.mUIRegisterGameReviewSiDocument;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIRegisterGameReviewSiDocument mUIRegisterGameReviewSiDocument;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIRegisterGameReviewSiDocument : HtmlDocument
+    {
+        
+        public UIRegisterGameReviewSiDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Register - Game Review Site!";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Account/Register";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://localhost:3085/Account/Register";
+            this.WindowTitles.Add("Register - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlEdit UIUsernameEdit
+        {
+            get
+            {
+                if ((this.mUIUsernameEdit == null))
+                {
+                    this.mUIUsernameEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIUsernameEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "UserName";
+                    this.mUIUsernameEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "UserName";
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = "User name";
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"UserName\" id=\"UserName\" type=\"text";
+                    this.mUIUsernameEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "2";
+                    this.mUIUsernameEdit.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIUsernameEdit;
+            }
+        }
+        
+        public HtmlEdit UIPasswordEdit
+        {
+            get
+            {
+                if ((this.mUIPasswordEdit == null))
+                {
+                    this.mUIPasswordEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "Password";
+                    this.mUIPasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "Password";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = "Password";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "PASSWORD";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"Password\" id=\"Password\" type=\"pass";
+                    this.mUIPasswordEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "3";
+                    this.mUIPasswordEdit.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIPasswordEdit;
+            }
+        }
+        
+        public HtmlEdit UIConfirmpasswordEdit
+        {
+            get
+            {
+                if ((this.mUIConfirmpasswordEdit == null))
+                {
+                    this.mUIConfirmpasswordEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIConfirmpasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "ConfirmPassword";
+                    this.mUIConfirmpasswordEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "ConfirmPassword";
+                    this.mUIConfirmpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = "Confirm password";
+                    this.mUIConfirmpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "PASSWORD";
+                    this.mUIConfirmpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIConfirmpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUIConfirmpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ConfirmPassword\" id=\"ConfirmPasswo";
+                    this.mUIConfirmpasswordEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "4";
+                    this.mUIConfirmpasswordEdit.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIConfirmpasswordEdit;
+            }
+        }
+        
+        public HtmlEdit UIAvatarUrlEdit
+        {
+            get
+            {
+                if ((this.mUIAvatarUrlEdit == null))
+                {
+                    this.mUIAvatarUrlEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIAvatarUrlEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "AvatarUrl";
+                    this.mUIAvatarUrlEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "AvatarUrl";
+                    this.mUIAvatarUrlEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = "AvatarUrl";
+                    this.mUIAvatarUrlEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUIAvatarUrlEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIAvatarUrlEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUIAvatarUrlEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"AvatarUrl\" id=\"AvatarUrl\" type=\"te";
+                    this.mUIAvatarUrlEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "5";
+                    this.mUIAvatarUrlEdit.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIAvatarUrlEdit;
+            }
+        }
+        
+        public HtmlEdit UIBioEdit
+        {
+            get
+            {
+                if ((this.mUIBioEdit == null))
+                {
+                    this.mUIBioEdit = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIBioEdit.SearchProperties[HtmlEdit.PropertyNames.Id] = "Bio";
+                    this.mUIBioEdit.SearchProperties[HtmlEdit.PropertyNames.Name] = "Bio";
+                    this.mUIBioEdit.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = "Bio";
+                    this.mUIBioEdit.FilterProperties[HtmlEdit.PropertyNames.Type] = "SINGLELINE";
+                    this.mUIBioEdit.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIBioEdit.FilterProperties[HtmlEdit.PropertyNames.Class] = null;
+                    this.mUIBioEdit.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"Bio\" id=\"Bio\" type=\"text\" value=\"\"";
+                    this.mUIBioEdit.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "6";
+                    this.mUIBioEdit.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIBioEdit;
+            }
+        }
+        
+        public UIBodyPane6 UIBodyPane
+        {
+            get
+            {
+                if ((this.mUIBodyPane == null))
+                {
+                    this.mUIBodyPane = new UIBodyPane6(this);
+                }
+                return this.mUIBodyPane;
+            }
+        }
+        
+        public UIBodyPane14 UIBodyPane1
+        {
+            get
+            {
+                if ((this.mUIBodyPane1 == null))
+                {
+                    this.mUIBodyPane1 = new UIBodyPane14(this);
+                }
+                return this.mUIBodyPane1;
+            }
+        }
+        
+        public HtmlEdit UIPasswordEdit1
+        {
+            get
+            {
+                if ((this.mUIPasswordEdit1 == null))
+                {
+                    this.mUIPasswordEdit1 = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIPasswordEdit1.SearchProperties[HtmlEdit.PropertyNames.Id] = "Password";
+                    this.mUIPasswordEdit1.SearchProperties[HtmlEdit.PropertyNames.Name] = "Password";
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = "Password";
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.Type] = "PASSWORD";
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.Class] = "input-validation-error";
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"Password\" class=\"input-validation-";
+                    this.mUIPasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "3";
+                    this.mUIPasswordEdit1.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIPasswordEdit1;
+            }
+        }
+        
+        public HtmlEdit UIConfirmpasswordEdit1
+        {
+            get
+            {
+                if ((this.mUIConfirmpasswordEdit1 == null))
+                {
+                    this.mUIConfirmpasswordEdit1 = new HtmlEdit(this);
+                    #region Search Criteria
+                    this.mUIConfirmpasswordEdit1.SearchProperties[HtmlEdit.PropertyNames.Id] = "ConfirmPassword";
+                    this.mUIConfirmpasswordEdit1.SearchProperties[HtmlEdit.PropertyNames.Name] = "ConfirmPassword";
+                    this.mUIConfirmpasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.LabeledBy] = "Confirm password";
+                    this.mUIConfirmpasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.Type] = "PASSWORD";
+                    this.mUIConfirmpasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.Title] = null;
+                    this.mUIConfirmpasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.Class] = "valid";
+                    this.mUIConfirmpasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.ControlDefinition] = "name=\"ConfirmPassword\" class=\"valid\" id=";
+                    this.mUIConfirmpasswordEdit1.FilterProperties[HtmlEdit.PropertyNames.TagInstance] = "4";
+                    this.mUIConfirmpasswordEdit1.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIConfirmpasswordEdit1;
+            }
+        }
+        
+        public UIBodyPane24 UIBodyPane2
+        {
+            get
+            {
+                if ((this.mUIBodyPane2 == null))
+                {
+                    this.mUIBodyPane2 = new UIBodyPane24(this);
+                }
+                return this.mUIBodyPane2;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlEdit mUIUsernameEdit;
+        
+        private HtmlEdit mUIPasswordEdit;
+        
+        private HtmlEdit mUIConfirmpasswordEdit;
+        
+        private HtmlEdit mUIAvatarUrlEdit;
+        
+        private HtmlEdit mUIBioEdit;
+        
+        private UIBodyPane6 mUIBodyPane;
+        
+        private UIBodyPane14 mUIBodyPane1;
+        
+        private HtmlEdit mUIPasswordEdit1;
+        
+        private HtmlEdit mUIConfirmpasswordEdit1;
+        
+        private UIBodyPane24 mUIBodyPane2;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane6 : HtmlDiv
+    {
+        
+        public UIBodyPane6(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Register. Create a new account. \r\n\r\n\r\n\r\n";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Register - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlInputButton UIRegisterButton
+        {
+            get
+            {
+                if ((this.mUIRegisterButton == null))
+                {
+                    this.mUIRegisterButton = new HtmlInputButton(this);
+                    #region Search Criteria
+                    this.mUIRegisterButton.SearchProperties[HtmlButton.PropertyNames.Id] = null;
+                    this.mUIRegisterButton.SearchProperties[HtmlButton.PropertyNames.Name] = null;
+                    this.mUIRegisterButton.SearchProperties[HtmlButton.PropertyNames.DisplayText] = "Register";
+                    this.mUIRegisterButton.SearchProperties[HtmlButton.PropertyNames.Type] = "submit";
+                    this.mUIRegisterButton.FilterProperties[HtmlButton.PropertyNames.Title] = null;
+                    this.mUIRegisterButton.FilterProperties[HtmlButton.PropertyNames.Class] = null;
+                    this.mUIRegisterButton.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "type=\"submit\" value=\"Register\"";
+                    this.mUIRegisterButton.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "7";
+                    this.mUIRegisterButton.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIRegisterButton;
+            }
+        }
+        
+        public HtmlCustom UIAvatarUrlCustom
+        {
+            get
+            {
+                if ((this.mUIAvatarUrlCustom == null))
+                {
+                    this.mUIAvatarUrlCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUIAvatarUrlCustom.SearchProperties["TagName"] = "LI";
+                    this.mUIAvatarUrlCustom.SearchProperties["Id"] = null;
+                    this.mUIAvatarUrlCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIAvatarUrlCustom.FilterProperties["Class"] = null;
+                    this.mUIAvatarUrlCustom.FilterProperties["ControlDefinition"] = null;
+                    this.mUIAvatarUrlCustom.FilterProperties["InnerText"] = "AvatarUrl\r\n ";
+                    this.mUIAvatarUrlCustom.FilterProperties["TagInstance"] = "5";
+                    this.mUIAvatarUrlCustom.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIAvatarUrlCustom;
+            }
+        }
+        
+        public HtmlLabel UIBioLabel
+        {
+            get
+            {
+                if ((this.mUIBioLabel == null))
+                {
+                    this.mUIBioLabel = new HtmlLabel(this);
+                    #region Search Criteria
+                    this.mUIBioLabel.SearchProperties[HtmlLabel.PropertyNames.Id] = null;
+                    this.mUIBioLabel.SearchProperties[HtmlLabel.PropertyNames.Name] = null;
+                    this.mUIBioLabel.SearchProperties[HtmlLabel.PropertyNames.LabelFor] = "Bio";
+                    this.mUIBioLabel.SearchProperties[HtmlLabel.PropertyNames.InnerText] = "Bio";
+                    this.mUIBioLabel.FilterProperties[HtmlLabel.PropertyNames.Class] = null;
+                    this.mUIBioLabel.FilterProperties[HtmlLabel.PropertyNames.ControlDefinition] = "for=\"Bio\"";
+                    this.mUIBioLabel.FilterProperties[HtmlLabel.PropertyNames.TagInstance] = "5";
+                    this.mUIBioLabel.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIBioLabel;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlInputButton mUIRegisterButton;
+        
+        private HtmlCustom mUIAvatarUrlCustom;
+        
+        private HtmlLabel mUIBioLabel;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane14 : HtmlDiv
+    {
+        
+        public UIBodyPane14(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Register. Create a new account. \r\n\r\n\r\nTh";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Register - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlCustom UIThePasswordmustbeatlCustom
+        {
+            get
+            {
+                if ((this.mUIThePasswordmustbeatlCustom == null))
+                {
+                    this.mUIThePasswordmustbeatlCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUIThePasswordmustbeatlCustom.SearchProperties["TagName"] = "LI";
+                    this.mUIThePasswordmustbeatlCustom.SearchProperties["Id"] = null;
+                    this.mUIThePasswordmustbeatlCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIThePasswordmustbeatlCustom.FilterProperties["Class"] = null;
+                    this.mUIThePasswordmustbeatlCustom.FilterProperties["ControlDefinition"] = null;
+                    this.mUIThePasswordmustbeatlCustom.FilterProperties["InnerText"] = "The Password must be at least 6 characte";
+                    this.mUIThePasswordmustbeatlCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUIThePasswordmustbeatlCustom.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIThePasswordmustbeatlCustom;
+            }
+        }
+        
+        public HtmlCustom UITheUsernamefieldisreCustom
+        {
+            get
+            {
+                if ((this.mUITheUsernamefieldisreCustom == null))
+                {
+                    this.mUITheUsernamefieldisreCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUITheUsernamefieldisreCustom.SearchProperties["TagName"] = "LI";
+                    this.mUITheUsernamefieldisreCustom.SearchProperties["Id"] = null;
+                    this.mUITheUsernamefieldisreCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUITheUsernamefieldisreCustom.FilterProperties["Class"] = null;
+                    this.mUITheUsernamefieldisreCustom.FilterProperties["ControlDefinition"] = null;
+                    this.mUITheUsernamefieldisreCustom.FilterProperties["InnerText"] = "The User name field is required.";
+                    this.mUITheUsernamefieldisreCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUITheUsernamefieldisreCustom.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUITheUsernamefieldisreCustom;
+            }
+        }
+        
+        public HtmlCustom UIThePasswordfieldisreCustom
+        {
+            get
+            {
+                if ((this.mUIThePasswordfieldisreCustom == null))
+                {
+                    this.mUIThePasswordfieldisreCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUIThePasswordfieldisreCustom.SearchProperties["TagName"] = "LI";
+                    this.mUIThePasswordfieldisreCustom.SearchProperties["Id"] = null;
+                    this.mUIThePasswordfieldisreCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIThePasswordfieldisreCustom.FilterProperties["Class"] = null;
+                    this.mUIThePasswordfieldisreCustom.FilterProperties["ControlDefinition"] = null;
+                    this.mUIThePasswordfieldisreCustom.FilterProperties["InnerText"] = "The Password field is required.";
+                    this.mUIThePasswordfieldisreCustom.FilterProperties["TagInstance"] = "2";
+                    this.mUIThePasswordfieldisreCustom.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIThePasswordfieldisreCustom;
+            }
+        }
+        
+        public HtmlCustom UITheAvatarUrlfieldisrCustom
+        {
+            get
+            {
+                if ((this.mUITheAvatarUrlfieldisrCustom == null))
+                {
+                    this.mUITheAvatarUrlfieldisrCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUITheAvatarUrlfieldisrCustom.SearchProperties["TagName"] = "LI";
+                    this.mUITheAvatarUrlfieldisrCustom.SearchProperties["Id"] = null;
+                    this.mUITheAvatarUrlfieldisrCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUITheAvatarUrlfieldisrCustom.FilterProperties["Class"] = null;
+                    this.mUITheAvatarUrlfieldisrCustom.FilterProperties["ControlDefinition"] = null;
+                    this.mUITheAvatarUrlfieldisrCustom.FilterProperties["InnerText"] = "The AvatarUrl field is required.";
+                    this.mUITheAvatarUrlfieldisrCustom.FilterProperties["TagInstance"] = "3";
+                    this.mUITheAvatarUrlfieldisrCustom.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUITheAvatarUrlfieldisrCustom;
+            }
+        }
+        
+        public HtmlCustom UITheBiofieldisrequireCustom
+        {
+            get
+            {
+                if ((this.mUITheBiofieldisrequireCustom == null))
+                {
+                    this.mUITheBiofieldisrequireCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUITheBiofieldisrequireCustom.SearchProperties["TagName"] = "LI";
+                    this.mUITheBiofieldisrequireCustom.SearchProperties["Id"] = null;
+                    this.mUITheBiofieldisrequireCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUITheBiofieldisrequireCustom.FilterProperties["Class"] = null;
+                    this.mUITheBiofieldisrequireCustom.FilterProperties["ControlDefinition"] = null;
+                    this.mUITheBiofieldisrequireCustom.FilterProperties["InnerText"] = "The Bio field is required.";
+                    this.mUITheBiofieldisrequireCustom.FilterProperties["TagInstance"] = "4";
+                    this.mUITheBiofieldisrequireCustom.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUITheBiofieldisrequireCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlCustom mUIThePasswordmustbeatlCustom;
+        
+        private HtmlCustom mUITheUsernamefieldisreCustom;
+        
+        private HtmlCustom mUIThePasswordfieldisreCustom;
+        
+        private HtmlCustom mUITheAvatarUrlfieldisrCustom;
+        
+        private HtmlCustom mUITheBiofieldisrequireCustom;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane24 : HtmlDiv
+    {
+        
+        public UIBodyPane24(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Register. Create a new account. \r\n\r\n\r\nUs";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Register - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlCustom UIUsernamealreadyexistCustom
+        {
+            get
+            {
+                if ((this.mUIUsernamealreadyexistCustom == null))
+                {
+                    this.mUIUsernamealreadyexistCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUIUsernamealreadyexistCustom.SearchProperties["TagName"] = "LI";
+                    this.mUIUsernamealreadyexistCustom.SearchProperties["Id"] = null;
+                    this.mUIUsernamealreadyexistCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIUsernamealreadyexistCustom.FilterProperties["Class"] = null;
+                    this.mUIUsernamealreadyexistCustom.FilterProperties["ControlDefinition"] = null;
+                    this.mUIUsernamealreadyexistCustom.FilterProperties["InnerText"] = "User name already exists. Please enter a";
+                    this.mUIUsernamealreadyexistCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUIUsernamealreadyexistCustom.WindowTitles.Add("Register - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIUsernamealreadyexistCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlCustom mUIUsernamealreadyexistCustom;
         #endregion
     }
 }

@@ -16,31 +16,30 @@ namespace GameReviewWebsiteTests
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class Gamer
+    public class Author
     {
-        public Gamer()
+        public Author()
         {
         }
 
 //=========================================================================================
-        // GAME
+        // Author
         [TestMethod]
-        public void SearchForGamerFrank()
+        public void SearchForAuthorSox()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
-            this.UIMap.TypeInSearchBox("Frank");
+            this.UIMap.SwitchToAuthors();
+            this.UIMap.TypeInSearchBox("Sox");
             this.UIMap.SubmitLol();
-            //this.UIMap.AssertLinkContent("Frank");
-            this.UIMap.clickFrank();
+            this.UIMap.AssertSox();
             this.UIMap.closesite();
         }
 
         [TestMethod]
-        public void SearchForGamerLong()
+        public void SearchForAuthorLong()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
+            this.UIMap.SwitchToAuthors();
             var Content = new String('z', 51);
             this.UIMap.TypeInSearchBox(Content);
             this.UIMap.SubmitLol();
@@ -51,23 +50,23 @@ namespace GameReviewWebsiteTests
 
         }
         [TestMethod]
-        public void SearchForGamerNothing()
+        public void SearchForAuthorNothing()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
+            this.UIMap.SwitchToAuthors();
             this.UIMap.SubmitLol();
-            this.UIMap.AssertMMOMan();
+            this.UIMap.AssertAuthorsNothing();
             this.UIMap.closesite();
         }
 
         [TestMethod]
-        public void SearchForGamerNotThere()
+        public void SearchForAuthorNotThere()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
+            this.UIMap.SwitchToAuthors();
             this.UIMap.TypeInSearchBox("pickles34");
             this.UIMap.SubmitLol();
-            this.UIMap.AssertPicklesNot();
+            this.UIMap.AssertAuthorsNotThere();
             this.UIMap.closesite();
         }
 

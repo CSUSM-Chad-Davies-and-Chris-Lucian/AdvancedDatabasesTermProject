@@ -16,58 +16,58 @@ namespace GameReviewWebsiteTests
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class Gamer
+    public class Login
     {
-        public Gamer()
+        public Login()
         {
         }
 
 //=========================================================================================
-        // GAME
+        // Login
         [TestMethod]
-        public void SearchForGamerFrank()
+        public void LoginBadPassword()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
-            this.UIMap.TypeInSearchBox("Frank");
-            this.UIMap.SubmitLol();
-            //this.UIMap.AssertLinkContent("Frank");
-            this.UIMap.clickFrank();
+            this.UIMap.SwitchToLogin();
+            this.UIMap.TypeFrank();
+            this.UIMap.TypeWrongPassword();
+            this.UIMap.PressLogIn();
+            this.UIMap.WrongPassword();
             this.UIMap.closesite();
         }
 
         [TestMethod]
-        public void SearchForGamerLong()
+        public void LoginGoodPassword()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
-            var Content = new String('z', 51);
-            this.UIMap.TypeInSearchBox(Content);
-            this.UIMap.SubmitLol();
-            this.UIMap.AssertLong(string.Format("Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for {0}" +
-"zzzzzzzzzzzzzz\r\nSearch is limited to 50 characters \r\n\r\nGame Review Tite \r\n\r\nGame" +
-" Name \r\n\r\nRating ", Content));
+            this.UIMap.SwitchToLogin();
+            this.UIMap.TypeFrank();
+            this.UIMap.TypeCorrectPassword();
+            this.UIMap.PressLogIn();
+            this.UIMap.EnsureFrankLogIn();
             this.UIMap.closesite();
 
         }
         [TestMethod]
-        public void SearchForGamerNothing()
+        public void LoginNoValue()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
-            this.UIMap.SubmitLol();
-            this.UIMap.AssertMMOMan();
+            this.UIMap.SwitchToLogin();
+            this.UIMap.PressLogIn1();
+            this.UIMap.CheckUserNameFieldEmpty();
+            this.UIMap.CheckPasswordFieldEmpty();
             this.UIMap.closesite();
         }
 
         [TestMethod]
-        public void SearchForGamerNotThere()
+        public void LoginTooLongValue()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
-            this.UIMap.TypeInSearchBox("pickles34");
-            this.UIMap.SubmitLol();
-            this.UIMap.AssertPicklesNot();
+            this.UIMap.SwitchToLogin();
+            this.UIMap.UserZs();
+            this.UIMap.PassLong();
+            this.UIMap.PressLogIn1();
+            this.UIMap.UserNameTooLong();
             this.UIMap.closesite();
         }
 

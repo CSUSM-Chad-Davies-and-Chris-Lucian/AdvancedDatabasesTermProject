@@ -30,7 +30,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.OpenSite();
             this.UIMap.TypeInSearchBox("lol");
             this.UIMap.SubmitLol();
-            this.UIMap.AssertLinkContent("LOL");
+            this.UIMap.AssertLoLSearchTest();
             this.UIMap.closesite();
         }
 

@@ -25,21 +25,21 @@ namespace GameReviewWebsiteTests
 //=========================================================================================
         // GAME
         [TestMethod]
-        public void SearchForGamerFrank()
+        public void SearchForGameDestiny()
         {
             this.UIMap.OpenSite();
-            //this.UIMap.ChangeToGamers();
-            //this.UIMap.TypeInSearchBox("Frank");
-            //this.UIMap.SubmitLol();
-            //this.UIMap.AssertLinkContent("Frank");
+            this.UIMap.SwitchToGames();
+            this.UIMap.TypeInSearchBox("Destiny");
+            this.UIMap.SubmitLol();
+            this.UIMap.AssertDestiny();
             this.UIMap.closesite();
         }
 
         [TestMethod]
-        public void SearchForGamerLong()
+        public void SearchForGameLong()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
+            this.UIMap.SwitchToGames();
             var Content = new String('z', 51);
             this.UIMap.TypeInSearchBox(Content);
             this.UIMap.SubmitLol();
@@ -50,23 +50,23 @@ namespace GameReviewWebsiteTests
 
         }
         [TestMethod]
-        public void SearchForGamerNothing()
+        public void SearchForGameNothing()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
+            this.UIMap.SwitchToGames();
             this.UIMap.SubmitLol();
-            this.UIMap.AssertEmptyGameReviewSearch();
+            this.UIMap.AssertGamesNothing1();
             this.UIMap.closesite();
         }
 
         [TestMethod]
-        public void SearchForGamerNotThere()
+        public void SearchForGameNotThere()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
+            this.UIMap.SwitchToGames();
             this.UIMap.TypeInSearchBox("pickles34");
             this.UIMap.SubmitLol();
-            this.UIMap.AssertWrongReview();
+            this.UIMap.AssertNotThereGames();
             this.UIMap.closesite();
         }
 

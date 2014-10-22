@@ -16,58 +16,73 @@ namespace GameReviewWebsiteTests
     /// Summary description for CodedUITest1
     /// </summary>
     [CodedUITest]
-    public class Gamer
+    public class Comment
     {
-        public Gamer()
+        public Comment()
         {
         }
 
 //=========================================================================================
-        // GAME
+        // Comment
+        // Need to finish Not Started
         [TestMethod]
-        public void SearchForGamerFrank()
+        public void CommentNotTitle()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
-            this.UIMap.TypeInSearchBox("Frank");
-            this.UIMap.SubmitLol();
-            //this.UIMap.AssertLinkContent("Frank");
-            this.UIMap.clickFrank();
+            this.UIMap.SwitchToRegister();
+            this.UIMap.TypeUserName();
+            this.UIMap.TypePasswords();
+            this.UIMap.TypeAvBio();
+            this.UIMap.PressRegister();
+            this.UIMap.CheckPasswordShort();
             this.UIMap.closesite();
         }
 
         [TestMethod]
-        public void SearchForGamerLong()
+        public void CommentLongTitle()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
-            var Content = new String('z', 51);
-            this.UIMap.TypeInSearchBox(Content);
-            this.UIMap.SubmitLol();
-            this.UIMap.AssertLong(string.Format("Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for {0}" +
-"zzzzzzzzzzzzzz\r\nSearch is limited to 50 characters \r\n\r\nGame Review Tite \r\n\r\nGame" +
-" Name \r\n\r\nRating ", Content));
+            this.UIMap.SwitchToRegister();
+            this.UIMap.TypeUserName();
+            this.UIMap.TypeGoodPasswords1();
+            this.UIMap.TypeAvBio();
+            this.UIMap.PressRegister();
+            this.UIMap.RegisterAlreadyExist();
+
+            //this.UIMap.CheckUserNameRegistered();
             this.UIMap.closesite();
 
         }
         [TestMethod]
-        public void SearchForGamerNothing()
+        public void CommentNoContent()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
-            this.UIMap.SubmitLol();
-            this.UIMap.AssertMMOMan();
+            this.UIMap.SwitchToRegister();
+            this.UIMap.PressRegister();
+            this.UIMap.UserFieldReqReg();
+            this.UIMap.PasswordReqReg();
+            this.UIMap.AvatarReqReg();
+            this.UIMap.BioReqReg();
             this.UIMap.closesite();
         }
 
         [TestMethod]
-        public void SearchForGamerNotThere()
+        public void CommentLongContent()
         {
             this.UIMap.OpenSite();
-            this.UIMap.ChangeToGamers();
-            this.UIMap.TypeInSearchBox("pickles34");
-            this.UIMap.SubmitLol();
-            this.UIMap.AssertPicklesNot();
+            this.UIMap.SwitchToRegister();
+            this.UIMap.RegFillFieldsFull();
+            // breaks after filling fields
+            this.UIMap.closesite();
+        }
+
+        [TestMethod]
+        public void CommentValid()
+        {
+            this.UIMap.OpenSite();
+            this.UIMap.SwitchToRegister();
+            this.UIMap.RegFillFieldsFull();
+            // breaks after filling fields
             this.UIMap.closesite();
         }
 
