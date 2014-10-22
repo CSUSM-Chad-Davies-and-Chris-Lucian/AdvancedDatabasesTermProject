@@ -26,15 +26,16 @@ namespace GameReviewWebsiteTests
         // Comment
         // Need to finish Not Started
         [TestMethod]
-        public void CommentNotTitle()
+        public void CommentNoTitle()
         {
             this.UIMap.OpenSite();
-            this.UIMap.SwitchToRegister();
-            this.UIMap.TypeUserName();
-            this.UIMap.TypePasswords();
-            this.UIMap.TypeAvBio();
-            this.UIMap.PressRegister();
-            this.UIMap.CheckPasswordShort();
+            this.UIMap.ChangeToLogIn();
+            this.UIMap.TypeLoginCredentials();
+            this.UIMap.HitLogin();
+            this.UIMap.ChangeToDestiny();
+            this.UIMap.TypeComment();
+            this.UIMap.HitAddComment();
+            this.UIMap.CheckForTitleFieldReq();
             this.UIMap.closesite();
         }
 
@@ -42,27 +43,27 @@ namespace GameReviewWebsiteTests
         public void CommentLongTitle()
         {
             this.UIMap.OpenSite();
-            this.UIMap.SwitchToRegister();
-            this.UIMap.TypeUserName();
-            this.UIMap.TypeGoodPasswords1();
-            this.UIMap.TypeAvBio();
-            this.UIMap.PressRegister();
-            this.UIMap.RegisterAlreadyExist();
-
-            //this.UIMap.CheckUserNameRegistered();
+            this.UIMap.ChangeToLogIn();
+            this.UIMap.TypeLoginCredentials();
+            this.UIMap.HitLogin();
+            this.UIMap.ChangeToDestiny();
+            this.UIMap.InputLongTitle();
+            this.UIMap.AddTestComment();
+            this.UIMap.CheckTitleMaxLength();
             this.UIMap.closesite();
-
         }
+
         [TestMethod]
         public void CommentNoContent()
         {
             this.UIMap.OpenSite();
-            this.UIMap.SwitchToRegister();
-            this.UIMap.PressRegister();
-            this.UIMap.UserFieldReqReg();
-            this.UIMap.PasswordReqReg();
-            this.UIMap.AvatarReqReg();
-            this.UIMap.BioReqReg();
+            this.UIMap.ChangeToLogIn();
+            this.UIMap.TypeLoginCredentials();
+            this.UIMap.HitLogin();
+            this.UIMap.ChangeToDestiny();
+            this.UIMap.EnterCommentTitle();
+            this.UIMap.AddCommentButton();
+            this.UIMap.CheckContentReq();
             this.UIMap.closesite();
         }
 
@@ -70,9 +71,13 @@ namespace GameReviewWebsiteTests
         public void CommentLongContent()
         {
             this.UIMap.OpenSite();
-            this.UIMap.SwitchToRegister();
-            this.UIMap.RegFillFieldsFull();
-            // breaks after filling fields
+            this.UIMap.ChangeToLogIn();
+            this.UIMap.TypeLoginCredentials();
+            this.UIMap.HitLogin();
+            this.UIMap.ChangeToDestiny();
+            this.UIMap.TypeTitleComment();
+            this.UIMap.EnterCommentContentTooLong();
+            this.UIMap.CheckContentCommentLengthReq();
             this.UIMap.closesite();
         }
 
@@ -80,9 +85,13 @@ namespace GameReviewWebsiteTests
         public void CommentValid()
         {
             this.UIMap.OpenSite();
-            this.UIMap.SwitchToRegister();
-            this.UIMap.RegFillFieldsFull();
-            // breaks after filling fields
+            this.UIMap.ChangeToLogIn();
+            this.UIMap.TypeLoginCredentials();
+            this.UIMap.HitLogin();
+            this.UIMap.ChangeToDestiny();
+            this.UIMap.EnterTitleAndCommentGood();
+            this.UIMap.HitAddComment1();
+            this.UIMap.CheckCommentCreated();
             this.UIMap.closesite();
         }
 
