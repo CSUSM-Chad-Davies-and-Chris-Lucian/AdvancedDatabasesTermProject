@@ -23,9 +23,6 @@
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AvatarUrl)
-            </th>
         </tr>
 
         @foreach (var item in Model)
@@ -33,9 +30,6 @@
             <tr>
                 <td>
                     <h2>@Html.ActionLink(item.Name, "Details", new { id = item.GamerId })</h2>
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AvatarUrl)
                 </td>
             </tr>
         }

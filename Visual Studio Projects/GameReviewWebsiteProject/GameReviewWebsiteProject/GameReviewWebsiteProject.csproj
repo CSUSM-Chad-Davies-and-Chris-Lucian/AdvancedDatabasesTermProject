@@ -230,6 +230,9 @@
     <Compile Include="Models\PartialClasses\GameReview.cs" />
     <Compile Include="Models\PartialClasses\Gamer.cs" />
     <Compile Include="Models\PartialClasses\Game.cs" />
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>ModelGameReviewWebsite.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

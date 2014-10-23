@@ -66,7 +66,6 @@ namespace GameReviewWebsiteProject.Controllers
                     var db = new GameReviewWebsiteEntities();
                     db.Gamers.Add(new Gamer()
                                       {
-                                          AvatarUrl = model.AvatarUrl,
                                           Biography = model.Bio,
                                           Name = model.UserName,
                                           Password = model.Password

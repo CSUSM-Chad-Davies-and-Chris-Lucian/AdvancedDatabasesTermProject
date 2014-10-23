@@ -30,5 +30,6 @@ namespace GameReviewWebsiteProject.Models
         public DbSet<Game> Games { get; set; }
         public DbSet<Gamer> Gamers { get; set; }
         public DbSet<GameReview> GameReviews { get; set; }
+        public DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

@@ -12,15 +12,12 @@ namespace GameReviewWebsiteProject.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Comment
+    public partial class sysdiagram
     {
-        public int CommentId { get; set; }
-        public int GameReviewId { get; set; }
-        public int GamerId { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
-    
-        public virtual Gamer Gamer { get; set; }
-        public virtual GameReview GameReview { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

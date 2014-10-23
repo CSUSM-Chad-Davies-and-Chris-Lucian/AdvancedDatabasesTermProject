@@ -14,9 +14,6 @@ namespace GameReviewWebsiteProject.Models
             [StringLength(150)]
             public string Name { get; set; }
             [Required]
-            [StringLength(150)]
-            public string AvatarUrl { get; set; }
-            [Required]
             [StringLength(4000)]
             public string Biography { get; set; }
             [Required]

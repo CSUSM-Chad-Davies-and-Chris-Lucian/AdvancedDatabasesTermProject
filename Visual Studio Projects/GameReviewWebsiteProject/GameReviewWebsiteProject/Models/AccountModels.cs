@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Globalization;
+using System.Linq;
 using System.Web.Security;
 
 namespace GameReviewWebsiteProject.Models
@@ -76,6 +77,7 @@ namespace GameReviewWebsiteProject.Models
         [StringLength(150)]
         [Required]
         [Display(Name = "User name")]
+        [UserNameIsUnique]
         public string UserName { get; set; }
 
         [Required]
@@ -94,9 +96,22 @@ namespace GameReviewWebsiteProject.Models
         [StringLength(4000)]
         public string Bio { get; set; }
 
-        [Required]
-        [StringLength(150)]
-        public string AvatarUrl { get; set; }
+    }
+
+    public class UserNameIsUniqueAttribute : ValidationAttribute
+    {
+        protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+        {
+            var gamer = (RegisterModel)validationContext.ObjectInstance;
+            if (gamer == null) return null;
+            var db = new GameReviewWebsiteEntities();
+            var user = db.Gamers.FirstOrDefault(u => u.Name.ToLower() == gamer.UserName.ToLower());
+
+            if (user == null)
+                return ValidationResult.Success;
+            else
+                return new ValidationResult("User already exists");
+        }
     }
 
     public class ExternalLogin

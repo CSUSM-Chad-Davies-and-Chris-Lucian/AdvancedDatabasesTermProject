@@ -4,16 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="bb892be78f4044f4b41c07589feafd89" Name="Diagram1">
-        <EntityTypeShape EntityType="GameReviewWebsiteModel.Author" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="GameReviewWebsiteModel.Comment" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="GameReviewWebsiteModel.Game" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="GameReviewWebsiteModel.Gamer" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="GameReviewWebsiteModel.GameReview" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="GameReviewWebsiteModel.FK_GameReview_Author" ManuallyRouted="false" />
-        <AssociationConnector Association="GameReviewWebsiteModel.FK_Comment_Gamer" ManuallyRouted="false" />
-        <AssociationConnector Association="GameReviewWebsiteModel.FK_Comment_GameReview" ManuallyRouted="false" />
-        <AssociationConnector Association="GameReviewWebsiteModel.FK_GameReview_Game" ManuallyRouted="false" />
+      <Diagram DiagramId="bb892be78f4044f4b41c07589feafd89" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="GameReviewWebsiteModel.Author" Width="1.5" PointX="8.3382866179283184" PointY="2.1471096734270034" />
+        <EntityTypeShape EntityType="GameReviewWebsiteModel.Comment" Width="1.5" PointX="3.5398195774945522" PointY="13.94462301486387" />
+        <EntityTypeShape EntityType="GameReviewWebsiteModel.Game" Width="1.5" PointX="4.3481410166007191" PointY="6.6328651190888444" />
+        <EntityTypeShape EntityType="GameReviewWebsiteModel.Gamer" Width="1.5" PointX="5.977754437354279" PointY="21.540032441513628" />
+        <EntityTypeShape EntityType="GameReviewWebsiteModel.GameReview" Width="1.5" PointX="1.3895997076246887" PointY="5.3911374385427395" />
+        <EntityTypeShape EntityType="GameReviewWebsiteModel.sysdiagram" Width="1.5" PointX="9.5020136598041347" PointY="7.7623191959049178" />
+        <AssociationConnector Association="GameReviewWebsiteModel.FK_GameReview_Author" />
+        <AssociationConnector Association="GameReviewWebsiteModel.FK_Comment_Gamer" />
+        <AssociationConnector Association="GameReviewWebsiteModel.FK_Comment_GameReview" />
+        <AssociationConnector Association="GameReviewWebsiteModel.FK_GameReview_Game" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
