@@ -19,7 +19,9 @@ namespace GameReviewWebsiteProject.Infrastructure.WebSecurity.MembershipProvider
         public override bool ValidateUser(string username, string password)
         {
             var db = new GameReviewWebsiteEntities();
-            return db.Gamers.Any(x => x.Name == username && x.Password == password);
+            return db.Gamers.Where(x => x.Name == username)
+                .ToList()
+                .Any(x => x.Password == password);
         }
     }
 }
