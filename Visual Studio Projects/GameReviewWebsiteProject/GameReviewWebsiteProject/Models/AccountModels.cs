@@ -79,14 +79,14 @@ namespace GameReviewWebsiteProject.Models
         public string UserName { get; set; }
 
         [Required]
-        [StringLength(10)]
+        [StringLength(10, ErrorMessage = "The {0} must be between {2} and {1}.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
-        [StringLength(10)]
+        [StringLength(10, ErrorMessage = "The {0} must be between {2} and {1}.", MinimumLength = 6)]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
