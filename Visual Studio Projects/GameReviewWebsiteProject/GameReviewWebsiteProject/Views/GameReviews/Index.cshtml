@@ -8,7 +8,8 @@
 @using (Html.BeginForm())
 {
     @Html.TextBox("search")
-    <input type="submit" />
+        <input type="submit" value="Search"/>
+
 }
 @if (!String.IsNullOrEmpty(ViewBag.PreviewSearch))
 {

@@ -7,8 +7,8 @@
 <h2>Gamers</h2>
 @using (Html.BeginForm())
 {
-    @Html.TextBox("search")
-    <input type="submit" />
+    @Html.TextBox("search")    
+    <input type="submit" value="Search" />
 }
 @if (!String.IsNullOrEmpty(ViewBag.PreviewSearch))
 {
