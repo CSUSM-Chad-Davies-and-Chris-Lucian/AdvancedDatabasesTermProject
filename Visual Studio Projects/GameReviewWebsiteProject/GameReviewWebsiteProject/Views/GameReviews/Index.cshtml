@@ -15,34 +15,46 @@
     <h2>You are searching for @ViewBag.PreviewSearch</h2>
     <strong id="searchError" style="color: red;">@ViewBag.SearchError</strong>
 }
-<table>
-    <tr>
-        <th>
-            Game Review Tite        
-        </th>
-        <th>
-            Game Name
-        </th>
-
-        <th>
-            @Html.DisplayNameFor(model => model.Rating)
-        </th>
-
-    </tr>
-
-    @foreach (var item in Model)
-    {
+@if (Model.Any())
+{
+    <table>
         <tr>
-            <td>
-                <h2>@Html.ActionLink(item.Title, "Details", new { id = item.GameReviewId })</h2>
-            </td>
-            <td>
-                <h2>@Html.DisplayFor(model => item.Game.Title)</h2>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rating)
-            </td>
-        </tr>
-    }
+            <th>Game Review Tite        
+            </th>
+            <th>Game Name
+            </th>
 
-</table>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating)
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <h2>@Html.ActionLink(item.Title, "Details", new { id = item.GameReviewId })</h2>
+                </td>
+                <td>
+                    <h2>@Html.DisplayFor(model => item.Game.Title)</h2>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+}
+else
+{
+    <h1>No results for this search</h1> 
+    <h2>Please try the following to refine your search.</h2>
+    <ul>
+        <li>Shorten your query</li>
+        <li>Check for extra spaces</li>
+        <li>Search for partial words instead of whole words</li>
+    </ul>
+}

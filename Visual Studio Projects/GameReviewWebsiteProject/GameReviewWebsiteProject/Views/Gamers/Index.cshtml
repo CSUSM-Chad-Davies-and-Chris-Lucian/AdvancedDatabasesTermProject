@@ -15,26 +15,41 @@
     <h2>You are searching for @ViewBag.PreviewSearch</h2>
     <strong style="color: red;">@ViewBag.SearchError</strong>
 }
-<table>
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AvatarUrl)
-        </th>
-    </tr>
+@if (Model.Any())
+{
 
-    @foreach (var item in Model)
-    {
+    <table>
         <tr>
-            <td>
-                <h2>@Html.ActionLink(item.Name, "Details", new { id = item.GamerId })</h2>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AvatarUrl)
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvatarUrl)
+            </th>
         </tr>
-    }
 
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <h2>@Html.ActionLink(item.Name, "Details", new { id = item.GamerId })</h2>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AvatarUrl)
+                </td>
+            </tr>
+        }
+
+    </table>
+
+}
+else
+{
+    <h1>No results for this search</h1> 
+    <h2>Please try the following to refine your search.</h2>
+    <ul>
+        <li>Shorten your query</li>
+        <li>Check for extra spaces</li>
+        <li>Search for partial words instead of whole words</li>
+    </ul>
+}
