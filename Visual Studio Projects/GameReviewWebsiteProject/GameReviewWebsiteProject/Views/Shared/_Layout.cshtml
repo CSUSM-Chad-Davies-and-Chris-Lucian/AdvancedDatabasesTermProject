@@ -1,51 +1,63 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title - Game Review Site!</title>
-        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-    </head>
-    <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("Game Review Website!", "Index", "GameReviews")</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Game Reviews", "Index", "GameReviews")</li>
-                            <li>@Html.ActionLink("Gamers", "Index", "Gamers")</li>
-                            <li>@Html.ActionLink("Authors", "Index", "Authors")</li>
-                            <li>@Html.ActionLink("Games", "Index", "Games")</li>
-
-                            
-                        </ul>
-                    </nav>
-                </div>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Game Review Site!</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">@Html.ActionLink("Game Review Website!", "Index", "GameReviews")</p>
             </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
+            <div class="float-right">
+                <section id="login">
+                    @Html.Partial("_LoginPartial")
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Game Reviews", "Index", "GameReviews")</li>
+                        <li>@Html.ActionLink("Gamers", "Index", "Gamers")</li>
+                        <li>@Html.ActionLink("Authors", "Index", "Authors")</li>
+                        <li>@Html.ActionLink("Games", "Index", "Games")</li>
+
+
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - The Awesome Game Reviewers</p>
-                </div>
+    </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - The Awesome Game Reviewers</p>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-    </body>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        // add indicator to required fields
+        jQuery('input,select').each(function () {
+            var req = jQuery(this).attr('data-val-required');
+            if (undefined != req) {
+                var label = jQuery('label[for="' + jQuery(this).attr('id') + '"]');
+                var text = label.text();
+                label.append('<span style="color:red"> *</span>');
+
+            }
+        });
+    </script>
+</body>
 </html>
