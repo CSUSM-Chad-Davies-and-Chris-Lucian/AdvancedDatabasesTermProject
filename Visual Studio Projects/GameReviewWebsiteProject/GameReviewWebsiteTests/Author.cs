@@ -30,7 +30,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.OpenSite();
             this.UIMap.SwitchToAuthors();
             this.UIMap.TypeInSearchBox("Sox");
-            this.UIMap.SubmitLol();
+            this.UIMap.ClickSearchAuth();
             this.UIMap.AssertSox();
             this.UIMap.closesite();
         }
@@ -42,7 +42,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.SwitchToAuthors();
             var Content = new String('z', 51);
             this.UIMap.TypeInSearchBox(Content);
-            this.UIMap.SubmitLol();
+            this.UIMap.ClickSearchAuth();
             this.UIMap.AssertLong(string.Format("Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for {0}" +
 "zzzzzzzzzzzzzz\r\nSearch is limited to 50 characters \r\n\r\nGame Review Tite \r\n\r\nGame" +
 " Name \r\n\r\nRating ", Content));
@@ -54,8 +54,8 @@ namespace GameReviewWebsiteTests
         {
             this.UIMap.OpenSite();
             this.UIMap.SwitchToAuthors();
-            this.UIMap.SubmitLol();
-            this.UIMap.AssertAuthorsNothing();
+            this.UIMap.ClickSearchAuth();
+            this.UIMap.AssertAuthorsNothing1();
             this.UIMap.closesite();
         }
 
@@ -65,8 +65,9 @@ namespace GameReviewWebsiteTests
             this.UIMap.OpenSite();
             this.UIMap.SwitchToAuthors();
             this.UIMap.TypeInSearchBox("pickles34");
-            this.UIMap.SubmitLol();
-            this.UIMap.AssertAuthorsNotThere();
+            this.UIMap.ClickSearchAuth();
+            this.UIMap.AssertAuthorsNotThere1();
+
             this.UIMap.closesite();
         }
 

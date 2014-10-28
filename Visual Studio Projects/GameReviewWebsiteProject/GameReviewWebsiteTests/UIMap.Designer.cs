@@ -1360,6 +1360,173 @@ namespace GameReviewWebsiteTests
             Assert.AreEqual(this.CheckCommentCreatedExpectedValues.UIFrankgoodtitlegoodcoPaneInnerText, uIFrankgoodtitlegoodcoPane.InnerText);
         }
         
+        /// <summary>
+        /// AuthorsLongZs - Use 'AuthorsLongZsExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AuthorsLongZs()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIAuthorsGameReviewSitWindow.UIAuthorsGameReviewSitDocument.UIBodyPane3.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Authors
+            //
+            //  
+            //
+            //You are searching for zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+            //Search is limited to 50 characters 
+            //No results for this search
+            //
+            //Please try the following to refine your search.
+            //Shorten your query
+            //Check for extra spaces
+            //Search for partial words instead of whole words'
+            Assert.AreEqual(this.AuthorsLongZsExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// CheckAuthorsSearchLen - Use 'CheckAuthorsSearchLenExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void CheckAuthorsSearchLen()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIAuthorsGameReviewSitWindow.UIAuthorsGameReviewSitDocument.UIBodyPane3.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Authors
+            //
+            //  
+            //
+            //You are searching for zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+            //Search is limited to 50 characters 
+            //No results for this search
+            //
+            //Please try the following to refine your search.
+            //Shorten your query
+            //Check for extra spaces
+            //Search for partial words instead of whole words'
+            Assert.AreEqual(this.CheckAuthorsSearchLenExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// ClickSearchAuth
+        /// </summary>
+        public void ClickSearchAuth()
+        {
+            #region Variable Declarations
+            HtmlInputButton uISearchButton = this.UIAuthorsGameReviewSitWindow.UIAuthorsGameReviewSitDocument.UIBodyPane1.UISearchButton;
+            #endregion
+
+            // Click 'Search' button
+            Mouse.Click(uISearchButton, new Point(35, 23));
+        }
+        
+        /// <summary>
+        /// AssertAuthorsNothing1 - Use 'AssertAuthorsNothing1ExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertAuthorsNothing1()
+        {
+            #region Variable Declarations
+            HtmlDiv uIBodyPane1 = this.UIAuthorsGameReviewSitWindow.UIAuthorsGameReviewSitDocument.UIBodyPane1;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'body' pane equals '
+            //Authors
+            //
+            //  
+            //
+            //
+            //Name 
+            //
+            //Genre 
+            //
+            //
+            //Chris
+            //FPS 
+            //
+            //Chad
+            //MMO 
+            //
+            //ReviewBot
+            //All 
+            //
+            //Dictator Commander
+            //RTS 
+            //
+            //Annoying 14 yearold
+            //First Person Shooters 
+            //
+            //Simulator Rick
+            //Simulators 
+            //
+            //Billy the bomber
+            //Flight Sim 
+            //
+            //Sam of the shrine
+            //RPG23 
+            //
+            //Sox
+            //Indie 
+            //
+            //Speedy Bob
+            //Racing 
+            //
+            //Slow Surgeon
+            //Surgeon Sims 
+            //
+            //Rick Roll Rogue
+            //Rogue Like 
+            //
+            //Cappin Pirate Yar
+            //Pirate sim 
+            //
+            //Simply Pvp
+            //Pvp anything 
+            //
+            //Eponential Salvation
+            //I must heeeeeeel youuu! 
+            //
+            //Dreaming of Clowns
+            //Clown Horror 
+            //
+            //Moba Adoba
+            //MOBAs 
+            //
+            //Fantasy Texter
+            //Text Based Roguelikes 
+            //
+            //Monopoly General 
+            //Not bored of board games 
+            //
+            //WhySoSerious
+            //Bat Games '
+            Assert.AreEqual(this.AssertAuthorsNothing1ExpectedValues.UIBodyPane1InnerText, uIBodyPane1.InnerText);
+        }
+        
+        /// <summary>
+        /// AssertAuthorsNotThere1 - Use 'AssertAuthorsNotThere1ExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertAuthorsNotThere1()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIAuthorsGameReviewSitWindow.UIAuthorsGameReviewSitDocument.UIBodyPane2.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Authors
+            //
+            //  
+            //
+            //You are searching for pickles34
+            // 
+            //No results for this search
+            //
+            //Please try the following to refine your search.
+            //Shorten your query
+            //Check for extra spaces
+            //Search for partial words instead of whole words'
+            Assert.AreEqual(this.AssertAuthorsNotThere1ExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
         #region Properties
         public virtual AssertEmptyGameReviewSearchExpectedValues AssertEmptyGameReviewSearchExpectedValues
         {
@@ -2081,6 +2248,54 @@ namespace GameReviewWebsiteTests
             }
         }
         
+        public virtual AuthorsLongZsExpectedValues AuthorsLongZsExpectedValues
+        {
+            get
+            {
+                if ((this.mAuthorsLongZsExpectedValues == null))
+                {
+                    this.mAuthorsLongZsExpectedValues = new AuthorsLongZsExpectedValues();
+                }
+                return this.mAuthorsLongZsExpectedValues;
+            }
+        }
+        
+        public virtual CheckAuthorsSearchLenExpectedValues CheckAuthorsSearchLenExpectedValues
+        {
+            get
+            {
+                if ((this.mCheckAuthorsSearchLenExpectedValues == null))
+                {
+                    this.mCheckAuthorsSearchLenExpectedValues = new CheckAuthorsSearchLenExpectedValues();
+                }
+                return this.mCheckAuthorsSearchLenExpectedValues;
+            }
+        }
+        
+        public virtual AssertAuthorsNothing1ExpectedValues AssertAuthorsNothing1ExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertAuthorsNothing1ExpectedValues == null))
+                {
+                    this.mAssertAuthorsNothing1ExpectedValues = new AssertAuthorsNothing1ExpectedValues();
+                }
+                return this.mAssertAuthorsNothing1ExpectedValues;
+            }
+        }
+        
+        public virtual AssertAuthorsNotThere1ExpectedValues AssertAuthorsNotThere1ExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertAuthorsNotThere1ExpectedValues == null))
+                {
+                    this.mAssertAuthorsNotThere1ExpectedValues = new AssertAuthorsNotThere1ExpectedValues();
+                }
+                return this.mAssertAuthorsNotThere1ExpectedValues;
+            }
+        }
+        
         public UIGameReviewsGameRevieWindow UIGameReviewsGameRevieWindow
         {
             get
@@ -2298,6 +2513,14 @@ namespace GameReviewWebsiteTests
         private EnterTitleAndCommentGoodParams mEnterTitleAndCommentGoodParams;
         
         private CheckCommentCreatedExpectedValues mCheckCommentCreatedExpectedValues;
+        
+        private AuthorsLongZsExpectedValues mAuthorsLongZsExpectedValues;
+        
+        private CheckAuthorsSearchLenExpectedValues mCheckAuthorsSearchLenExpectedValues;
+        
+        private AssertAuthorsNothing1ExpectedValues mAssertAuthorsNothing1ExpectedValues;
+        
+        private AssertAuthorsNotThere1ExpectedValues mAssertAuthorsNotThere1ExpectedValues;
         
         private UIGameReviewsGameRevieWindow mUIGameReviewsGameRevieWindow;
         
@@ -4307,6 +4530,261 @@ Bat Games ";
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'AuthorsLongZs'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AuthorsLongZsExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Authors
+        ///
+        ///  
+        ///
+        ///You are searching for zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+        ///Search is limited to 50 characters 
+        ///No results for this search
+        ///
+        ///Please try the following to refine your search.
+        ///Shorten your query
+        ///Check for extra spaces
+        ///Search for partial words instead of whole words'
+        /// </summary>
+        public string UIItemCustomInnerText = @"Authors
+
+  
+
+You are searching for zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+Search is limited to 50 characters 
+No results for this search
+
+Please try the following to refine your search.
+Shorten your query
+Check for extra spaces
+Search for partial words instead of whole words";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'CheckAuthorsSearchLen'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class CheckAuthorsSearchLenExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Authors
+        ///
+        ///  
+        ///
+        ///You are searching for zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+        ///Search is limited to 50 characters 
+        ///No results for this search
+        ///
+        ///Please try the following to refine your search.
+        ///Shorten your query
+        ///Check for extra spaces
+        ///Search for partial words instead of whole words'
+        /// </summary>
+        public string UIItemCustomInnerText = @"Authors
+
+  
+
+You are searching for zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+Search is limited to 50 characters 
+No results for this search
+
+Please try the following to refine your search.
+Shorten your query
+Check for extra spaces
+Search for partial words instead of whole words";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertAuthorsNothing1'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertAuthorsNothing1ExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'body' pane equals '
+        ///Authors
+        ///
+        ///  
+        ///
+        ///
+        ///Name 
+        ///
+        ///Genre 
+        ///
+        ///
+        ///Chris
+        ///FPS 
+        ///
+        ///Chad
+        ///MMO 
+        ///
+        ///ReviewBot
+        ///All 
+        ///
+        ///Dictator Commander
+        ///RTS 
+        ///
+        ///Annoying 14 yearold
+        ///First Person Shooters 
+        ///
+        ///Simulator Rick
+        ///Simulators 
+        ///
+        ///Billy the bomber
+        ///Flight Sim 
+        ///
+        ///Sam of the shrine
+        ///RPG23 
+        ///
+        ///Sox
+        ///Indie 
+        ///
+        ///Speedy Bob
+        ///Racing 
+        ///
+        ///Slow Surgeon
+        ///Surgeon Sims 
+        ///
+        ///Rick Roll Rogue
+        ///Rogue Like 
+        ///
+        ///Cappin Pirate Yar
+        ///Pirate sim 
+        ///
+        ///Simply Pvp
+        ///Pvp anything 
+        ///
+        ///Eponential Salvation
+        ///I must heeeeeeel youuu! 
+        ///
+        ///Dreaming of Clowns
+        ///Clown Horror 
+        ///
+        ///Moba Adoba
+        ///MOBAs 
+        ///
+        ///Fantasy Texter
+        ///Text Based Roguelikes 
+        ///
+        ///Monopoly General 
+        ///Not bored of board games 
+        ///
+        ///WhySoSerious
+        ///Bat Games '
+        /// </summary>
+        public string UIBodyPane1InnerText = @"
+Authors
+
+  
+
+
+Name 
+
+Genre 
+
+
+Chris
+FPS 
+
+Chad
+MMO 
+
+ReviewBot
+All 
+
+Dictator Commander
+RTS 
+
+Annoying 14 yearold
+First Person Shooters 
+
+Simulator Rick
+Simulators 
+
+Billy the bomber
+Flight Sim 
+
+Sam of the shrine
+RPG23 
+
+Sox
+Indie 
+
+Speedy Bob
+Racing 
+
+Slow Surgeon
+Surgeon Sims 
+
+Rick Roll Rogue
+Rogue Like 
+
+Cappin Pirate Yar
+Pirate sim 
+
+Simply Pvp
+Pvp anything 
+
+Eponential Salvation
+I must heeeeeeel youuu! 
+
+Dreaming of Clowns
+Clown Horror 
+
+Moba Adoba
+MOBAs 
+
+Fantasy Texter
+Text Based Roguelikes 
+
+Monopoly General 
+Not bored of board games 
+
+WhySoSerious
+Bat Games ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AssertAuthorsNotThere1'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertAuthorsNotThere1ExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Authors
+        ///
+        ///  
+        ///
+        ///You are searching for pickles34
+        /// 
+        ///No results for this search
+        ///
+        ///Please try the following to refine your search.
+        ///Shorten your query
+        ///Check for extra spaces
+        ///Search for partial words instead of whole words'
+        /// </summary>
+        public string UIItemCustomInnerText = "Authors\r\n\r\n  \r\n\r\nYou are searching for pickles34\r\n \r\nNo results for this search\r\n" +
+            "\r\nPlease try the following to refine your search.\r\nShorten your query\r\nCheck for" +
+            " extra spaces\r\nSearch for partial words instead of whole words";
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIGameReviewsGameRevieWindow : WinWindow
     {
@@ -5865,6 +6343,18 @@ Bat Games ";
                 return this.mUIBodyPane2;
             }
         }
+        
+        public UIBodyPane31 UIBodyPane3
+        {
+            get
+            {
+                if ((this.mUIBodyPane3 == null))
+                {
+                    this.mUIBodyPane3 = new UIBodyPane31(this);
+                }
+                return this.mUIBodyPane3;
+            }
+        }
         #endregion
         
         #region Fields
@@ -5873,6 +6363,8 @@ Bat Games ";
         private UIBodyPane13 mUIBodyPane1;
         
         private UIBodyPane23 mUIBodyPane2;
+        
+        private UIBodyPane31 mUIBodyPane3;
         #endregion
     }
     
@@ -5963,10 +6455,35 @@ Bat Games ";
                 return this.mUIItemCustom;
             }
         }
+        
+        public HtmlInputButton UISearchButton
+        {
+            get
+            {
+                if ((this.mUISearchButton == null))
+                {
+                    this.mUISearchButton = new HtmlInputButton(this);
+                    #region Search Criteria
+                    this.mUISearchButton.SearchProperties[HtmlButton.PropertyNames.Id] = null;
+                    this.mUISearchButton.SearchProperties[HtmlButton.PropertyNames.Name] = null;
+                    this.mUISearchButton.SearchProperties[HtmlButton.PropertyNames.DisplayText] = "Search";
+                    this.mUISearchButton.SearchProperties[HtmlButton.PropertyNames.Type] = "submit";
+                    this.mUISearchButton.FilterProperties[HtmlButton.PropertyNames.Title] = null;
+                    this.mUISearchButton.FilterProperties[HtmlButton.PropertyNames.Class] = null;
+                    this.mUISearchButton.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "type=\"submit\" value=\"Search\"";
+                    this.mUISearchButton.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "2";
+                    this.mUISearchButton.WindowTitles.Add("Authors - Game Review Site!");
+                    #endregion
+                }
+                return this.mUISearchButton;
+            }
+        }
         #endregion
         
         #region Fields
         private HtmlCustom mUIItemCustom;
+        
+        private HtmlInputButton mUISearchButton;
         #endregion
     }
     
@@ -5981,6 +6498,53 @@ Bat Games ";
             this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
             this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
             this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Authors\r\n\r\n  \r\n\r\nYou are searching for p";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Authors - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlCustom UIItemCustom
+        {
+            get
+            {
+                if ((this.mUIItemCustom == null))
+                {
+                    this.mUIItemCustom = new HtmlCustom(this);
+                    #region Search Criteria
+                    this.mUIItemCustom.SearchProperties["TagName"] = "SECTION";
+                    this.mUIItemCustom.SearchProperties["Id"] = null;
+                    this.mUIItemCustom.SearchProperties[UITestControl.PropertyNames.Name] = null;
+                    this.mUIItemCustom.FilterProperties["Class"] = "content-wrapper main-content clear-fix";
+                    this.mUIItemCustom.FilterProperties["ControlDefinition"] = "class=\"content-wrapper main-content clea";
+                    this.mUIItemCustom.FilterProperties["TagInstance"] = "1";
+                    this.mUIItemCustom.WindowTitles.Add("Authors - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIItemCustom;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlCustom mUIItemCustom;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane31 : HtmlDiv
+    {
+        
+        public UIBodyPane31(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Authors\r\n\r\n  \r\n\r\nYou are searching for z";
             this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
             this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
             this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
