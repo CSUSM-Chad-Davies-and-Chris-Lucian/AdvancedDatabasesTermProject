@@ -31,7 +31,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.SwitchToGames();
             this.UIMap.TypeInSearchBox("Destiny");
             this.UIMap.SubmitLol();
-            this.UIMap.AssertDestiny();
+            this.UIMap.AssertDestiny1();
             this.UIMap.closesite();
         }
 
@@ -43,9 +43,8 @@ namespace GameReviewWebsiteTests
             var Content = new String('z', 51);
             this.UIMap.TypeInSearchBox(Content);
             this.UIMap.SubmitLol();
-            this.UIMap.AssertLong(string.Format("Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for {0}" +
-"zzzzzzzzzzzzzz\r\nSearch is limited to 50 characters \r\n\r\nGame Review Tite \r\n\r\nGame" +
-" Name \r\n\r\nRating ", Content));
+            this.UIMap.AssertGamesLongSearch();
+
             this.UIMap.closesite();
 
         }

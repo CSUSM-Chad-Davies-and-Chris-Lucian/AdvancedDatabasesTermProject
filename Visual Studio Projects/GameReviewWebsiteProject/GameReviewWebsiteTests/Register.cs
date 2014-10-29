@@ -31,9 +31,9 @@ namespace GameReviewWebsiteTests
             this.UIMap.SwitchToRegister();
             this.UIMap.TypeUserName();
             this.UIMap.TypePasswords();
-            this.UIMap.TypeAvBio();
+            this.UIMap.TypeBio();
             this.UIMap.PressRegister();
-            this.UIMap.CheckPasswordShort();
+            this.UIMap.CheckPassConfShort();
             this.UIMap.closesite();
         }
 
@@ -44,14 +44,14 @@ namespace GameReviewWebsiteTests
             this.UIMap.SwitchToRegister();
             this.UIMap.TypeUserName();
             this.UIMap.TypeGoodPasswords1();
-            this.UIMap.TypeAvBio();
+            this.UIMap.TypeBio();
             this.UIMap.PressRegister();
-            this.UIMap.RegisterAlreadyExist();
 
-            //this.UIMap.CheckUserNameRegistered();
+            //must test with new username otherwise just check for already exist
+            this.UIMap.CheckUserAlreadyExist();
             this.UIMap.closesite();
-
         }
+
         [TestMethod]
         public void RegisterNoValue()
         {
@@ -60,7 +60,6 @@ namespace GameReviewWebsiteTests
             this.UIMap.PressRegister();
             this.UIMap.UserFieldReqReg();
             this.UIMap.PasswordReqReg();
-            this.UIMap.AvatarReqReg();
             this.UIMap.BioReqReg();
             this.UIMap.closesite();
         }
@@ -70,8 +69,12 @@ namespace GameReviewWebsiteTests
         {
             this.UIMap.OpenSite();
             this.UIMap.SwitchToRegister();
-            this.UIMap.RegFillFieldsFull();
-            // breaks after filling fields
+            this.UIMap.FillRegFieldsFull();
+            this.UIMap.PressRegister();
+            this.UIMap.CheckUserNameLenght();
+            this.UIMap.CheckPasswordLength();
+            this.UIMap.CheckPasswordConfirmLength();
+            this.UIMap.CheckBioFieldLength();
             this.UIMap.closesite();
         }
 
