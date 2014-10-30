@@ -77,6 +77,8 @@ namespace GameReviewWebsiteTests
             this.UIMap.HitLogin();
             this.UIMap.ChangeToDestiny();
             this.UIMap.TypeTitleComment();
+            this.UIMap.Enter4001ContentTest();
+            this.UIMap.AssertCommentContentTest();
 
             ////this.UIMap.closesite();
         }

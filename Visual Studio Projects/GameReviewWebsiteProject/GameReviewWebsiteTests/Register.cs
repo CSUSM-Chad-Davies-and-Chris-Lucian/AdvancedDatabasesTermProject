@@ -70,12 +70,11 @@ namespace GameReviewWebsiteTests
         {
             this.UIMap.OpenSite();
             this.UIMap.SwitchToRegister();
-            this.UIMap.FillRegFieldsFull();
+            this.UIMap.FillUserName();
+            this.UIMap.FillPasswordFull();
+            this.UIMap.FillBioTest();
             this.UIMap.PressRegister();
-            this.UIMap.CheckUserNameLenght();
-            this.UIMap.CheckPasswordLength();
-            this.UIMap.CheckPasswordConfirmLength();
-            this.UIMap.CheckBioFieldLength();
+            this.UIMap.CheckAllFieldsLong();
             //this.UIMap.closesite();
         }
 
