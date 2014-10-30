@@ -30,9 +30,11 @@ namespace GameReviewWebsiteTests
             this.UIMap.OpenSite();
             this.UIMap.SwitchToGames();
             this.UIMap.TypeInSearchBox("Destiny");
-            this.UIMap.SubmitLol();
-            this.UIMap.AssertDestiny1();
-            this.UIMap.closesite();
+            this.UIMap.PressSearch();
+            this.UIMap.CheckGameDesitny();
+
+
+            //this.UIMap.closesite();
         }
 
         [TestMethod]
@@ -42,10 +44,10 @@ namespace GameReviewWebsiteTests
             this.UIMap.SwitchToGames();
             var Content = new String('z', 51);
             this.UIMap.TypeInSearchBox(Content);
-            this.UIMap.SubmitLol();
+            this.UIMap.PressSearch();
             this.UIMap.AssertGamesLongSearch();
 
-            this.UIMap.closesite();
+            //this.UIMap.closesite();
 
         }
         [TestMethod]
@@ -53,9 +55,9 @@ namespace GameReviewWebsiteTests
         {
             this.UIMap.OpenSite();
             this.UIMap.SwitchToGames();
-            this.UIMap.SubmitLol();
+            this.UIMap.PressSearch();
             this.UIMap.AssertGamesNothing1();
-            this.UIMap.closesite();
+            //this.UIMap.closesite();
         }
 
         [TestMethod]
@@ -64,9 +66,10 @@ namespace GameReviewWebsiteTests
             this.UIMap.OpenSite();
             this.UIMap.SwitchToGames();
             this.UIMap.TypeInSearchBox("pickles34");
-            this.UIMap.SubmitLol();
-            this.UIMap.AssertNotThereGames();
-            this.UIMap.closesite();
+            this.UIMap.PressSearch();
+            this.UIMap.GamesNotThere1();
+
+            //this.UIMap.closesite();
         }
 
 //=========================================================================================

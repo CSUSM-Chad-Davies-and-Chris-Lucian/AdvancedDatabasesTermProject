@@ -36,7 +36,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.TypeComment();
             this.UIMap.HitAddComment();
             this.UIMap.CheckForTitleFieldReq();
-            this.UIMap.closesite();
+            ////this.UIMap.closesite();
         }
 
         [TestMethod]
@@ -50,7 +50,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.InputLongTitle();
             this.UIMap.AddTestComment();
             this.UIMap.CheckTitleMaxLength();
-            this.UIMap.closesite();
+            ////this.UIMap.closesite();
         }
 
         [TestMethod]
@@ -64,9 +64,10 @@ namespace GameReviewWebsiteTests
             this.UIMap.EnterCommentTitle();
             this.UIMap.AddCommentButton();
             this.UIMap.CheckContentReq();
-            this.UIMap.closesite();
+            ////this.UIMap.closesite();
         }
 
+        // Very Long Content 
         [TestMethod]
         public void CommentLongContent()
         {
@@ -76,9 +77,8 @@ namespace GameReviewWebsiteTests
             this.UIMap.HitLogin();
             this.UIMap.ChangeToDestiny();
             this.UIMap.TypeTitleComment();
-            this.UIMap.EnterCommentContentTooLong();
-            this.UIMap.CheckContentCommentLengthReq();
-            this.UIMap.closesite();
+
+            ////this.UIMap.closesite();
         }
 
         [TestMethod]
@@ -91,8 +91,9 @@ namespace GameReviewWebsiteTests
             this.UIMap.ChangeToDestiny();
             this.UIMap.EnterTitleAndCommentGood();
             this.UIMap.HitAddComment1();
-            this.UIMap.CheckCommentCreated();
-            this.UIMap.closesite();
+            this.UIMap.CheckGoodComment1();
+
+            //////this.UIMap.closesite();
         }
 
 //=========================================================================================

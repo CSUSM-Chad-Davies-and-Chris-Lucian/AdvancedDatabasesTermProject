@@ -34,7 +34,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.TypeBio();
             this.UIMap.PressRegister();
             this.UIMap.CheckPassConfShort();
-            this.UIMap.closesite();
+            //this.UIMap.closesite();
         }
 
         [TestMethod]
@@ -49,7 +49,7 @@ namespace GameReviewWebsiteTests
 
             //must test with new username otherwise just check for already exist
             this.UIMap.CheckUserAlreadyExist();
-            this.UIMap.closesite();
+            //this.UIMap.closesite();
         }
 
         [TestMethod]
@@ -61,9 +61,10 @@ namespace GameReviewWebsiteTests
             this.UIMap.UserFieldReqReg();
             this.UIMap.PasswordReqReg();
             this.UIMap.BioReqReg();
-            this.UIMap.closesite();
+            //this.UIMap.closesite();
         }
 
+        // Very Long Value
         [TestMethod]
         public void RegisterTooLongValue()
         {
@@ -75,7 +76,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.CheckPasswordLength();
             this.UIMap.CheckPasswordConfirmLength();
             this.UIMap.CheckBioFieldLength();
-            this.UIMap.closesite();
+            //this.UIMap.closesite();
         }
 
 //=========================================================================================

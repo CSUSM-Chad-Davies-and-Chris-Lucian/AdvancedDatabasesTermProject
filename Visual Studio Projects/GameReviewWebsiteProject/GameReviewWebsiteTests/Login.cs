@@ -33,7 +33,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.TypeWrongPassword();
             this.UIMap.PressLogIn();
             this.UIMap.WrongPassword();
-            this.UIMap.closesite();
+            //this.UIMap.closesite();
         }
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.TypeCorrectPassword();
             this.UIMap.PressLogIn();
             this.UIMap.EnsureFrankLogIn();
-            this.UIMap.closesite();
+            //this.UIMap.closesite();
 
         }
         [TestMethod]
@@ -56,7 +56,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.PressLogIn1();
             this.UIMap.CheckUserNameFieldEmpty();
             this.UIMap.CheckPasswordFieldEmpty();
-            this.UIMap.closesite();
+            //this.UIMap.closesite();
         }
 
         [TestMethod]
@@ -68,7 +68,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.PassLong();
             this.UIMap.PressLogIn1();
             this.UIMap.UserNameTooLong();
-            this.UIMap.closesite();
+            //this.UIMap.closesite();
         }
 
 //=========================================================================================

@@ -1694,6 +1694,163 @@ namespace GameReviewWebsiteTests
             Assert.AreEqual(this.AssertGamesLongSearchExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
         }
         
+        /// <summary>
+        /// CheckGoodComment1 - Use 'CheckGoodComment1ExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void CheckGoodComment1()
+        {
+            #region Variable Declarations
+            HtmlDiv uIFrankgoodtitlegoodcoPane1 = this.UIDestinyIsamazingGameWindow.UIDestinyIsamazingGameDocument.UIBodyPane.UIFrankgoodtitlegoodcoPane1;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'Frank - good title good comment De' pane equals 'Frank - good title 
+            //good comment 
+            //
+            //Delete '
+            Assert.AreEqual(this.CheckGoodComment1ExpectedValues.UIFrankgoodtitlegoodcoPane1InnerText, uIFrankgoodtitlegoodcoPane1.InnerText);
+        }
+        
+        /// <summary>
+        /// DestinyGameReviewSearchTest - Use 'DestinyGameReviewSearchTestExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void DestinyGameReviewSearchTest()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UIBodyPane.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Game Reviews!
+            //
+            //  
+            //
+            //You are searching for Destiny
+            // 
+            //
+            //Game Review Tite 
+            //
+            //Game Name 
+            //
+            //Rating 
+            //
+            //
+            //Destiny Is amazing!
+            //
+            //Destiny
+            //4.90 '
+            Assert.AreEqual(this.DestinyGameReviewSearchTestExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// PressSearch
+        /// </summary>
+        public void PressSearch()
+        {
+            #region Variable Declarations
+            HtmlInputButton uISearchButton = this.UIGamesGameReviewSiteIWindow.UIGamesGameReviewSiteDocument.UIBodyPane1.UISearchButton;
+            #endregion
+
+            // Click 'Search' button
+            Mouse.Click(uISearchButton, new Point(66, 23));
+        }
+        
+        /// <summary>
+        /// CheckGameDesitny - Use 'CheckGameDesitnyExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void CheckGameDesitny()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIGamesGameReviewSiteIWindow.UIGamesGameReviewSiteDocument.UIBodyPane.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Games
+            //
+            //  
+            //
+            //You are searching for Destiny
+            // 
+            //
+            //Title 
+            //
+            //Description 
+            //
+            //
+            //Destiny
+            //MMOFPS with epic story and action. '
+            Assert.AreEqual(this.CheckGameDesitnyExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// GamesNotThere1 - Use 'GamesNotThere1ExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void GamesNotThere1()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIGamesGameReviewSiteIWindow.UIGamesGameReviewSiteDocument.UIBodyPane2.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Games
+            //
+            //  
+            //
+            //You are searching for pickles34
+            // 
+            //No results for this search
+            //
+            //Please try the following to refine your search.
+            //Shorten your query
+            //Check for extra spaces
+            //Search for partial words instead of whole words'
+            Assert.AreEqual(this.GamesNotThere1ExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// GameReveiewNotThere - Use 'GameReveiewNotThereExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void GameReveiewNotThere()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UIBodyPane.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Game Reviews!
+            //
+            //  
+            //
+            //You are searching for pickles34
+            // 
+            //No results for this search
+            //
+            //Please try the following to refine your search.
+            //Shorten your query
+            //Check for extra spaces
+            //Search for partial words instead of whole words'
+            Assert.AreEqual(this.GameReveiewNotThereExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
+        /// <summary>
+        /// GamerCheckNotThere - Use 'GamerCheckNotThereExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void GamerCheckNotThere()
+        {
+            #region Variable Declarations
+            HtmlCustom uIItemCustom = this.UIGamersGameReviewSiteWindow.UIGamersGameReviewSiteDocument.UIBodyPane3.UIItemCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of custom control equals 'Gamers
+            //
+            //  
+            //
+            //You are searching for pickles34
+            // 
+            //No results for this search
+            //
+            //Please try the following to refine your search.
+            //Shorten your query
+            //Check for extra spaces
+            //Search for partial words instead of whole words'
+            Assert.AreEqual(this.GamerCheckNotThereExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
+        }
+        
         #region Properties
         public virtual AssertEmptyGameReviewSearchExpectedValues AssertEmptyGameReviewSearchExpectedValues
         {
@@ -2583,6 +2740,78 @@ namespace GameReviewWebsiteTests
             }
         }
         
+        public virtual CheckGoodComment1ExpectedValues CheckGoodComment1ExpectedValues
+        {
+            get
+            {
+                if ((this.mCheckGoodComment1ExpectedValues == null))
+                {
+                    this.mCheckGoodComment1ExpectedValues = new CheckGoodComment1ExpectedValues();
+                }
+                return this.mCheckGoodComment1ExpectedValues;
+            }
+        }
+        
+        public virtual DestinyGameReviewSearchTestExpectedValues DestinyGameReviewSearchTestExpectedValues
+        {
+            get
+            {
+                if ((this.mDestinyGameReviewSearchTestExpectedValues == null))
+                {
+                    this.mDestinyGameReviewSearchTestExpectedValues = new DestinyGameReviewSearchTestExpectedValues();
+                }
+                return this.mDestinyGameReviewSearchTestExpectedValues;
+            }
+        }
+        
+        public virtual CheckGameDesitnyExpectedValues CheckGameDesitnyExpectedValues
+        {
+            get
+            {
+                if ((this.mCheckGameDesitnyExpectedValues == null))
+                {
+                    this.mCheckGameDesitnyExpectedValues = new CheckGameDesitnyExpectedValues();
+                }
+                return this.mCheckGameDesitnyExpectedValues;
+            }
+        }
+        
+        public virtual GamesNotThere1ExpectedValues GamesNotThere1ExpectedValues
+        {
+            get
+            {
+                if ((this.mGamesNotThere1ExpectedValues == null))
+                {
+                    this.mGamesNotThere1ExpectedValues = new GamesNotThere1ExpectedValues();
+                }
+                return this.mGamesNotThere1ExpectedValues;
+            }
+        }
+        
+        public virtual GameReveiewNotThereExpectedValues GameReveiewNotThereExpectedValues
+        {
+            get
+            {
+                if ((this.mGameReveiewNotThereExpectedValues == null))
+                {
+                    this.mGameReveiewNotThereExpectedValues = new GameReveiewNotThereExpectedValues();
+                }
+                return this.mGameReveiewNotThereExpectedValues;
+            }
+        }
+        
+        public virtual GamerCheckNotThereExpectedValues GamerCheckNotThereExpectedValues
+        {
+            get
+            {
+                if ((this.mGamerCheckNotThereExpectedValues == null))
+                {
+                    this.mGamerCheckNotThereExpectedValues = new GamerCheckNotThereExpectedValues();
+                }
+                return this.mGamerCheckNotThereExpectedValues;
+            }
+        }
+        
         public UIGameReviewsGameRevieWindow UIGameReviewsGameRevieWindow
         {
             get
@@ -2828,6 +3057,18 @@ namespace GameReviewWebsiteTests
         private AssertDestiny1ExpectedValues mAssertDestiny1ExpectedValues;
         
         private AssertGamesLongSearchExpectedValues mAssertGamesLongSearchExpectedValues;
+        
+        private CheckGoodComment1ExpectedValues mCheckGoodComment1ExpectedValues;
+        
+        private DestinyGameReviewSearchTestExpectedValues mDestinyGameReviewSearchTestExpectedValues;
+        
+        private CheckGameDesitnyExpectedValues mCheckGameDesitnyExpectedValues;
+        
+        private GamesNotThere1ExpectedValues mGamesNotThere1ExpectedValues;
+        
+        private GameReveiewNotThereExpectedValues mGameReveiewNotThereExpectedValues;
+        
+        private GamerCheckNotThereExpectedValues mGamerCheckNotThereExpectedValues;
         
         private UIGameReviewsGameRevieWindow mUIGameReviewsGameRevieWindow;
         
@@ -5350,6 +5591,170 @@ Search for partial words instead of whole words";
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'CheckGoodComment1'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class CheckGoodComment1ExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'Frank - good title good comment De' pane equals 'Frank - good title 
+        ///good comment 
+        ///
+        ///Delete '
+        /// </summary>
+        public string UIFrankgoodtitlegoodcoPane1InnerText = "Frank - good title \r\ngood comment \r\n\r\nDelete ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'DestinyGameReviewSearchTest'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class DestinyGameReviewSearchTestExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Game Reviews!
+        ///
+        ///  
+        ///
+        ///You are searching for Destiny
+        /// 
+        ///
+        ///Game Review Tite 
+        ///
+        ///Game Name 
+        ///
+        ///Rating 
+        ///
+        ///
+        ///Destiny Is amazing!
+        ///
+        ///Destiny
+        ///4.90 '
+        /// </summary>
+        public string UIItemCustomInnerText = "Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for Destiny\r\n \r\n\r\nGame Review Tite \r\n\r\nG" +
+            "ame Name \r\n\r\nRating \r\n\r\n\r\nDestiny Is amazing!\r\n\r\nDestiny\r\n4.90 ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'CheckGameDesitny'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class CheckGameDesitnyExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Games
+        ///
+        ///  
+        ///
+        ///You are searching for Destiny
+        /// 
+        ///
+        ///Title 
+        ///
+        ///Description 
+        ///
+        ///
+        ///Destiny
+        ///MMOFPS with epic story and action. '
+        /// </summary>
+        public string UIItemCustomInnerText = "Games\r\n\r\n  \r\n\r\nYou are searching for Destiny\r\n \r\n\r\nTitle \r\n\r\nDescription \r\n\r\n\r\nDe" +
+            "stiny\r\nMMOFPS with epic story and action. ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'GamesNotThere1'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class GamesNotThere1ExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Games
+        ///
+        ///  
+        ///
+        ///You are searching for pickles34
+        /// 
+        ///No results for this search
+        ///
+        ///Please try the following to refine your search.
+        ///Shorten your query
+        ///Check for extra spaces
+        ///Search for partial words instead of whole words'
+        /// </summary>
+        public string UIItemCustomInnerText = "Games\r\n\r\n  \r\n\r\nYou are searching for pickles34\r\n \r\nNo results for this search\r\n\r\n" +
+            "Please try the following to refine your search.\r\nShorten your query\r\nCheck for e" +
+            "xtra spaces\r\nSearch for partial words instead of whole words";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'GameReveiewNotThere'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class GameReveiewNotThereExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Game Reviews!
+        ///
+        ///  
+        ///
+        ///You are searching for pickles34
+        /// 
+        ///No results for this search
+        ///
+        ///Please try the following to refine your search.
+        ///Shorten your query
+        ///Check for extra spaces
+        ///Search for partial words instead of whole words'
+        /// </summary>
+        public string UIItemCustomInnerText = "Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for pickles34\r\n \r\nNo results for this se" +
+            "arch\r\n\r\nPlease try the following to refine your search.\r\nShorten your query\r\nChe" +
+            "ck for extra spaces\r\nSearch for partial words instead of whole words";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'GamerCheckNotThere'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class GamerCheckNotThereExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of custom control equals 'Gamers
+        ///
+        ///  
+        ///
+        ///You are searching for pickles34
+        /// 
+        ///No results for this search
+        ///
+        ///Please try the following to refine your search.
+        ///Shorten your query
+        ///Check for extra spaces
+        ///Search for partial words instead of whole words'
+        /// </summary>
+        public string UIItemCustomInnerText = "Gamers\r\n\r\n  \r\n\r\nYou are searching for pickles34\r\n \r\nNo results for this search\r\n\r" +
+            "\nPlease try the following to refine your search.\r\nShorten your query\r\nCheck for " +
+            "extra spaces\r\nSearch for partial words instead of whole words";
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIGameReviewsGameRevieWindow : WinWindow
     {
@@ -6747,12 +7152,37 @@ Search for partial words instead of whole words";
                 return this.mUIItemCustom;
             }
         }
+        
+        public HtmlInputButton UISearchButton
+        {
+            get
+            {
+                if ((this.mUISearchButton == null))
+                {
+                    this.mUISearchButton = new HtmlInputButton(this);
+                    #region Search Criteria
+                    this.mUISearchButton.SearchProperties[HtmlButton.PropertyNames.Id] = null;
+                    this.mUISearchButton.SearchProperties[HtmlButton.PropertyNames.Name] = null;
+                    this.mUISearchButton.SearchProperties[HtmlButton.PropertyNames.DisplayText] = "Search";
+                    this.mUISearchButton.SearchProperties[HtmlButton.PropertyNames.Type] = "submit";
+                    this.mUISearchButton.FilterProperties[HtmlButton.PropertyNames.Title] = null;
+                    this.mUISearchButton.FilterProperties[HtmlButton.PropertyNames.Class] = null;
+                    this.mUISearchButton.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "type=\"submit\" value=\"Search\"";
+                    this.mUISearchButton.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "2";
+                    this.mUISearchButton.WindowTitles.Add("Games - Game Review Site!");
+                    #endregion
+                }
+                return this.mUISearchButton;
+            }
+        }
         #endregion
         
         #region Fields
         private UIItemTable1 mUIItemTable;
         
         private HtmlCustom mUIItemCustom;
+        
+        private HtmlInputButton mUISearchButton;
         #endregion
     }
     
@@ -8632,6 +9062,28 @@ Search for partial words instead of whole words";
                 return this.mUIFrankgoodtitlegoodcoPane;
             }
         }
+        
+        public HtmlDiv UIFrankgoodtitlegoodcoPane1
+        {
+            get
+            {
+                if ((this.mUIFrankgoodtitlegoodcoPane1 == null))
+                {
+                    this.mUIFrankgoodtitlegoodcoPane1 = new HtmlDiv(this);
+                    #region Search Criteria
+                    this.mUIFrankgoodtitlegoodcoPane1.SearchProperties[HtmlDiv.PropertyNames.Id] = null;
+                    this.mUIFrankgoodtitlegoodcoPane1.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+                    this.mUIFrankgoodtitlegoodcoPane1.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Frank - good title \r\ngood comment \r\n\r\nDe";
+                    this.mUIFrankgoodtitlegoodcoPane1.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+                    this.mUIFrankgoodtitlegoodcoPane1.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+                    this.mUIFrankgoodtitlegoodcoPane1.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = null;
+                    this.mUIFrankgoodtitlegoodcoPane1.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "31";
+                    this.mUIFrankgoodtitlegoodcoPane1.WindowTitles.Add("Destiny Is amazing! - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIFrankgoodtitlegoodcoPane1;
+            }
+        }
         #endregion
         
         #region Fields
@@ -8646,6 +9098,8 @@ Search for partial words instead of whole words";
         private HtmlSpan mUIThefieldContentmustbPane;
         
         private HtmlDiv mUIFrankgoodtitlegoodcoPane;
+        
+        private HtmlDiv mUIFrankgoodtitlegoodcoPane1;
         #endregion
     }
 }
