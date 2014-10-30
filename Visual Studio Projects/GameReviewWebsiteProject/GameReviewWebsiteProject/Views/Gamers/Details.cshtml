@@ -10,14 +10,14 @@
     <legend>Gamer</legend>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Name)
+        @Html.DisplayNameFor(model => model.Name)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Name)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Biography)
+        @Html.DisplayNameFor(model => model.Biography)
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Biography)
@@ -32,6 +32,12 @@
         <p>
             @Html.DisplayFor(model => comment.Content)
         </p>
+        @if (User.Identity.Name.ToLower() == comment.Gamer.Name.ToLower())
+        {
+            <p>
+                @Html.ActionLink("Delete", "Delete", "Comment", new { id = comment.CommentId , orgin = "Gamers"}, null)
+            </p>
+        }
     </div>
 }
 <p>

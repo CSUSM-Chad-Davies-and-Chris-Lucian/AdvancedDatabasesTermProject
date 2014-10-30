@@ -100,13 +100,14 @@ namespace GameReviewWebsiteProject.Controllers
         //
         // GET: /Comment/Delete/5
 
-        public ActionResult Delete(int id = 0)
+        public ActionResult Delete(int id = 0, string orgin = "GameReviews")
         {
             Comment comment = db.Comments.Find(id);
             if (comment == null)
             {
                 return HttpNotFound();
             }
+            ViewBag.orgin = orgin;
             return View(comment);
         }
 
@@ -115,12 +116,12 @@ namespace GameReviewWebsiteProject.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int id, string orgin = "GameReviews")
         {
             Comment comment = db.Comments.Find(id);
             db.Comments.Remove(comment);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", orgin, new { id = orgin == "GameReviews"? comment.GameReviewId:comment.GamerId });
         }
 
         protected override void Dispose(bool disposing)

@@ -11,14 +11,14 @@
     <legend>Comment</legend>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.GameReview.Title)
+         Game Review Title
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.GameReview.Title)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.Gamer.Name)
+         Gamer Name
     </div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Gamer.Name)
@@ -41,7 +41,9 @@
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     <p>
+        <input type ="hidden" name ="orgin" value ="@ViewBag.orgin" />
         <input type="submit" value="Delete" /> |
         @Html.ActionLink("Back to List", "Index")
     </p>
+    
 }

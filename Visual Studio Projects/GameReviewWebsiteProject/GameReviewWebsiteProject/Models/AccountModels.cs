@@ -86,6 +86,7 @@ namespace GameReviewWebsiteProject.Models
         [Display(Name = "Password")]
         public string Password { get; set; }
 
+        [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Confirm password")]
         [StringLength(10, ErrorMessage = "The {0} must be between {2} and {1}.", MinimumLength = 6)]
