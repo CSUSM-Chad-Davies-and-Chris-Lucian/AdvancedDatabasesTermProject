@@ -98,6 +98,20 @@ namespace GameReviewWebsiteTests
             //////this.UIMap.closesite();
         }
 
+        // Delete
+        [TestMethod]
+        public void DeletePost()
+        {
+            this.UIMap.OpenSite();
+            this.UIMap.SwitchToLogin();
+            this.UIMap.TypeFrank();
+            this.UIMap.TypeCorrectPassword();
+            this.UIMap.PressLogIn();
+            this.UIMap.SelectDestiny();
+            this.UIMap.SelectDelete();
+            this.UIMap.ConfirmDelete();
+            this.UIMap.AddDeleteInsertion();
+        }
 //=========================================================================================
         // END
 

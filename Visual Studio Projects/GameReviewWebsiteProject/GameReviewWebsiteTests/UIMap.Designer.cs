@@ -1936,6 +1936,58 @@ namespace GameReviewWebsiteTests
             Assert.AreEqual(this.CheckAllFieldsLongExpectedValues.UIItemCustomInnerText, uIItemCustom.InnerText);
         }
         
+        /// <summary>
+        /// SelectDestiny
+        /// </summary>
+        public void SelectDestiny()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uIDestinyIsamazingHyperlink = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UIBodyPane1.UIDestinyIsamazingHyperlink;
+            #endregion
+
+            // Click 'Destiny Is amazing!' link
+            Mouse.Click(uIDestinyIsamazingHyperlink, new Point(109, 22));
+        }
+        
+        /// <summary>
+        /// SelectDelete
+        /// </summary>
+        public void SelectDelete()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uIDeleteHyperlink = this.UIDestinyIsamazingGameWindow.UIDestinyIsamazingGameDocument.UIBodyPane.UIDeleteHyperlink;
+            #endregion
+
+            // Click 'Delete' link
+            Mouse.Click(uIDeleteHyperlink, new Point(11, 5));
+        }
+        
+        /// <summary>
+        /// ConfirmDelete
+        /// </summary>
+        public void ConfirmDelete()
+        {
+            #region Variable Declarations
+            HtmlInputButton uIDeleteButton = this.UIDeleteGameReviewSiteWindow.UIDeleteGameReviewSiteDocument.UIBodyPane.UIDeleteButton;
+            #endregion
+
+            // Click 'Delete' button
+            Mouse.Click(uIDeleteButton, new Point(23, 26));
+        }
+        
+        /// <summary>
+        /// AddDeleteInsertion - Use 'AddDeleteInsertionExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AddDeleteInsertion()
+        {
+            #region Variable Declarations
+            HtmlDiv uIFirstpersojshooterwiPane = this.UIDestinyIsamazingGameWindow.UIDestinyIsamazingGameDocument.UIBodyPane.UIFirstpersojshooterwiPane;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'First persoj shooter with a massively mu' pane equals 'First persoj shooter with a massively multiplayer online elemnt! This epic game has all the action you will ever need and for all you stat junkies out there you will have to play this. Your stats will effect how your cooldowns help you blow stuff up! '
+            Assert.AreEqual(this.AddDeleteInsertionExpectedValues.UIFirstpersojshooterwiPaneInnerText, uIFirstpersojshooterwiPane.InnerText);
+        }
+        
         #region Properties
         public virtual AssertEmptyGameReviewSearchExpectedValues AssertEmptyGameReviewSearchExpectedValues
         {
@@ -2969,6 +3021,18 @@ namespace GameReviewWebsiteTests
             }
         }
         
+        public virtual AddDeleteInsertionExpectedValues AddDeleteInsertionExpectedValues
+        {
+            get
+            {
+                if ((this.mAddDeleteInsertionExpectedValues == null))
+                {
+                    this.mAddDeleteInsertionExpectedValues = new AddDeleteInsertionExpectedValues();
+                }
+                return this.mAddDeleteInsertionExpectedValues;
+            }
+        }
+        
         public UIGameReviewsGameRevieWindow UIGameReviewsGameRevieWindow
         {
             get
@@ -3062,6 +3126,18 @@ namespace GameReviewWebsiteTests
                     this.mUIDestinyIsamazingGameWindow = new UIDestinyIsamazingGameWindow();
                 }
                 return this.mUIDestinyIsamazingGameWindow;
+            }
+        }
+        
+        public UIDeleteGameReviewSiteWindow UIDeleteGameReviewSiteWindow
+        {
+            get
+            {
+                if ((this.mUIDeleteGameReviewSiteWindow == null))
+                {
+                    this.mUIDeleteGameReviewSiteWindow = new UIDeleteGameReviewSiteWindow();
+                }
+                return this.mUIDeleteGameReviewSiteWindow;
             }
         }
         #endregion
@@ -3239,6 +3315,8 @@ namespace GameReviewWebsiteTests
         
         private CheckAllFieldsLongExpectedValues mCheckAllFieldsLongExpectedValues;
         
+        private AddDeleteInsertionExpectedValues mAddDeleteInsertionExpectedValues;
+        
         private UIGameReviewsGameRevieWindow mUIGameReviewsGameRevieWindow;
         
         private UIGameReviewsGameRevieWindow1 mUIGameReviewsGameRevieWindow1;
@@ -3254,6 +3332,8 @@ namespace GameReviewWebsiteTests
         private UIRegisterGameReviewSiWindow mUIRegisterGameReviewSiWindow;
         
         private UIDestinyIsamazingGameWindow mUIDestinyIsamazingGameWindow;
+        
+        private UIDeleteGameReviewSiteWindow mUIDeleteGameReviewSiteWindow;
         #endregion
     }
     
@@ -6122,6 +6202,24 @@ Search for partial words instead of whole words";
         public string UIItemCustomInnerText = "The field User name must be a string with a maximum length of 150.\r\nThe Password " +
             "must be between 6 and 10.\r\nThe Confirm password must be between 6 and 10.\r\nThe f" +
             "ield Bio must be a string with a maximum length of 4000.";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'AddDeleteInsertion'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AddDeleteInsertionExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'First persoj shooter with a massively mu' pane equals 'First persoj shooter with a massively multiplayer online elemnt! This epic game has all the action you will ever need and for all you stat junkies out there you will have to play this. Your stats will effect how your cooldowns help you blow stuff up! '
+        /// </summary>
+        public string UIFirstpersojshooterwiPaneInnerText = "First persoj shooter with a massively multiplayer online elemnt! This epic game h" +
+            "as all the action you will ever need and for all you stat junkies out there you " +
+            "will have to play this. Your stats will effect how your cooldowns help you blow " +
+            "stuff up! ";
         #endregion
     }
     
@@ -9504,6 +9602,53 @@ Search for partial words instead of whole words";
                 return this.mUIFrankgoodtitlegoodcoPane1;
             }
         }
+        
+        public HtmlHyperlink UIDeleteHyperlink
+        {
+            get
+            {
+                if ((this.mUIDeleteHyperlink == null))
+                {
+                    this.mUIDeleteHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUIDeleteHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = null;
+                    this.mUIDeleteHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUIDeleteHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUIDeleteHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Delete";
+                    this.mUIDeleteHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Comment/Delete/1054";
+                    this.mUIDeleteHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUIDeleteHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://localhost:3085/Comment/Delete/1054";
+                    this.mUIDeleteHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = null;
+                    this.mUIDeleteHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "href=\"/Comment/Delete/1054\"";
+                    this.mUIDeleteHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "10";
+                    this.mUIDeleteHyperlink.WindowTitles.Add("Destiny Is amazing! - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIDeleteHyperlink;
+            }
+        }
+        
+        public HtmlDiv UIFirstpersojshooterwiPane
+        {
+            get
+            {
+                if ((this.mUIFirstpersojshooterwiPane == null))
+                {
+                    this.mUIFirstpersojshooterwiPane = new HtmlDiv(this);
+                    #region Search Criteria
+                    this.mUIFirstpersojshooterwiPane.SearchProperties[HtmlDiv.PropertyNames.Id] = null;
+                    this.mUIFirstpersojshooterwiPane.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+                    this.mUIFirstpersojshooterwiPane.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "First persoj shooter with a massively mu";
+                    this.mUIFirstpersojshooterwiPane.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+                    this.mUIFirstpersojshooterwiPane.FilterProperties[HtmlDiv.PropertyNames.Class] = "display-field";
+                    this.mUIFirstpersojshooterwiPane.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "class=\"display-field\"";
+                    this.mUIFirstpersojshooterwiPane.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "7";
+                    this.mUIFirstpersojshooterwiPane.WindowTitles.Add("Destiny Is amazing! - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIFirstpersojshooterwiPane;
+            }
+        }
         #endregion
         
         #region Fields
@@ -9520,6 +9665,133 @@ Search for partial words instead of whole words";
         private HtmlDiv mUIFrankgoodtitlegoodcoPane;
         
         private HtmlDiv mUIFrankgoodtitlegoodcoPane1;
+        
+        private HtmlHyperlink mUIDeleteHyperlink;
+        
+        private HtmlDiv mUIFirstpersojshooterwiPane;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIDeleteGameReviewSiteWindow : BrowserWindow
+    {
+        
+        public UIDeleteGameReviewSiteWindow()
+        {
+            #region Search Criteria
+            this.SearchProperties[UITestControl.PropertyNames.Name] = "Delete - Game Review Site!";
+            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "IEFrame";
+            this.WindowTitles.Add("Delete - Game Review Site!");
+            #endregion
+        }
+        
+        public void LaunchUrl(System.Uri url)
+        {
+            this.CopyFrom(BrowserWindow.Launch(url));
+        }
+        
+        #region Properties
+        public UIDeleteGameReviewSiteDocument UIDeleteGameReviewSiteDocument
+        {
+            get
+            {
+                if ((this.mUIDeleteGameReviewSiteDocument == null))
+                {
+                    this.mUIDeleteGameReviewSiteDocument = new UIDeleteGameReviewSiteDocument(this);
+                }
+                return this.mUIDeleteGameReviewSiteDocument;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIDeleteGameReviewSiteDocument mUIDeleteGameReviewSiteDocument;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIDeleteGameReviewSiteDocument : HtmlDocument
+    {
+        
+        public UIDeleteGameReviewSiteDocument(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDocument.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlDocument.PropertyNames.RedirectingPage] = "False";
+            this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
+            this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Delete - Game Review Site!";
+            this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Comment/Delete/1054";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://localhost:3085/Comment/Delete/1054";
+            this.WindowTitles.Add("Delete - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public UIBodyPane8 UIBodyPane
+        {
+            get
+            {
+                if ((this.mUIBodyPane == null))
+                {
+                    this.mUIBodyPane = new UIBodyPane8(this);
+                }
+                return this.mUIBodyPane;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private UIBodyPane8 mUIBodyPane;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIBodyPane8 : HtmlDiv
+    {
+        
+        public UIBodyPane8(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlDiv.PropertyNames.Id] = "body";
+            this.SearchProperties[HtmlDiv.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.InnerText] = "Delete\r\n\r\nAre you sure you want to delet";
+            this.FilterProperties[HtmlDiv.PropertyNames.Title] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlDiv.PropertyNames.ControlDefinition] = "id=\"body\"";
+            this.FilterProperties[HtmlDiv.PropertyNames.TagInstance] = "4";
+            this.WindowTitles.Add("Delete - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlInputButton UIDeleteButton
+        {
+            get
+            {
+                if ((this.mUIDeleteButton == null))
+                {
+                    this.mUIDeleteButton = new HtmlInputButton(this);
+                    #region Search Criteria
+                    this.mUIDeleteButton.SearchProperties[HtmlButton.PropertyNames.Id] = null;
+                    this.mUIDeleteButton.SearchProperties[HtmlButton.PropertyNames.Name] = null;
+                    this.mUIDeleteButton.SearchProperties[HtmlButton.PropertyNames.DisplayText] = "Delete";
+                    this.mUIDeleteButton.SearchProperties[HtmlButton.PropertyNames.Type] = "submit";
+                    this.mUIDeleteButton.FilterProperties[HtmlButton.PropertyNames.Title] = null;
+                    this.mUIDeleteButton.FilterProperties[HtmlButton.PropertyNames.Class] = null;
+                    this.mUIDeleteButton.FilterProperties[HtmlButton.PropertyNames.ControlDefinition] = "type=\"submit\" value=\"Delete\"";
+                    this.mUIDeleteButton.FilterProperties[HtmlButton.PropertyNames.TagInstance] = "3";
+                    this.mUIDeleteButton.WindowTitles.Add("Delete - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIDeleteButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlInputButton mUIDeleteButton;
         #endregion
     }
 }
