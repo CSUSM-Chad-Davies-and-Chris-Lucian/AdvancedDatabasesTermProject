@@ -37,6 +37,7 @@ namespace GameReviewWebsiteTests
             //this.UIMap.closesite();
         }
 
+        /*
         [TestMethod]
         public void RegisterGoodPassword()
         {
@@ -50,6 +51,20 @@ namespace GameReviewWebsiteTests
             //must test with new username otherwise just check for already exist
             this.UIMap.CheckUserAlreadyExist();
             //this.UIMap.closesite();
+        }*/
+
+        [TestMethod]
+        public void RegisterCheckDuplicate()
+        {
+            this.UIMap.OpenSite();
+            this.UIMap.SwitchToRegister();
+            this.UIMap.TypeUserName();
+            this.UIMap.TypeGoodPasswords1();
+            this.UIMap.TypeBio();
+            this.UIMap.PressRegister();
+
+            //must test with new username otherwise just check for already exist
+            this.UIMap.CheckUserAlreadyExist();
         }
 
         [TestMethod]
