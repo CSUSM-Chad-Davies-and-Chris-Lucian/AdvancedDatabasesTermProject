@@ -2014,6 +2014,23 @@ namespace GameReviewWebsiteTests
             Mouse.Click(uILogoffHyperlink, new Point(22, 12));
         }
         
+        /// <summary>
+        /// PasteValueIntoTitleField - Use 'PasteValueIntoTitleFieldParams' to pass parameters into this method.
+        /// </summary>
+        public void PasteValueIntoTitleField()
+        {
+            #region Variable Declarations
+            HtmlEdit uITitleEdit = this.UIDestinyIsamazingGameWindow.UIDestinyIsamazingGameDocument.UITitleEdit;
+            #endregion
+
+            // Last mouse action was not recorded.
+
+            // Last mouse action was not recorded.
+
+            // Type 'http://localhost:3085/' in 'Title' text box
+            uITitleEdit.Text = this.PasteValueIntoTitleFieldParams.UITitleEditText;
+        }
+        
         #region Properties
         public virtual AssertEmptyGameReviewSearchExpectedValues AssertEmptyGameReviewSearchExpectedValues
         {
@@ -3071,6 +3088,18 @@ namespace GameReviewWebsiteTests
             }
         }
         
+        public virtual PasteValueIntoTitleFieldParams PasteValueIntoTitleFieldParams
+        {
+            get
+            {
+                if ((this.mPasteValueIntoTitleFieldParams == null))
+                {
+                    this.mPasteValueIntoTitleFieldParams = new PasteValueIntoTitleFieldParams();
+                }
+                return this.mPasteValueIntoTitleFieldParams;
+            }
+        }
+        
         public UIGameReviewsGameRevieWindow UIGameReviewsGameRevieWindow
         {
             get
@@ -3356,6 +3385,8 @@ namespace GameReviewWebsiteTests
         private AddDeleteInsertionExpectedValues mAddDeleteInsertionExpectedValues;
         
         private AssertUserRegisterSuccessExpectedValues mAssertUserRegisterSuccessExpectedValues;
+        
+        private PasteValueIntoTitleFieldParams mPasteValueIntoTitleFieldParams;
         
         private UIGameReviewsGameRevieWindow mUIGameReviewsGameRevieWindow;
         
@@ -6275,6 +6306,21 @@ Search for partial words instead of whole words";
         /// Verify that the 'InnerText' property of 'login' custom control equals 'Hello, replace with dynamic2  Log off  '
         /// </summary>
         public string UILoginCustomInnerText = "Hello, replace with dynamic2  Log off  ";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'PasteValueIntoTitleField'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class PasteValueIntoTitleFieldParams
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'http://localhost:3085/' in 'Title' text box
+        /// </summary>
+        public string UITitleEditText = "http://localhost:3085/";
         #endregion
     }
     

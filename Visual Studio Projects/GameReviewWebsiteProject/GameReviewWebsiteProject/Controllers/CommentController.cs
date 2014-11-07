@@ -118,10 +118,22 @@ namespace GameReviewWebsiteProject.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id, string orgin = "GameReviews")
         {
-            Comment comment = db.Comments.Find(id);
+            var comment = db.Comments.Find(id);
             db.Comments.Remove(comment);
             db.SaveChanges();
-            return RedirectToAction("Details", orgin, new { id = orgin == "GameReviews"? comment.GameReviewId:comment.GamerId });
+
+            return RedirectToCommentOrigin(orgin, comment);
+        }
+
+        public ActionResult RedirectToCommentOrigin(int id, string orgin = "GameReviews")
+        {
+            var comment = db.Comments.Find(id);
+            return RedirectToCommentOrigin(orgin, comment);
+        }
+
+        private ActionResult RedirectToCommentOrigin(string orgin, Comment comment)
+        {
+            return RedirectToAction("Details", orgin, new {id = orgin == "GameReviews" ? comment.GameReviewId : comment.GamerId});
         }
 
         protected override void Dispose(bool disposing)

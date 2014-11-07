@@ -36,6 +36,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.TypeComment();
             this.UIMap.HitAddComment();
             this.UIMap.CheckForTitleFieldReq();
+            this.UIMap.LogOffUserForNextTest();
             ////this.UIMap.closesite();
         }
 
@@ -50,6 +51,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.InputLongTitle();
             this.UIMap.AddTestComment();
             this.UIMap.CheckTitleMaxLength();
+            this.UIMap.LogOffUserForNextTest();
             ////this.UIMap.closesite();
         }
 
@@ -64,6 +66,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.EnterCommentTitle();
             this.UIMap.AddCommentButton();
             this.UIMap.CheckContentReq();
+            this.UIMap.LogOffUserForNextTest();
             ////this.UIMap.closesite();
         }
 
@@ -79,7 +82,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.TypeTitleComment();
             this.UIMap.Enter4001ContentTest();
             this.UIMap.AssertCommentContentTest();
-
+            this.UIMap.LogOffUserForNextTest();
             ////this.UIMap.closesite();
         }
 
@@ -94,7 +97,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.EnterTitleAndCommentGood();
             this.UIMap.HitAddComment1();
             this.UIMap.CheckGoodComment1();
-
+            this.UIMap.LogOffUserForNextTest();
             //////this.UIMap.closesite();
         }
 
@@ -111,6 +114,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.SelectDelete();
             this.UIMap.ConfirmDelete();
             this.UIMap.AddDeleteInsertion();
+            this.UIMap.LogOffUserForNextTest();
         }
 //=========================================================================================
         // END

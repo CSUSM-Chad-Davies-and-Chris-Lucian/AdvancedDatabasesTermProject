@@ -41,12 +41,12 @@
             @Html.HiddenFor(model => model.GameReviewId)
             <div class="display-field">Title: </div>
             <div class="display-field">
-                @Html.EditorFor(model => new Comment().Title)
+                @Html.EditorFor(model => new Comment().Title)<span style="color:red"> *</span>
                 @Html.ValidationMessageFor(model => new Comment().Title)
             </div>
             <div class="display-field">Comment: </div>
             <div class="display-field">
-                @Html.TextArea("Content", "")
+                @Html.TextArea("Content", "")<span style="color:red"> *</span>
                 @Html.ValidationMessageFor(model => new Comment().Content)
             </div>
             <input type="submit" value="Add Comment" />

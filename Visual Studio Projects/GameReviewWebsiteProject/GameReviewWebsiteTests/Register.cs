@@ -78,7 +78,6 @@ namespace GameReviewWebsiteTests
             this.UIMap.UserFieldReqReg();
             this.UIMap.PasswordReqReg();
             this.UIMap.BioReqReg();
-            //this.UIMap.closesite();
         }
 
         // Very Long Value
@@ -92,7 +91,6 @@ namespace GameReviewWebsiteTests
             this.UIMap.FillBioTest();
             this.UIMap.PressRegister();
             this.UIMap.CheckAllFieldsLong();
-            //this.UIMap.closesite();
         }
 
 //=========================================================================================

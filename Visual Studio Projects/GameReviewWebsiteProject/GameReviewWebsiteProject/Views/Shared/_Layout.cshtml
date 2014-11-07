@@ -52,10 +52,12 @@
         jQuery('input,select').each(function () {
             var req = jQuery(this).attr('data-val-required');
             if (undefined != req) {
-                var label = jQuery('label[for="' + jQuery(this).attr('id') + '"]');
-                var text = label.text();
-                label.append('<span style="color:red"> *</span>');
 
+                var label = jQuery('label[for="' + jQuery(this).attr('id') + '"]');
+                if (label.attr("for") != 'RememberMe') {
+                    var text = label.text();
+                    label.append('<span style="color:red"> *</span>');
+                }
             }
         });
     </script>

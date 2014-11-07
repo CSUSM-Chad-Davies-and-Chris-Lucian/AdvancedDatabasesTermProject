@@ -70,7 +70,6 @@ namespace GameReviewWebsiteTests
             this.UIMap.PassLong();
             this.UIMap.PressLogIn1();
             this.UIMap.UserNameTooLong();
-            //this.UIMap.closesite();
         }
 
 //=========================================================================================

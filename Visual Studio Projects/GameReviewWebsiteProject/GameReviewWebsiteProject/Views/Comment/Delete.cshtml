@@ -43,7 +43,6 @@
     <p>
         <input type ="hidden" name ="orgin" value ="@ViewBag.orgin" />
         <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
+        @Html.ActionLink("Cancel", "RedirectToCommentOrigin", "Comment", new {origin = ViewBag.orgin, id = Model.CommentId},null)
     </p>
-    
 }
