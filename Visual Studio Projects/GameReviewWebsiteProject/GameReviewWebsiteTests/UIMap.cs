@@ -13,8 +13,8 @@
     using Mouse = Microsoft.VisualStudio.TestTools.UITesting.Mouse;
     using MouseButtons = System.Windows.Forms.MouseButtons;
     using Microsoft.VisualStudio.TestTools.UITesting.HtmlControls;
-    
-    
+
+
     public partial class UIMap
     {
         public void TypeInSearchBox(string content)
@@ -43,11 +43,38 @@
         }
         public HtmlHyperlink GetHyperLinkWithInnerText(string innerText)
         {
-                    var mUILOLHyperlink = new HtmlHyperlink();
-                    #region Search Criteria
-                    mUILOLHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = innerText;
-                    #endregion
-                return mUILOLHyperlink;
-            }
+            var mUILOLHyperlink = new HtmlHyperlink();
+            #region Search Criteria
+            mUILOLHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = innerText;
+            #endregion
+            return mUILOLHyperlink;
+        }
+
+        public void TypeUserName(string userName)
+        {
+            var uIUsernameEdit = this.UIRegisterGameReviewSiWindow.UIRegisterGameReviewSiDocument.UIUsernameEdit;
+            uIUsernameEdit.Text = userName;
+        }
+
+        /// <summary>
+        /// AssertUserRegisterSuccess - Use 'AssertUserRegisterSuccessExpectedValues' to pass parameters into this method.
+        /// </summary>
+        /// <param name="expectedUserName"></param>
+        public void AssertUserRegisterSuccess(string expectedUserName)
+        {
+            #region Variable Declarations
+            HtmlCustom uILoginCustom = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UILoginCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'login' custom control equals 'Hello, replace with dynamic2  Log off  '
+            Assert.AreEqual("Hello, " + expectedUserName + "  Log off  ", uILoginCustom.InnerText, "User did not log in");
+        }
+
+        public void AssertAuthorNotSearched()
+        {
+
+            HtmlDiv uIBodyPane1 = this.UIAuthorsGameReviewSitWindow.UIAuthorsGameReviewSitDocument.UIBodyPane1;
+            Assert.IsTrue(!uIBodyPane1.InnerText.Contains("You are searching for"), "Something was searched for.");
+        }
     }
 }

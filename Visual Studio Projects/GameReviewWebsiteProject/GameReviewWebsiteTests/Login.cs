@@ -45,6 +45,8 @@ namespace GameReviewWebsiteTests
             this.UIMap.TypeCorrectPassword();
             this.UIMap.PressLogIn();
             this.UIMap.EnsureFrankLogIn();
+            this.UIMap.LogOffUserForNextTest();
+
             //this.UIMap.closesite();
 
         }

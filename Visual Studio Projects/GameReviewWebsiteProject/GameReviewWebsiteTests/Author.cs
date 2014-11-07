@@ -55,8 +55,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.OpenSite();
             this.UIMap.SwitchToAuthors();
             this.UIMap.ClickSearchAuth();
-            this.UIMap.AssertAuthorsNothing1();
-            //this.UIMap.closesite();
+            this.UIMap.AssertAuthorNotSearched();
         }
 
         [TestMethod]

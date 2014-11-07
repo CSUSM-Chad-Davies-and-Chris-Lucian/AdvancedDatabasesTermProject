@@ -29,7 +29,8 @@ namespace GameReviewWebsiteTests
         {
             this.UIMap.OpenSite();
             this.UIMap.SwitchToRegister();
-            this.UIMap.TypeUserName();
+            UIMap tempQualifier = this.UIMap;
+            this.UIMap.TypeUserName(tempQualifier.TypeUserNameParams.UIUsernameEditText);
             this.UIMap.TypePasswords();
             this.UIMap.TypeBio();
             this.UIMap.PressRegister();
@@ -37,28 +38,29 @@ namespace GameReviewWebsiteTests
             //this.UIMap.closesite();
         }
 
-        /*
+
         [TestMethod]
         public void RegisterGoodPassword()
         {
             this.UIMap.OpenSite();
             this.UIMap.SwitchToRegister();
-            this.UIMap.TypeUserName();
+            UIMap tempQualifier = this.UIMap;
+            var userName = tempQualifier.TypeUserNameParams.UIUsernameEditText + DateTime.Now.ToString();
+            this.UIMap.TypeUserName(userName);
             this.UIMap.TypeGoodPasswords1();
             this.UIMap.TypeBio();
             this.UIMap.PressRegister();
-
-            //must test with new username otherwise just check for already exist
-            this.UIMap.CheckUserAlreadyExist();
-            //this.UIMap.closesite();
-        }*/
+            this.UIMap.AssertUserRegisterSuccess(userName);
+            this.UIMap.LogOffUserForNextTest();
+        }
 
         [TestMethod]
         public void RegisterCheckDuplicate()
         {
             this.UIMap.OpenSite();
             this.UIMap.SwitchToRegister();
-            this.UIMap.TypeUserName();
+            UIMap tempQualifier = this.UIMap;
+            this.UIMap.TypeUserName(tempQualifier.TypeUserNameParams.UIUsernameEditText);
             this.UIMap.TypeGoodPasswords1();
             this.UIMap.TypeBio();
             this.UIMap.PressRegister();

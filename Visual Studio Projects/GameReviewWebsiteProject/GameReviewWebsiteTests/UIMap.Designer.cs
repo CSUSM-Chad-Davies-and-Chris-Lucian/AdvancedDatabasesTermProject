@@ -1988,6 +1988,32 @@ namespace GameReviewWebsiteTests
             Assert.AreEqual(this.AddDeleteInsertionExpectedValues.UIFirstpersojshooterwiPaneInnerText, uIFirstpersojshooterwiPane.InnerText);
         }
         
+        /// <summary>
+        /// AssertUserRegisterSuccess - Use 'AssertUserRegisterSuccessExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertUserRegisterSuccess()
+        {
+            #region Variable Declarations
+            HtmlCustom uILoginCustom = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UILoginCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'login' custom control equals 'Hello, replace with dynamic2  Log off  '
+            Assert.AreEqual(this.AssertUserRegisterSuccessExpectedValues.UILoginCustomInnerText, uILoginCustom.InnerText, "User did not log in");
+        }
+        
+        /// <summary>
+        /// LogOffUserForNextTest
+        /// </summary>
+        public void LogOffUserForNextTest()
+        {
+            #region Variable Declarations
+            HtmlHyperlink uILogoffHyperlink = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UILogoutFormCustom.UILogoffHyperlink;
+            #endregion
+
+            // Click 'Log off' link
+            Mouse.Click(uILogoffHyperlink, new Point(22, 12));
+        }
+        
         #region Properties
         public virtual AssertEmptyGameReviewSearchExpectedValues AssertEmptyGameReviewSearchExpectedValues
         {
@@ -3033,6 +3059,18 @@ namespace GameReviewWebsiteTests
             }
         }
         
+        public virtual AssertUserRegisterSuccessExpectedValues AssertUserRegisterSuccessExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertUserRegisterSuccessExpectedValues == null))
+                {
+                    this.mAssertUserRegisterSuccessExpectedValues = new AssertUserRegisterSuccessExpectedValues();
+                }
+                return this.mAssertUserRegisterSuccessExpectedValues;
+            }
+        }
+        
         public UIGameReviewsGameRevieWindow UIGameReviewsGameRevieWindow
         {
             get
@@ -3316,6 +3354,8 @@ namespace GameReviewWebsiteTests
         private CheckAllFieldsLongExpectedValues mCheckAllFieldsLongExpectedValues;
         
         private AddDeleteInsertionExpectedValues mAddDeleteInsertionExpectedValues;
+        
+        private AssertUserRegisterSuccessExpectedValues mAssertUserRegisterSuccessExpectedValues;
         
         private UIGameReviewsGameRevieWindow mUIGameReviewsGameRevieWindow;
         
@@ -6223,6 +6263,21 @@ Search for partial words instead of whole words";
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'AssertUserRegisterSuccess'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertUserRegisterSuccessExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'InnerText' property of 'login' custom control equals 'Hello, replace with dynamic2  Log off  '
+        /// </summary>
+        public string UILoginCustomInnerText = "Hello, replace with dynamic2  Log off  ";
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIGameReviewsGameRevieWindow : WinWindow
     {
@@ -6553,6 +6608,18 @@ Search for partial words instead of whole words";
                 return this.mUIRegisterHyperlink;
             }
         }
+        
+        public UILogoutFormCustom UILogoutFormCustom
+        {
+            get
+            {
+                if ((this.mUILogoutFormCustom == null))
+                {
+                    this.mUILogoutFormCustom = new UILogoutFormCustom(this);
+                }
+                return this.mUILogoutFormCustom;
+            }
+        }
         #endregion
         
         #region Fields
@@ -6569,6 +6636,8 @@ Search for partial words instead of whole words";
         private HtmlCustom mUILoginCustom;
         
         private HtmlHyperlink mUIRegisterHyperlink;
+        
+        private UILogoutFormCustom mUILogoutFormCustom;
         #endregion
     }
     
@@ -6888,6 +6957,56 @@ Search for partial words instead of whole words";
         private HtmlHyperlink mUIGamesHyperlink;
         
         private HtmlHyperlink mUIAuthorsHyperlink;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UILogoutFormCustom : HtmlCustom
+    {
+        
+        public UILogoutFormCustom(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties["TagName"] = "FORM";
+            this.SearchProperties["Id"] = "logoutForm";
+            this.SearchProperties[UITestControl.PropertyNames.Name] = null;
+            this.FilterProperties["Class"] = null;
+            this.FilterProperties["ControlDefinition"] = "id=\"logoutForm\" action=\"/Account/LogOff\"";
+            this.FilterProperties["TagInstance"] = "1";
+            this.WindowTitles.Add("Game Reviews - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlHyperlink UILogoffHyperlink
+        {
+            get
+            {
+                if ((this.mUILogoffHyperlink == null))
+                {
+                    this.mUILogoffHyperlink = new HtmlHyperlink(this);
+                    #region Search Criteria
+                    this.mUILogoffHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Id] = null;
+                    this.mUILogoffHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Name] = null;
+                    this.mUILogoffHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.Target] = null;
+                    this.mUILogoffHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Log off";
+                    this.mUILogoffHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "document.getElementById(\'logoutForm\').submit()";
+                    this.mUILogoffHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
+                    this.mUILogoffHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "javascript:document.getElementById(\'logoutForm\').submit()";
+                    this.mUILogoffHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = null;
+                    this.mUILogoffHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "href=\"javascript:document.getElementById";
+                    this.mUILogoffHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "1";
+                    this.mUILogoffHyperlink.WindowTitles.Add("Game Reviews - Game Review Site!");
+                    #endregion
+                }
+                return this.mUILogoffHyperlink;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlHyperlink mUILogoffHyperlink;
         #endregion
     }
     
