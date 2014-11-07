@@ -8,23 +8,40 @@ using System;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 namespace GameReviewWebsiteTests
 {
     [CodedUITest]
     public class Game
     {
+        //Coded UI test Context
+        public TestContext TestContext { get; set; }
+
+        //Coded UI test UI map
+        private UIMap map;
+        public UIMap UiMap
+        {
+            get
+            {
+                if ((map == null))
+                {
+                    map = new UIMap();
+                }
+
+                return map;
+            }
+        }
+
 
         //Checks the search of a game
         //Assert the search succeeds
         [TestMethod]
         public void SearchForGameDestiny()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToGames();
-            this.UIMap.TypeInSearchBox("Destiny");
-            this.UIMap.PressSearch();
-            this.UIMap.CheckGameDesitny();
+            UiMap.OpenSite();
+            UiMap.SwitchToGames();
+            UiMap.TypeInSearchBox("Destiny");
+            UiMap.PressSearch();
+            UiMap.CheckGameDesitny();
         }
 
         //Checks a search for a game with a name too long
@@ -32,12 +49,12 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void SearchForGameLong()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToGames();
+            UiMap.OpenSite();
+            UiMap.SwitchToGames();
             var content = new String('z', 51);
-            this.UIMap.TypeInSearchBox(content);
-            this.UIMap.PressSearch();
-            this.UIMap.AssertGamesLongSearch();
+            UiMap.TypeInSearchBox(content);
+            UiMap.PressSearch();
+            UiMap.AssertGamesLongSearch();
         }
 
         //Searches for nothing
@@ -45,10 +62,10 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void SearchForGameNothing()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToGames();
-            this.UIMap.PressSearch();
-            this.UIMap.AssertGamesNothing1();
+            UiMap.OpenSite();
+            UiMap.SwitchToGames();
+            UiMap.PressSearch();
+            UiMap.AssertGamesNothing1();
         }
 
         //Searches for something that does not exist
@@ -56,43 +73,11 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void SearchForGameNotThere()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToGames();
-            this.UIMap.TypeInSearchBox("pickles34");
-            this.UIMap.PressSearch();
-            this.UIMap.GamesNotThere1();
-
-            
+            UiMap.OpenSite();
+            UiMap.SwitchToGames();
+            UiMap.TypeInSearchBox("pickles34");
+            UiMap.PressSearch();
+            UiMap.GamesNotThere1();
         }
-
-        //Coded UI test Context
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-        private TestContext testContextInstance;
-
-        //Coded UI test UI map
-        public UIMap UIMap
-        {
-            get
-            {
-                if ((this.map == null))
-                {
-                    this.map = new UIMap();
-                }
-
-                return this.map;
-            }
-        }
-
-        private UIMap map;
     }
 }

@@ -8,22 +8,38 @@ using System;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 namespace GameReviewWebsiteTests
 {
     [CodedUITest]
     public class GameReview
     {
+        //Test context for the Coded UI tests
+        public TestContext TestContext { get; set; }
+
+        //UI Map for Coded UI tests
+        private UIMap map;
+        public UIMap UiMap
+        {
+            get
+            {
+                if ((map == null))
+                {
+                    map = new UIMap();
+                }
+
+                return map;
+            }
+        }
+
         //Searches for a review "lol"
         //Asserts the game LOL was found
         [TestMethod]
         public void SearchForLolReviewAndVerifyTest()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.TypeInSearchBox("lol");
-            this.UIMap.PressSearch();
-            this.UIMap.AssertLoLSearchTest();
-            
+            UiMap.OpenSite();
+            UiMap.TypeInSearchBox("lol");
+            UiMap.PressSearch();
+            UiMap.AssertLoLSearchTest();
         }
 
         //Searches for a game review thats too long
@@ -31,13 +47,13 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void SearchForGameReviewLong()
         {
-            this.UIMap.OpenSite();
-            var Content = new String('z', 51);
-            this.UIMap.TypeInSearchBox(Content);
-            this.UIMap.PressSearch();
-            this.UIMap.AssertLong(string.Format("Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for {0}" +
-"zzzzzzzzzzzzzz\r\nSearch is limited to 50 characters \r\n\r\nGame Review Tite \r\n\r\nGame" +
-" Name \r\n\r\nRating ", Content));
+            UiMap.OpenSite();
+            var content = new String('z', 51);
+            UiMap.TypeInSearchBox(content);
+            UiMap.PressSearch();
+            UiMap.AssertLong(string.Format("Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for {0}" +
+                                           "zzzzzzzzzzzzzz\r\nSearch is limited to 50 characters \r\n\r\nGame Review Tite \r\n\r\nGame" +
+                                           " Name \r\n\r\nRating ", content));
         }
 
         //Searches for No game review
@@ -45,10 +61,9 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void SearchForGameReviewNothing()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.PressSearch();
-            this.UIMap.AssertEmptyGameReviewSearch();
-            
+            UiMap.OpenSite();
+            UiMap.PressSearch();
+            UiMap.AssertEmptyGameReviewSearch();
         }
 
         //Searches for game review thats not there
@@ -56,40 +71,10 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void SearchForGameReviewNotThere()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.TypeInSearchBox("pickles34");
-            this.UIMap.PressSearch();
-            this.UIMap.GameReveiewNotThere();
+            UiMap.OpenSite();
+            UiMap.TypeInSearchBox("pickles34");
+            UiMap.PressSearch();
+            UiMap.GameReveiewNotThere();
         }
-
-        //Test context for the Coded UI tests
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-        private TestContext testContextInstance;
-
-        //UI Map for Coded UI tests
-        public UIMap UIMap
-        {
-            get
-            {
-                if ((this.map == null))
-                {
-                    this.map = new UIMap();
-                }
-
-                return this.map;
-            }
-        }
-
-        private UIMap map;
     }
 }

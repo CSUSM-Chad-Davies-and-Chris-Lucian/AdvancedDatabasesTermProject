@@ -3,28 +3,44 @@
 //11/6/2014
 //Codesd UI Tests for the Logins Controller
 //This class tests all functionality related to the Logins
+
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 
 namespace GameReviewWebsiteTests
 {
     [CodedUITest]
     public class Login
     {
+        //Test context for the Coded UI tests
+        public TestContext TestContext { get; set; }
+
+        //UI Map for Coded UI tests
+        private UIMap map;
+        public UIMap UIMap
+        {
+            get
+            {
+                if ((map == null))
+                {
+                    map = new UIMap();
+                }
+
+                return map;
+            }
+        }
 
         //Attempts a login with a bad password
         //Asserts proper error was shown
         [TestMethod]
         public void LoginBadPassword()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToLogin();
-            this.UIMap.TypeFrank();
-            this.UIMap.TypeWrongPassword();
-            this.UIMap.PressLogIn();
-            this.UIMap.WrongPassword();
-            
+            UIMap.OpenSite();
+            UIMap.SwitchToLogin();
+            UIMap.TypeFrank();
+            UIMap.TypeWrongPassword();
+            UIMap.PressLogIn();
+            UIMap.WrongPassword();
         }
 
         //Attempts a login with a good password
@@ -32,13 +48,13 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void LoginGoodPassword()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToLogin();
-            this.UIMap.TypeFrank();
-            this.UIMap.TypeCorrectPassword();
-            this.UIMap.PressLogIn();
-            this.UIMap.EnsureFrankLogIn();
-            this.UIMap.LogOffUserForNextTest();
+            UIMap.OpenSite();
+            UIMap.SwitchToLogin();
+            UIMap.TypeFrank();
+            UIMap.TypeCorrectPassword();
+            UIMap.PressLogIn();
+            UIMap.EnsureFrankLogIn();
+            UIMap.LogOffUserForNextTest();
         }
 
         //Attempts a login with no value
@@ -46,12 +62,11 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void LoginNoValue()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToLogin();
-            this.UIMap.PressLogIn1();
-            this.UIMap.CheckUserNameFieldEmpty();
-            this.UIMap.CheckPasswordFieldEmpty();
-            
+            UIMap.OpenSite();
+            UIMap.SwitchToLogin();
+            UIMap.PressLogIn1();
+            UIMap.CheckUserNameFieldEmpty();
+            UIMap.CheckPasswordFieldEmpty();
         }
 
         //Attempts a login with too many charecters
@@ -59,42 +74,12 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void LoginTooLongValue()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToLogin();
-            this.UIMap.UserZs();
-            this.UIMap.PassLong();
-            this.UIMap.PressLogIn1();
-            this.UIMap.UserNameTooLong();
+            UIMap.OpenSite();
+            UIMap.SwitchToLogin();
+            UIMap.UserZs();
+            UIMap.PassLong();
+            UIMap.PressLogIn1();
+            UIMap.UserNameTooLong();
         }
-
-        //Test context for the Coded UI tests
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-        private TestContext testContextInstance;
-
-        //UI Map for Coded UI tests
-        public UIMap UIMap
-        {
-            get
-            {
-                if ((this.map == null))
-                {
-                    this.map = new UIMap();
-                }
-
-                return this.map;
-            }
-        }
-
-        private UIMap map;
     }
 }

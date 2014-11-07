@@ -8,24 +8,39 @@ using System;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 namespace GameReviewWebsiteTests
 {
     [CodedUITest]
     public class Author
     {
+        //Test context code for the coded UI test
+        public TestContext TestContext { get; set; }
+
+        //UI map code for the coded UI tests
+        private UIMap map;
+        public UIMap UiMap
+        {
+            get
+            {
+                if ((map == null))
+                {
+                    map = new UIMap();
+                }
+
+                return map;
+            }
+        }
 
         //Searches for the author named Sox
         //Then verifies it exists
         [TestMethod]
         public void SearchForAuthorSox()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToAuthors();
-            this.UIMap.TypeInSearchBox("Sox");
-            this.UIMap.ClickSearchAuth();
-            this.UIMap.AssertSox();
-            
+            UiMap.OpenSite();
+            UiMap.SwitchToAuthors();
+            UiMap.TypeInSearchBox("Sox");
+            UiMap.ClickSearchAuth();
+            UiMap.AssertSox();
         }
 
         //Searches for a author with a name too long
@@ -33,16 +48,14 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void SearchForAuthorLong()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToAuthors();
-            var Content = new String('z', 51);
-            this.UIMap.TypeInSearchBox(Content);
-            this.UIMap.ClickSearchAuth();
-            this.UIMap.AssertLong(string.Format("Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for {0}" +
-"zzzzzzzzzzzzzz\r\nSearch is limited to 50 characters \r\n\r\nGame Review Tite \r\n\r\nGame" +
-" Name \r\n\r\nRating ", Content));
-            
-
+            UiMap.OpenSite();
+            UiMap.SwitchToAuthors();
+            var content = new String('z', 51);
+            UiMap.TypeInSearchBox(content);
+            UiMap.ClickSearchAuth();
+            UiMap.AssertLong(string.Format("Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for {0}" +
+                                           "zzzzzzzzzzzzzz\r\nSearch is limited to 50 characters \r\n\r\nGame Review Tite \r\n\r\nGame" +
+                                           " Name \r\n\r\nRating ", content));
         }
 
         //Searches for nothing
@@ -50,10 +63,10 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void SearchForAuthorNothing()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToAuthors();
-            this.UIMap.ClickSearchAuth();
-            this.UIMap.AssertAuthorNotSearched();
+            UiMap.OpenSite();
+            UiMap.SwitchToAuthors();
+            UiMap.ClickSearchAuth();
+            UiMap.AssertAuthorNotSearched();
         }
 
         //Searches for authors that dont exist
@@ -61,43 +74,11 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void SearchForAuthorNotThere()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToAuthors();
-            this.UIMap.TypeInSearchBox("pickles34");
-            this.UIMap.ClickSearchAuth();
-            this.UIMap.AssertAuthorsNotThere1();
-
-            
+            UiMap.OpenSite();
+            UiMap.SwitchToAuthors();
+            UiMap.TypeInSearchBox("pickles34");
+            UiMap.ClickSearchAuth();
+            UiMap.AssertAuthorsNotThere1();
         }
-
-        //Test context code for the coded UI test
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-        private TestContext testContextInstance;
-
-        //UI map code for the coded UI tests
-        public UIMap UIMap
-        {
-            get
-            {
-                if ((this.map == null))
-                {
-                    this.map = new UIMap();
-                }
-
-                return this.map;
-            }
-        }
-
-        private UIMap map;
     }
 }

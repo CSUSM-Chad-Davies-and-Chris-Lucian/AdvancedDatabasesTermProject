@@ -8,26 +8,42 @@ using System;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 namespace GameReviewWebsiteTests
 {
     [CodedUITest]
     public class Register
     {
+        //Coded UI test context
+        public TestContext TestContext { get; set; }
+
+        //Coded UI UI map
+        private UIMap map;
+        public UIMap UiMap
+        {
+            get
+            {
+                if ((map == null))
+                {
+                    map = new UIMap();
+                }
+
+                return map;
+            }
+        }
 
         //Attempts Register with bad password
         //Asserts error messages show
         [TestMethod]
         public void RegisterBadPassword()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToRegister();
-            var tempQualifier = this.UIMap;
-            this.UIMap.TypeUserName(tempQualifier.TypeUserNameParams.UIUsernameEditText);
-            this.UIMap.TypePasswords();
-            this.UIMap.TypeBio();
-            this.UIMap.PressRegister();
-            this.UIMap.CheckPassConfShort();
+            UiMap.OpenSite();
+            UiMap.SwitchToRegister();
+            var tempQualifier = UiMap;
+            UiMap.TypeUserName(tempQualifier.TypeUserNameParams.UIUsernameEditText);
+            UiMap.TypePasswords();
+            UiMap.TypeBio();
+            UiMap.PressRegister();
+            UiMap.CheckPassConfShort();
         }
 
         //Register with good password
@@ -36,16 +52,16 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void RegisterGoodPassword()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToRegister();
-            var tempQualifier = this.UIMap;
+            UiMap.OpenSite();
+            UiMap.SwitchToRegister();
+            var tempQualifier = UiMap;
             var userName = tempQualifier.TypeUserNameParams.UIUsernameEditText + DateTime.Now.ToString();
-            this.UIMap.TypeUserName(userName);
-            this.UIMap.TypeGoodPasswords1();
-            this.UIMap.TypeBio();
-            this.UIMap.PressRegister();
-            this.UIMap.AssertUserRegisterSuccess(userName);
-            this.UIMap.LogOffUserForNextTest();
+            UiMap.TypeUserName(userName);
+            UiMap.TypeGoodPasswords1();
+            UiMap.TypeBio();
+            UiMap.PressRegister();
+            UiMap.AssertUserRegisterSuccess(userName);
+            UiMap.LogOffUserForNextTest();
         }
 
         //Attempts to register a duplicate user
@@ -53,14 +69,14 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void RegisterCheckDuplicate()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToRegister();
-            var tempQualifier = this.UIMap;
-            this.UIMap.TypeUserName(tempQualifier.TypeUserNameParams.UIUsernameEditText);
-            this.UIMap.TypeGoodPasswords1();
-            this.UIMap.TypeBio();
-            this.UIMap.PressRegister();
-            this.UIMap.CheckUserAlreadyExist();
+            UiMap.OpenSite();
+            UiMap.SwitchToRegister();
+            var tempQualifier = UiMap;
+            UiMap.TypeUserName(tempQualifier.TypeUserNameParams.UIUsernameEditText);
+            UiMap.TypeGoodPasswords1();
+            UiMap.TypeBio();
+            UiMap.PressRegister();
+            UiMap.CheckUserAlreadyExist();
         }
 
         //Attempts to register a blank user
@@ -68,12 +84,12 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void RegisterNoValue()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToRegister();
-            this.UIMap.PressRegister();
-            this.UIMap.UserFieldReqReg();
-            this.UIMap.PasswordReqReg();
-            this.UIMap.BioReqReg();
+            UiMap.OpenSite();
+            UiMap.SwitchToRegister();
+            UiMap.PressRegister();
+            UiMap.UserFieldReqReg();
+            UiMap.PasswordReqReg();
+            UiMap.BioReqReg();
         }
 
         //Attempts Register too long value
@@ -81,43 +97,13 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void RegisterTooLongValue()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToRegister();
-            this.UIMap.FillUserName();
-            this.UIMap.FillPasswordFull();
-            this.UIMap.FillBioTest();
-            this.UIMap.PressRegister();
-            this.UIMap.CheckAllFieldsLong();
+            UiMap.OpenSite();
+            UiMap.SwitchToRegister();
+            UiMap.FillUserName();
+            UiMap.FillPasswordFull();
+            UiMap.FillBioTest();
+            UiMap.PressRegister();
+            UiMap.CheckAllFieldsLong();
         }
-
-        //Coded UI test context
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-        private TestContext testContextInstance;
-
-        //Coded UI UI map
-        public UIMap UIMap
-        {
-            get
-            {
-                if ((this.map == null))
-                {
-                    this.map = new UIMap();
-                }
-
-                return this.map;
-            }
-        }
-
-        private UIMap map;
     }
 }

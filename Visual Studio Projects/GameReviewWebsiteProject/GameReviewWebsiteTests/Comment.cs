@@ -7,28 +7,43 @@
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-
 namespace GameReviewWebsiteTests
 {
     [CodedUITest]
     public class Comment
     {
+        //Context used for Coded UI tests
+        public TestContext TestContext { get; set; }
+
+        //Ui map for coded UI tests
+        private UIMap map;
+        public UIMap UiMap
+        {
+            get
+            {
+                if ((map == null))
+                {
+                    map = new UIMap();
+                }
+
+                return map;
+            }
+        }
 
         //This tests a comment with no title
         //Asserts that error message pops up
         [TestMethod]
         public void CommentNoTitle()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.ChangeToLogIn();
-            this.UIMap.TypeLoginCredentials();
-            this.UIMap.HitLogin();
-            this.UIMap.ChangeToDestiny();
-            this.UIMap.TypeComment();
-            this.UIMap.HitAddComment();
-            this.UIMap.CheckForTitleFieldReq();
-            this.UIMap.LogOffUserForNextTest();
-            
+            UiMap.OpenSite();
+            UiMap.ChangeToLogIn();
+            UiMap.TypeLoginCredentials();
+            UiMap.HitLogin();
+            UiMap.ChangeToDestiny();
+            UiMap.TypeComment();
+            UiMap.HitAddComment();
+            UiMap.CheckForTitleFieldReq();
+            UiMap.LogOffUserForNextTest();
         }
 
         //Writes a comment with a title thats too long
@@ -36,16 +51,15 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void CommentLongTitle()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.ChangeToLogIn();
-            this.UIMap.TypeLoginCredentials();
-            this.UIMap.HitLogin();
-            this.UIMap.ChangeToDestiny();
-            this.UIMap.InputLongTitle();
-            this.UIMap.AddTestComment();
-            this.UIMap.CheckTitleMaxLength();
-            this.UIMap.LogOffUserForNextTest();
-            
+            UiMap.OpenSite();
+            UiMap.ChangeToLogIn();
+            UiMap.TypeLoginCredentials();
+            UiMap.HitLogin();
+            UiMap.ChangeToDestiny();
+            UiMap.InputLongTitle();
+            UiMap.AddTestComment();
+            UiMap.CheckTitleMaxLength();
+            UiMap.LogOffUserForNextTest();
         }
 
         //Checks a comment with no body
@@ -53,16 +67,15 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void CommentNoContent()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.ChangeToLogIn();
-            this.UIMap.TypeLoginCredentials();
-            this.UIMap.HitLogin();
-            this.UIMap.ChangeToDestiny();
-            this.UIMap.EnterCommentTitle();
-            this.UIMap.AddCommentButton();
-            this.UIMap.CheckContentReq();
-            this.UIMap.LogOffUserForNextTest();
-            
+            UiMap.OpenSite();
+            UiMap.ChangeToLogIn();
+            UiMap.TypeLoginCredentials();
+            UiMap.HitLogin();
+            UiMap.ChangeToDestiny();
+            UiMap.EnterCommentTitle();
+            UiMap.AddCommentButton();
+            UiMap.CheckContentReq();
+            UiMap.LogOffUserForNextTest();
         }
 
         //Checks a comment with content too long.
@@ -70,16 +83,15 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void CommentLongContent()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.ChangeToLogIn();
-            this.UIMap.TypeLoginCredentials();
-            this.UIMap.HitLogin();
-            this.UIMap.ChangeToDestiny();
-            this.UIMap.TypeTitleComment();
-            this.UIMap.Enter4001ContentTest();
-            this.UIMap.AssertCommentContentTest();
-            this.UIMap.LogOffUserForNextTest();
-            
+            UiMap.OpenSite();
+            UiMap.ChangeToLogIn();
+            UiMap.TypeLoginCredentials();
+            UiMap.HitLogin();
+            UiMap.ChangeToDestiny();
+            UiMap.TypeTitleComment();
+            UiMap.Enter4001ContentTest();
+            UiMap.AssertCommentContentTest();
+            UiMap.LogOffUserForNextTest();
         }
 
         //Checks the functionality of a valid comment
@@ -87,15 +99,15 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void CommentValid()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.ChangeToLogIn();
-            this.UIMap.TypeLoginCredentials();
-            this.UIMap.HitLogin();
-            this.UIMap.ChangeToDestiny();
-            this.UIMap.EnterTitleAndCommentGood();
-            this.UIMap.HitAddComment1();
-            this.UIMap.CheckGoodComment1();
-            this.UIMap.LogOffUserForNextTest();
+            UiMap.OpenSite();
+            UiMap.ChangeToLogIn();
+            UiMap.TypeLoginCredentials();
+            UiMap.HitLogin();
+            UiMap.ChangeToDestiny();
+            UiMap.EnterTitleAndCommentGood();
+            UiMap.HitAddComment1();
+            UiMap.CheckGoodComment1();
+            UiMap.LogOffUserForNextTest();
         }
 
         //Checks a deletion of a Comment
@@ -103,46 +115,16 @@ namespace GameReviewWebsiteTests
         [TestMethod]
         public void DeletePost()
         {
-            this.UIMap.OpenSite();
-            this.UIMap.SwitchToLogin();
-            this.UIMap.TypeFrank();
-            this.UIMap.TypeCorrectPassword();
-            this.UIMap.PressLogIn();
-            this.UIMap.SelectDestiny();
-            this.UIMap.SelectDelete();
-            this.UIMap.ConfirmDelete();
-            this.UIMap.AddDeleteInsertion();
-            this.UIMap.LogOffUserForNextTest();
+            UiMap.OpenSite();
+            UiMap.SwitchToLogin();
+            UiMap.TypeFrank();
+            UiMap.TypeCorrectPassword();
+            UiMap.PressLogIn();
+            UiMap.SelectDestiny();
+            UiMap.SelectDelete();
+            UiMap.ConfirmDelete();
+            UiMap.AddDeleteInsertion();
+            UiMap.LogOffUserForNextTest();
         }
-        
-        //Context used for Coded UI tests
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
-        private TestContext testContextInstance;
-
-        //Ui map for coded UI tests
-        public UIMap UIMap
-        {
-            get
-            {
-                if ((this.map == null))
-                {
-                    this.map = new UIMap();
-                }
-
-                return this.map;
-            }
-        }
-
-        private UIMap map;
     }
 }
