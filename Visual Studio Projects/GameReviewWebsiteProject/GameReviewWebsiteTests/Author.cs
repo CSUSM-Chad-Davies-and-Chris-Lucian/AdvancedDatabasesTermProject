@@ -8,10 +8,6 @@ namespace GameReviewWebsiteTests
     [CodedUITest]
     public class Author
     {
-        public Author()
-        {
-        }
-
         [TestMethod]
         public void SearchForAuthorSox()
         {

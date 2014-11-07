@@ -66,7 +66,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.BioReqReg();
         }
 
-        [TestMethod
+        [TestMethod]
         public void RegisterTooLongValue()
         {
             this.UIMap.OpenSite();
