@@ -1,4 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UITesting;
+﻿//Authors: Chris Lucian & Chad Davies
+//CS 643 Advanced Databases
+//11/6/2014
+//Codesd UI Tests for the Comment Controller
+//This class tests all functionality related to the Comments
+
+using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
@@ -7,10 +13,9 @@ namespace GameReviewWebsiteTests
     [CodedUITest]
     public class Comment
     {
-        public Comment()
-        {
-        }
 
+        //This tests a comment with no title
+        //Asserts that error message pops up
         [TestMethod]
         public void CommentNoTitle()
         {
@@ -26,6 +31,8 @@ namespace GameReviewWebsiteTests
             
         }
 
+        //Writes a comment with a title thats too long
+        //Asserts the check for max length and the error message
         [TestMethod]
         public void CommentLongTitle()
         {
@@ -41,6 +48,8 @@ namespace GameReviewWebsiteTests
             
         }
 
+        //Checks a comment with no body
+        //Asserts the error message shows
         [TestMethod]
         public void CommentNoContent()
         {
@@ -56,7 +65,8 @@ namespace GameReviewWebsiteTests
             
         }
 
-        // Very Long Content 
+        //Checks a comment with content too long.
+        //Asserts error message shows after typing in over 4000 letters
         [TestMethod]
         public void CommentLongContent()
         {
@@ -72,6 +82,8 @@ namespace GameReviewWebsiteTests
             
         }
 
+        //Checks the functionality of a valid comment
+        //Asserts the entry and submission of a valid comment
         [TestMethod]
         public void CommentValid()
         {
@@ -86,6 +98,8 @@ namespace GameReviewWebsiteTests
             this.UIMap.LogOffUserForNextTest();
         }
 
+        //Checks a deletion of a Comment
+        //Asserts the Comment was deleted
         [TestMethod]
         public void DeletePost()
         {
@@ -101,6 +115,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.LogOffUserForNextTest();
         }
         
+        //Context used for Coded UI tests
         public TestContext TestContext
         {
             get
@@ -114,6 +129,7 @@ namespace GameReviewWebsiteTests
         }
         private TestContext testContextInstance;
 
+        //Ui map for coded UI tests
         public UIMap UIMap
         {
             get

@@ -2031,6 +2031,19 @@ namespace GameReviewWebsiteTests
             uITitleEdit.Text = this.PasteValueIntoTitleFieldParams.UITitleEditText;
         }
         
+        /// <summary>
+        /// AssertFrankWasFound - Use 'AssertFrankWasFoundExpectedValues' to pass parameters into this method.
+        /// </summary>
+        public void AssertFrankWasFound()
+        {
+            #region Variable Declarations
+            HtmlCell uIFrankCell = this.UIGamersGameReviewSiteWindow.UIGamersGameReviewSiteDocument.UIBodyPane2.UIItemTable.UIFrankCell;
+            #endregion
+
+            // Verify that the 'FriendlyName' property of 'Frank' cell equals 'Frank'
+            Assert.AreEqual(this.AssertFrankWasFoundExpectedValues.UIFrankCellFriendlyName, uIFrankCell.FriendlyName, "Frank Was not Found");
+        }
+        
         #region Properties
         public virtual AssertEmptyGameReviewSearchExpectedValues AssertEmptyGameReviewSearchExpectedValues
         {
@@ -3100,6 +3113,18 @@ namespace GameReviewWebsiteTests
             }
         }
         
+        public virtual AssertFrankWasFoundExpectedValues AssertFrankWasFoundExpectedValues
+        {
+            get
+            {
+                if ((this.mAssertFrankWasFoundExpectedValues == null))
+                {
+                    this.mAssertFrankWasFoundExpectedValues = new AssertFrankWasFoundExpectedValues();
+                }
+                return this.mAssertFrankWasFoundExpectedValues;
+            }
+        }
+        
         public UIGameReviewsGameRevieWindow UIGameReviewsGameRevieWindow
         {
             get
@@ -3387,6 +3412,8 @@ namespace GameReviewWebsiteTests
         private AssertUserRegisterSuccessExpectedValues mAssertUserRegisterSuccessExpectedValues;
         
         private PasteValueIntoTitleFieldParams mPasteValueIntoTitleFieldParams;
+        
+        private AssertFrankWasFoundExpectedValues mAssertFrankWasFoundExpectedValues;
         
         private UIGameReviewsGameRevieWindow mUIGameReviewsGameRevieWindow;
         
@@ -6324,6 +6351,21 @@ Search for partial words instead of whole words";
         #endregion
     }
     
+    /// <summary>
+    /// Parameters to be passed into 'AssertFrankWasFound'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class AssertFrankWasFoundExpectedValues
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Verify that the 'FriendlyName' property of 'Frank' cell equals 'Frank'
+        /// </summary>
+        public string UIFrankCellFriendlyName = "Frank";
+        #endregion
+    }
+    
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
     public class UIGameReviewsGameRevieWindow : WinWindow
     {
@@ -7489,10 +7531,75 @@ Search for partial words instead of whole words";
                 return this.mUIFrankHyperlink;
             }
         }
+        
+        public UIItemTable1 UIItemTable
+        {
+            get
+            {
+                if ((this.mUIItemTable == null))
+                {
+                    this.mUIItemTable = new UIItemTable1(this);
+                }
+                return this.mUIItemTable;
+            }
+        }
         #endregion
         
         #region Fields
         private HtmlHyperlink mUIFrankHyperlink;
+        
+        private UIItemTable1 mUIItemTable;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
+    public class UIItemTable1 : HtmlTable
+    {
+        
+        public UIItemTable1(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[HtmlTable.PropertyNames.Id] = null;
+            this.SearchProperties[HtmlTable.PropertyNames.Name] = null;
+            this.FilterProperties[HtmlTable.PropertyNames.InnerText] = "Name \r\n\r\n\r\nFrank";
+            this.FilterProperties[HtmlTable.PropertyNames.ControlDefinition] = null;
+            this.FilterProperties[HtmlTable.PropertyNames.RowCount] = "2";
+            this.FilterProperties[HtmlTable.PropertyNames.ColumnCount] = "1";
+            this.FilterProperties[HtmlTable.PropertyNames.Class] = null;
+            this.FilterProperties[HtmlTable.PropertyNames.TagInstance] = "1";
+            this.WindowTitles.Add("Gamers - Game Review Site!");
+            #endregion
+        }
+        
+        #region Properties
+        public HtmlCell UIFrankCell
+        {
+            get
+            {
+                if ((this.mUIFrankCell == null))
+                {
+                    this.mUIFrankCell = new HtmlCell(this);
+                    #region Search Criteria
+                    this.mUIFrankCell.SearchProperties[HtmlCell.PropertyNames.Id] = null;
+                    this.mUIFrankCell.SearchProperties[HtmlCell.PropertyNames.Name] = null;
+                    this.mUIFrankCell.SearchProperties[HtmlCell.PropertyNames.MaxDepth] = "3";
+                    this.mUIFrankCell.SearchProperties[HtmlCell.PropertyNames.InnerText] = "Frank";
+                    this.mUIFrankCell.FilterProperties[HtmlCell.PropertyNames.ControlDefinition] = null;
+                    this.mUIFrankCell.FilterProperties[HtmlCell.PropertyNames.RowIndex] = "1";
+                    this.mUIFrankCell.FilterProperties[HtmlCell.PropertyNames.ColumnIndex] = "0";
+                    this.mUIFrankCell.FilterProperties[HtmlCell.PropertyNames.Class] = null;
+                    this.mUIFrankCell.FilterProperties[HtmlCell.PropertyNames.TagInstance] = "1";
+                    this.mUIFrankCell.WindowTitles.Add("Gamers - Game Review Site!");
+                    #endregion
+                }
+                return this.mUIFrankCell;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private HtmlCell mUIFrankCell;
         #endregion
     }
     
@@ -7753,13 +7860,13 @@ Search for partial words instead of whole words";
         }
         
         #region Properties
-        public UIItemTable1 UIItemTable
+        public UIItemTable2 UIItemTable
         {
             get
             {
                 if ((this.mUIItemTable == null))
                 {
-                    this.mUIItemTable = new UIItemTable1(this);
+                    this.mUIItemTable = new UIItemTable2(this);
                 }
                 return this.mUIItemTable;
             }
@@ -7811,7 +7918,7 @@ Search for partial words instead of whole words";
         #endregion
         
         #region Fields
-        private UIItemTable1 mUIItemTable;
+        private UIItemTable2 mUIItemTable;
         
         private HtmlCustom mUIItemCustom;
         
@@ -7820,10 +7927,10 @@ Search for partial words instead of whole words";
     }
     
     [GeneratedCode("Coded UITest Builder", "11.0.60315.1")]
-    public class UIItemTable1 : HtmlTable
+    public class UIItemTable2 : HtmlTable
     {
         
-        public UIItemTable1(UITestControl searchLimitContainer) : 
+        public UIItemTable2(UITestControl searchLimitContainer) : 
                 base(searchLimitContainer)
         {
             #region Search Criteria
