@@ -1,20 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Windows.Input;
-using System.Windows.Forms;
-using System.Drawing;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UITest.Extension;
-using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 
 
 namespace GameReviewWebsiteTests
 {
-    /// <summary>
-    /// Summary description for CodedUITest1
-    /// </summary>
     [CodedUITest]
     public class Register
     {
@@ -22,8 +12,6 @@ namespace GameReviewWebsiteTests
         {
         }
 
-//=========================================================================================
-        // Register
         [TestMethod]
         public void RegisterBadPassword()
         {
@@ -35,7 +23,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.TypeBio();
             this.UIMap.PressRegister();
             this.UIMap.CheckPassConfShort();
-            //this.UIMap.closesite();
+            
         }
 
 
@@ -64,8 +52,6 @@ namespace GameReviewWebsiteTests
             this.UIMap.TypeGoodPasswords1();
             this.UIMap.TypeBio();
             this.UIMap.PressRegister();
-
-            //must test with new username otherwise just check for already exist
             this.UIMap.CheckUserAlreadyExist();
         }
 
@@ -80,8 +66,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.BioReqReg();
         }
 
-        // Very Long Value
-        [TestMethod]
+        [TestMethod
         public void RegisterTooLongValue()
         {
             this.UIMap.OpenSite();
@@ -93,13 +78,6 @@ namespace GameReviewWebsiteTests
             this.UIMap.CheckAllFieldsLong();
         }
 
-//=========================================================================================
-        // END
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
         public TestContext TestContext
         {
             get

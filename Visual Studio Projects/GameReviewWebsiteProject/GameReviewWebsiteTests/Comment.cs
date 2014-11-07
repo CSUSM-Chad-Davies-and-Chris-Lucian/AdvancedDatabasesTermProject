@@ -1,20 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Windows.Input;
-using System.Windows.Forms;
-using System.Drawing;
-using Microsoft.VisualStudio.TestTools.UITesting;
+﻿using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UITest.Extension;
-using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 
 
 namespace GameReviewWebsiteTests
 {
-    /// <summary>
-    /// Summary description for CodedUITest1
-    /// </summary>
     [CodedUITest]
     public class Comment
     {
@@ -22,9 +11,6 @@ namespace GameReviewWebsiteTests
         {
         }
 
-//=========================================================================================
-        // Comment
-        // Need to finish Not Started
         [TestMethod]
         public void CommentNoTitle()
         {
@@ -37,7 +23,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.HitAddComment();
             this.UIMap.CheckForTitleFieldReq();
             this.UIMap.LogOffUserForNextTest();
-            ////this.UIMap.closesite();
+            
         }
 
         [TestMethod]
@@ -52,7 +38,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.AddTestComment();
             this.UIMap.CheckTitleMaxLength();
             this.UIMap.LogOffUserForNextTest();
-            ////this.UIMap.closesite();
+            
         }
 
         [TestMethod]
@@ -67,7 +53,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.AddCommentButton();
             this.UIMap.CheckContentReq();
             this.UIMap.LogOffUserForNextTest();
-            ////this.UIMap.closesite();
+            
         }
 
         // Very Long Content 
@@ -83,7 +69,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.Enter4001ContentTest();
             this.UIMap.AssertCommentContentTest();
             this.UIMap.LogOffUserForNextTest();
-            ////this.UIMap.closesite();
+            
         }
 
         [TestMethod]
@@ -98,10 +84,8 @@ namespace GameReviewWebsiteTests
             this.UIMap.HitAddComment1();
             this.UIMap.CheckGoodComment1();
             this.UIMap.LogOffUserForNextTest();
-            //////this.UIMap.closesite();
         }
 
-        // Delete
         [TestMethod]
         public void DeletePost()
         {
@@ -116,13 +100,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.AddDeleteInsertion();
             this.UIMap.LogOffUserForNextTest();
         }
-//=========================================================================================
-        // END
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
+        
         public TestContext TestContext
         {
             get

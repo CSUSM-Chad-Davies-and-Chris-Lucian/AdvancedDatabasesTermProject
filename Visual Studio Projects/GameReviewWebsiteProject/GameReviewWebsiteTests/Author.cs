@@ -1,20 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
-using System.Windows.Input;
-using System.Windows.Forms;
-using System.Drawing;
 using Microsoft.VisualStudio.TestTools.UITesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UITest.Extension;
-using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
 
 
 namespace GameReviewWebsiteTests
 {
-    /// <summary>
-    /// Summary description for CodedUITest1
-    /// </summary>
     [CodedUITest]
     public class Author
     {
@@ -22,8 +12,6 @@ namespace GameReviewWebsiteTests
         {
         }
 
-//=========================================================================================
-        // Author
         [TestMethod]
         public void SearchForAuthorSox()
         {
@@ -32,7 +20,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.TypeInSearchBox("Sox");
             this.UIMap.ClickSearchAuth();
             this.UIMap.AssertSox();
-            //this.UIMap.closesite();
+            
         }
 
         [TestMethod]
@@ -46,7 +34,7 @@ namespace GameReviewWebsiteTests
             this.UIMap.AssertLong(string.Format("Game Reviews!\r\n\r\n  \r\n\r\nYou are searching for {0}" +
 "zzzzzzzzzzzzzz\r\nSearch is limited to 50 characters \r\n\r\nGame Review Tite \r\n\r\nGame" +
 " Name \r\n\r\nRating ", Content));
-            //this.UIMap.closesite();
+            
 
         }
         [TestMethod]
@@ -67,16 +55,9 @@ namespace GameReviewWebsiteTests
             this.UIMap.ClickSearchAuth();
             this.UIMap.AssertAuthorsNotThere1();
 
-            //this.UIMap.closesite();
+            
         }
 
-//=========================================================================================
-        // END
-
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
         public TestContext TestContext
         {
             get
