@@ -25,6 +25,8 @@ namespace GameReviewWebsiteTests
             }
         }
 
+        //Attempts to enter Javascript Injection into the site
+        //Asserts failure
         [TestMethod]
         public void RegisterWithJavascriptInjectionNameAndGoodPassword()
         {

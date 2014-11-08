@@ -25,7 +25,8 @@ namespace GameReviewWebsiteTests
             }
         }
 
-
+        //Attempts Sql Injection
+        //Asserts proper behavior
         [TestMethod]
         public void TestAuthorSearchInjectionAttack()
         {
@@ -39,7 +40,8 @@ namespace GameReviewWebsiteTests
                                            " Name \r\n\r\nRating ", injectionAttack));
         }
 
-
+        //Attempts Sql Injection
+        //Asserts proper behavior
         [TestMethod]
         public void TestGamesSearchInjectionAttack()
         {
@@ -53,7 +55,8 @@ namespace GameReviewWebsiteTests
                                            " Name \r\n\r\nRating ", injectionAttack));
         }
 
-
+        //Attempts Sql Injection
+        //Asserts proper behavior
         [TestMethod]
         public void TestGamersSearchInjectionAttack()
         {
@@ -67,7 +70,8 @@ namespace GameReviewWebsiteTests
                                            " Name \r\n\r\nRating ", injectionAttack));
         }
 
-
+        //Attempts Sql Injection
+        //Asserts proper behavior
         [TestMethod]
         public void TestGameReviewsSearchInjectionAttack()
         {
@@ -80,6 +84,8 @@ namespace GameReviewWebsiteTests
                                            " Name \r\n\r\nRating ", injectionAttack));
         }
 
+        //Attempts Sql Injection
+        //Asserts proper behavior
         [TestMethod]
         public void LoginSqlInjectPastPassword()
         {
