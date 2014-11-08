@@ -70,11 +70,24 @@
             Assert.AreEqual("Hello, " + expectedUserName + "  Log off  ", uILoginCustom.InnerText, "User did not log in");
         }
 
+
+        public void AssertUserRegisterFail(string expectedUserName)
+        {
+            #region Variable Declarations
+            HtmlCustom uILoginCustom = this.UIGameReviewsGameRevieWindow1.UIGameReviewsGameRevieDocument.UILoginCustom;
+            #endregion
+
+            // Verify that the 'InnerText' property of 'login' custom control equals 'Hello, replace with dynamic2  Log off  '
+            Assert.AreNotEqual("Hello, " + expectedUserName + "  Log off  ", uILoginCustom.InnerText, "User did not log in");
+        }
+
         public void AssertAuthorNotSearched()
         {
 
             HtmlDiv uIBodyPane1 = this.UIAuthorsGameReviewSitWindow.UIAuthorsGameReviewSitDocument.UIBodyPane1;
             Assert.IsTrue(!uIBodyPane1.InnerText.Contains("You are searching for"), "Something was searched for.");
         }
+
+
     }
 }

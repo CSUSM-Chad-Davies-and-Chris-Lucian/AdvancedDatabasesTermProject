@@ -66,6 +66,8 @@
     <Compile Include="UIMap.Designer.cs">
       <DependentUpon>UIMap.uitest</DependentUpon>
     </Compile>
+    <Compile Include="SqlInjectionAttackTests.cs" />
+    <Compile Include="JavascriptInjectionTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="UIMap.uitest" />
