@@ -1,37 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿//Chris Lucian & Chad Davies
+//CS 643 Advanced Databases
+//11/8/2014
+
+using System;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using GameReviewWebsiteProject.Models;
 
 namespace GameReviewWebsiteProject.Controllers
 {
+    //Controller for gamers
     public class GamersController : Controller
     {
-        private GameReviewWebsiteEntities db = new GameReviewWebsiteEntities();
+        private readonly GameReviewWebsiteEntities db = new GameReviewWebsiteEntities();
 
-        //
-        // GET: /Gamers/
-
+        //Allows searching of gamers
         public ActionResult Index(String search = "")
         {
             ViewBag.SearchError = search.Length > 50 ? "Search is limited to 50 characters" : "";
             search = String.Join("", search.Take(50));
             ViewBag.PreviewSearch = search;
+            //Generates the select statement for the search
+            //See authors for an example
             var gamers = db.Gamers.Where(x => x.Name.Contains(search));
 
             return View(gamers.ToList());
         }
 
-        //
-        // GET: /Gamers/Details/5
-
+        //Shows details for a gamer based on the id passed in the URL
         public ActionResult Details(int id = 0)
         {
-            Gamer gamer = db.Gamers.Find(id);
+            //Generates select statement to get the gamer by id
+            var gamer = db.Gamers.Find(id);
             if (gamer == null)
             {
                 return HttpNotFound();
@@ -39,86 +39,7 @@ namespace GameReviewWebsiteProject.Controllers
             return View(gamer);
         }
 
-        //
-        // GET: /Gamers/Create
-
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        //
-        // POST: /Gamers/Create
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(Gamer gamer)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Gamers.Add(gamer);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(gamer);
-        }
-
-        //
-        // GET: /Gamers/Edit/5
-
-        public ActionResult Edit(int id = 0)
-        {
-            Gamer gamer = db.Gamers.Find(id);
-            if (gamer == null)
-            {
-                return HttpNotFound();
-            }
-            return View(gamer);
-        }
-
-        //
-        // POST: /Gamers/Edit/5
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Gamer gamer)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(gamer).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(gamer);
-        }
-
-        //
-        // GET: /Gamers/Delete/5
-
-        public ActionResult Delete(int id = 0)
-        {
-            Gamer gamer = db.Gamers.Find(id);
-            if (gamer == null)
-            {
-                return HttpNotFound();
-            }
-            return View(gamer);
-        }
-
-        //
-        // POST: /Gamers/Delete/5
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Gamer gamer = db.Gamers.Find(id);
-            db.Gamers.Remove(gamer);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
+        //Deconstructor
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

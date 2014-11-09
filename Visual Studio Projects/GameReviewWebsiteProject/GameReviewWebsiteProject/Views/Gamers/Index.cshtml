@@ -1,4 +1,13 @@
-﻿@model IEnumerable<GameReviewWebsiteProject.Models.Gamer>
+﻿@*
+Chris Lucian & Chad Davies
+CS 643 Advanced Databases
+11/8/2014
+
+This a razor file used to generate HTML using C#
+Please note the comment tags can both be either "double slash" or "At Star" in these files
+depending on the context
+*@
+@model IEnumerable<GameReviewWebsiteProject.Models.Gamer>
 
 @{
     ViewBag.Title = "Gamers";
@@ -15,6 +24,7 @@
     <h2>You are searching for @ViewBag.PreviewSearch</h2>
     <strong style="color: red;">@ViewBag.SearchError</strong>
 }
+@*If the search returns any results show them otherwise show suggestions for refining the search*@
 @if (Model.Any())
 {
 

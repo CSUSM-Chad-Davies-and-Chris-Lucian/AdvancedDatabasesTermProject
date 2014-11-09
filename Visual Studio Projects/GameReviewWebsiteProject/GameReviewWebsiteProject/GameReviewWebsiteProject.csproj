@@ -315,20 +315,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Views\Comment\Index.cshtml" />
-    <Content Include="Views\Comment\Details.cshtml" />
-    <Content Include="Views\Comment\Create.cshtml" />
-    <Content Include="Views\Comment\Edit.cshtml" />
     <Content Include="Views\Comment\Delete.cshtml" />
-    <None Include="Web.config">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Images\accent.png" />
@@ -345,38 +332,27 @@
     <Content Include="Images\orderedList8.png" />
     <Content Include="Images\orderedList9.png" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\Gamers\Index.cshtml" />
     <Content Include="Views\Gamers\Details.cshtml" />
-    <Content Include="Views\Gamers\Create.cshtml" />
-    <Content Include="Views\Gamers\Edit.cshtml" />
-    <Content Include="Views\Gamers\Delete.cshtml" />
     <Content Include="Views\Authors\Index.cshtml" />
     <Content Include="Views\Authors\Details.cshtml" />
-    <Content Include="Views\Authors\Create.cshtml" />
-    <Content Include="Views\Authors\Edit.cshtml" />
-    <Content Include="Views\Authors\Delete.cshtml" />
-    <Content Include="Views\GameReviews\Create.cshtml" />
-    <Content Include="Views\GameReviews\Delete.cshtml" />
     <Content Include="Views\GameReviews\Details.cshtml" />
-    <Content Include="Views\GameReviews\Edit.cshtml" />
     <Content Include="Views\GameReviews\Index.cshtml" />
     <Content Include="Views\Games\Index.cshtml" />
     <Content Include="Views\Games\Details.cshtml" />
-    <Content Include="Views\Games\Create.cshtml" />
-    <Content Include="Views\Games\Edit.cshtml" />
-    <Content Include="Views\Games\Delete.cshtml" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

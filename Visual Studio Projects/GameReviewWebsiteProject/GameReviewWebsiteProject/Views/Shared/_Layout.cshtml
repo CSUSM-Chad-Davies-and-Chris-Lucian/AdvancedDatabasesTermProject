@@ -1,4 +1,18 @@
-﻿<!DOCTYPE html>
+﻿@*
+Chris Lucian & Chad Davies
+CS 643 Advanced Databases
+11/8/2014
+
+This a razor file used to generate HTML using C#
+Please note the comment tags can both be either "double slash" or "At Star" in these files
+depending on the context
+
+
+The layout page is the master page for all other pages.
+
+The html and razor expressions here are displayed on all pages
+*@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -47,6 +61,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
+    @*A short script using jquery to assign red astrisks to each of the required fields*@
     <script type="text/javascript">
         // add indicator to required fields
         jQuery('input,select').each(function () {

@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Chris Lucian & Chad Davies
+//CS 643 Advanced Databases
+//11/8/2014
+
+using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Threading;

@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿//Chris Lucian & Chad Davies
+//CS 643 Advanced Databases
+//11/8/2014
+
+using System;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using GameReviewWebsiteProject.Models;
 
@@ -11,27 +11,37 @@ namespace GameReviewWebsiteProject.Controllers
 {
     public class AuthorsController : Controller
     {
-        private GameReviewWebsiteEntities db = new GameReviewWebsiteEntities();
+        private readonly GameReviewWebsiteEntities db = new GameReviewWebsiteEntities();
 
-        //
-        // GET: /Authors/
-
+        //Shows the Authors search page
         public ActionResult Index(String search = "")
         {
             ViewBag.SearchError = search.Length > 50 ? "Search is limited to 50 characters" : "";
             search = String.Join("", search.Take(50));
             ViewBag.PreviewSearch = search;
-            var authors = db.Authors.Where(x => x.Name.Contains(search));
 
+            //Select statement to the database
+            //Automatically Generates code into query:
+
+            var authors = db.Authors.Where(x => x.Name.Contains(search));
+            //{SELECT 
+            //[Extent1].[AuthorId] AS [AuthorId], 
+            //[Extent1].[Name] AS [Name], 
+            //[Extent1].[Genre] AS [Genre], 
+            //[Extent1].[Biography] AS [Biography]
+            //FROM [dbo].[Author] AS [Extent1]
+            //WHERE [Extent1].[Name] LIKE @p__linq__0 ESCAPE N'~'}
+
+            //Views route automatically to views of the same name
             return View(authors.ToList());
         }
 
-        //
-        // GET: /Authors/Details/5
 
+        //Shows the details for a single author
         public ActionResult Details(int id = 0)
         {
-            Author author = db.Authors.Find(id);
+            //Linq Query to select an author by id
+            var author = db.Authors.Find(id);
             if (author == null)
             {
                 return HttpNotFound();
@@ -39,88 +49,10 @@ namespace GameReviewWebsiteProject.Controllers
             return View(author);
         }
 
-        //
-        // GET: /Authors/Create
-
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        //
-        // POST: /Authors/Create
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(Author author)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Authors.Add(author);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View(author);
-        }
-
-        //
-        // GET: /Authors/Edit/5
-
-        public ActionResult Edit(int id = 0)
-        {
-            Author author = db.Authors.Find(id);
-            if (author == null)
-            {
-                return HttpNotFound();
-            }
-            return View(author);
-        }
-
-        //
-        // POST: /Authors/Edit/5
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Author author)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(author).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(author);
-        }
-
-        //
-        // GET: /Authors/Delete/5
-
-        public ActionResult Delete(int id = 0)
-        {
-            Author author = db.Authors.Find(id);
-            if (author == null)
-            {
-                return HttpNotFound();
-            }
-            return View(author);
-        }
-
-        //
-        // POST: /Authors/Delete/5
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Author author = db.Authors.Find(id);
-            db.Authors.Remove(author);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
+        //Destructor for the class
         protected override void Dispose(bool disposing)
         {
+            //Dispose of the databse connection
             db.Dispose();
             base.Dispose(disposing);
         }

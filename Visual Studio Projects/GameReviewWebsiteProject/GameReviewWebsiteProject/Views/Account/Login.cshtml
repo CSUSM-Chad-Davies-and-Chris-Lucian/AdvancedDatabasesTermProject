@@ -1,4 +1,14 @@
-﻿@model GameReviewWebsiteProject.Models.LoginModel
+﻿@*
+Chris Lucian & Chad Davies
+CS 643 Advanced Databases
+11/8/2014
+
+This a razor file used to generate HTML using C#
+Please note the comment tags can both be either "double slash" or "At Star" in these files
+depending on the context
+*@
+
+@model GameReviewWebsiteProject.Models.LoginModel
 
 @{
     ViewBag.Title = "Log in";
@@ -11,15 +21,20 @@
 <section id="loginForm">
 <h2>Use a local account to log in.</h2>
 @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    //Anti forgery tokens are used to prevent Cross Site Scripting Attacks on a site
     @Html.AntiForgeryToken()
+    //Valiation summary is used to show a summary of anvalid attributes on the model
     @Html.ValidationSummary(true)
 
     <fieldset>
         <legend>Log in Form</legend>
         <ol>
             <li>
+                @*Label For Generates a title for the field in the model*@
                 @Html.LabelFor(m => m.UserName)
+                @*Text Box For Generates the field for the field in the model*@
                 @Html.TextBoxFor(m => m.UserName)
+                @*Validaton Message For Generates the Validation tags and message section for the field in the model*@
                 @Html.ValidationMessageFor(m => m.UserName)
             </li>
             <li>
@@ -35,11 +50,14 @@
         <input type="submit" value="Log in" />
     </fieldset>
     <p>
+        @*Action link is used to generate a hyperlink referencing the Controller and Action in MVC*@
         @Html.ActionLink("Register", "Register") if you don't have an account.
     </p>
 }
 </section>
 
+@*This is a section in the _Layout.cshtml
+it allows us to include javascript bundles that are not on every page*@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
