@@ -1,8 +1,13 @@
-﻿using System.Web;
+﻿//Chris Lucian & Chad Davies
+//CS 643 Advanced Databases
+//11/8/2014
+
+using System.Web;
 using System.Web.Optimization;
 
 namespace GameReviewWebsiteProject
 {
+    //This class helps configure bundles used to import files into razor pages used to generate the html
     public class BundleConfig
     {
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
