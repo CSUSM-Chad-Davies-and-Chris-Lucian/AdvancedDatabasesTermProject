@@ -38,7 +38,7 @@ namespace GameReviewWebsiteProject.Filters
                         }
                     }
 
-                    WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+                    WebSecurity.InitializeDatabaseConnection("DefaultConnection", "Gamer", "GamerId", "Name", autoCreateTables: false);
                 }
                 catch (Exception ex)
                 {

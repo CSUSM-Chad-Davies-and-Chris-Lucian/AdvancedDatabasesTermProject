@@ -1,7 +1,7 @@
 ﻿//Authors: Chris Lucian & Chad Davies
 //CS 643 Advanced Databases
 //11/6/2014
-//Codesd UI Tests for the Logins Controller
+//Coded UI Tests for the Logins Controller
 //This class tests all functionality related to the Logins
 
 using Microsoft.VisualStudio.TestTools.UITesting;
