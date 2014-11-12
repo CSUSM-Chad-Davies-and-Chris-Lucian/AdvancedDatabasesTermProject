@@ -346,7 +346,9 @@
     <Content Include="Views\GameReviews\Index.cshtml" />
     <Content Include="Views\Games\Index.cshtml" />
     <Content Include="Views\Games\Details.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
